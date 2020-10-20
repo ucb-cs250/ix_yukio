@@ -124,20 +124,6 @@ module universal_switch_box_tb;
 
    integer   i, j;
    initial begin
-      nse = 0;
-      ese = 0;
-      sse = 0;
-      wse = 0;
-      nde = 0;
-      ede = 0;
-      sde = 0;
-      wde = 0;
-      nge = 0;
-      ege = 0;
-      sge = 0;
-      wge = 0;
-      c = 0;
-      @(posedge clk);
       for(i = 0; i < 100; i = i + 1) begin
 	 @(negedge clk);
 	 ns = $random;

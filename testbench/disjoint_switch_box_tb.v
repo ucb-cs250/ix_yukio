@@ -48,12 +48,6 @@ module disjoint_switch_box_tb;
 
    integer   i, j;
    initial begin
-      ne = 0;
-      ee = 0;
-      se = 0;
-      we = 0;
-      c = 0;
-      @(posedge clk);
       for(i = 0; i < 100; i = i + 1) begin
 	 @(negedge clk);
 	 n = $random;
