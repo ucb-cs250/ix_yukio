@@ -140,34 +140,33 @@ module universal_switch_box_tb;
       @(posedge clk);
       for(i = 0; i < 100; i = i + 1) begin
 	 @(negedge clk);
+	 ns = $random;
+	 es = $random;
+	 ss = $random;
+	 ws = $random;
+	 nd = $random;
+	 ed = $random;
+	 sd = $random;
+	 wd = $random;
+	 ng = $random;
+	 eg = $random;
+	 sg = $random;
+	 wg = $random;
+	 nse = $random;
+	 ese = $random;
+	 sse = $random;
+	 wse = $random;
+	 nde = $random;
+	 ede = $random;
+	 sde = $random;
+	 wde = $random;
+	 nge = $random;
+	 ege = $random;
+	 sge = $random;
+	 wge = $random;
 	 for(j = 0; j < WS*6+WD/2*6; j = j + 1) begin
-	    ns = $random;
-	    es = $random;
-	    ss = $random;
-	    ws = $random;
-	    nd = $random;
-	    ed = $random;
-	    sd = $random;
-	    wd = $random;
-	    ng = $random;
-	    eg = $random;
-	    sg = $random;
-	    wg = $random;
-	    nse = $random;
-	    ese = $random;
-	    sse = $random;
-	    wse = $random;
-	    nde = $random;
-	    ede = $random;
-	    sde = $random;
-	    wde = $random;
-	    nge = $random;
-	    ege = $random;
-	    sge = $random;
-	    wge = $random;
 	    c[j] = $random;
 	 end
-
       end
       
       @(negedge clk);
