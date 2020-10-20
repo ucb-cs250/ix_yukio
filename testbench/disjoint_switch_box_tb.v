@@ -32,12 +32,12 @@ module disjoint_switch_box_tb;
    wire [W*6-1:0] valid;
    generate 
       for(k = 0; k < W; k = k + 1) begin
-	 assign valid[k*6] = !c[k*6] || north[k] == east[k];
-	 assign valid[k*6+1] = !c[k*6+1] || east[k] == south[k];
-	 assign valid[k*6+2] = !c[k*6+2] || south[k] == west[k];
-	 assign valid[k*6+3] = !c[k*6+3] || west[k] == north[k];
-	 assign valid[k*6+4] = !c[k*6+4] || north[k] == south[k];
-	 assign valid[k*6+5] = !c[k*6+5] || east[k] == west[k];
+	 assign valid[k*6] = !c[k*6] || north[k] === east[k];
+	 assign valid[k*6+1] = !c[k*6+1] || east[k] === south[k];
+	 assign valid[k*6+2] = !c[k*6+2] || south[k] === west[k];
+	 assign valid[k*6+3] = !c[k*6+3] || west[k] === north[k];
+	 assign valid[k*6+4] = !c[k*6+4] || north[k] === south[k];
+	 assign valid[k*6+5] = !c[k*6+5] || east[k] === west[k];
       end
    endgenerate
    

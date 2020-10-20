@@ -24,18 +24,18 @@ module switch_box_element_two_tb;
    
    always @(posedge clk) begin
      $display("%b %b %b %b %b", c, north, east, south, west);
-      if(c[0] && north[0] != east[0]) count = count + 1;
-      else if(c[1] && east[1] != south[0]) count = count + 1;
-      else if(c[2] && south[1] != west[1]) count = count + 1;
-      else if(c[3] && west[0] != north[1]) count = count + 1;
-      else if(c[4] && north[0] != south[0]) count = count + 1;
-      else if(c[5] && east[1] != west[1]) count = count + 1;
-      else if(c[6] && south[1] != north[1]) count = count + 1;
-      else if(c[7] && west[0] != east[0]) count = count + 1;
-      else if(c[8] && north[1] != east[1]) count = count + 1;
-      else if(c[9] && east[0] != south[1]) count = count + 1;
-      else if(c[10] && south[0] != west[0]) count = count + 1;
-      else if(c[11] && west[1] != north[0]) count = count + 1;
+      if(c[0] && north[0] !== east[0]) count = count + 1;
+      else if(c[1] && east[1] !== south[0]) count = count + 1;
+      else if(c[2] && south[1] !== west[1]) count = count + 1;
+      else if(c[3] && west[0] !== north[1]) count = count + 1;
+      else if(c[4] && north[0] !== south[0]) count = count + 1;
+      else if(c[5] && east[1] !== west[1]) count = count + 1;
+      else if(c[6] && south[1] !== north[1]) count = count + 1;
+      else if(c[7] && west[0] !== east[0]) count = count + 1;
+      else if(c[8] && north[1] !== east[1]) count = count + 1;
+      else if(c[9] && east[0] !== south[1]) count = count + 1;
+      else if(c[10] && south[0] !== west[0]) count = count + 1;
+      else if(c[11] && west[1] !== north[0]) count = count + 1;
    end
 
    integer   i;

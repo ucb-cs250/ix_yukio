@@ -20,12 +20,12 @@ module switch_box_element_one_tb;
    
    always @(posedge clk) begin
      $display("%b %b %b %b %b", c, north, east, south, west);
-      if(c[0] && north != east) count = count + 1;
-      else if(c[1] && east != south) count = count + 1;
-      else if(c[2] && south != west) count = count + 1;
-      else if(c[3] && west != north) count = count + 1;
-      else if(c[4] && north != south) count = count + 1;
-      else if(c[5] && east != west) count = count + 1;
+      if(c[0] && north !== east) count = count + 1;
+      else if(c[1] && east !== south) count = count + 1;
+      else if(c[2] && south !== west) count = count + 1;
+      else if(c[3] && west !== north) count = count + 1;
+      else if(c[4] && north !== south) count = count + 1;
+      else if(c[5] && east !== west) count = count + 1;
    end
 
    integer   i;
