@@ -4,11 +4,11 @@ module switch_box_element_one
    input [5:0] c
    );
 
-   tranif1(east, north, c[0]);
-   tranif1(south, east, c[1]);
-   tranif1(west, south, c[2]);
-   tranif1(north, west, c[3]);
-   tranif1(south, north, c[4]);
-   tranif1(west, east, c[5]);
+   transmission_gate ne(east, north, c[0]);
+   transmission_gate es(south, east, c[1]);
+   transmission_gate sw(west, south, c[2]);
+   transmission_gate wn(north, west, c[3]);
+   transmission_gate ns(south, north, c[4]);
+   transmission_gate ew(west, east, c[5]);
    
 endmodule
