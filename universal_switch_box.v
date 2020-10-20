@@ -16,20 +16,20 @@ module universal_switch_box
       for(i = 0; i < WS / 2; i = i + 1) begin : single_switch_box_element_two
 	 switch_box_element_two elem
 	      (
-	       .north({north_single[WS-1-i], north_single[i]}),
-	       .east({east_single[WS-1-i], east_single[i]}),
-	       .south({south_single[WS-1-i], south_single[i]}),
-	       .west({west_single[WS-1-i], west_single[i]}),
+	       .north({north_single[i*2+1], north_single[i*2]}),
+	       .east({east_single[i*2+1], east_single[i*2]}),
+	       .south({south_single[i*2+1], south_single[i*2]}),
+	       .west({west_single[i*2+1], west_single[i*2]}),
 	       .c(c[12*(i+1)-1:12*i])
 	       );
       end
       if(WS%2) begin : single_switch_box_element_one
 	 switch_box_element_one elem 
 	   (
-	    .north(north_single[WS/2]),
-	    .east(east_single[WS/2]),
-	    .south(south_single[WS/2]),
-	    .west(west_single[WS/2]),
+	    .north(north_single[WS-1]),
+	    .east(east_single[WS-1]),
+	    .south(south_single[WS-1]),
+	    .west(west_single[WS-1]),
 	    .c(c[WS*6-1:(WS-1)*6])
 	    );
       end
@@ -43,20 +43,20 @@ module universal_switch_box
       for(i = 0; i < WD / 4; i = i + 1) begin : double_switch_box_element_two
 	 switch_box_element_two elem
 	      (
-	       .north({north_double[WD/2-1-i], north_double[i]}),
-	       .east({east_double[WD-1-i], east_double[i+WD/2]}),
-	       .south({south_double[WD-1-i], south_double[i+WD/2]}),
-	       .west({west_double[WD/2-1-i], west_double[i]}),
+	       .north({north_double[i*2+1], north_double[i*2]}),
+	       .east({east_double[i*2+1+WD/2], east_double[i*2+WD/2]}),
+	       .south({south_double[i*2+1+WD/2], south_double[i*2+WD/2]}),
+	       .west({west_double[i*2+1], west_double[i*2]}),
 	       .c(c[12*(i+1)-1+BASE:12*i+BASE])
 	       );
       end
       if(WD/2%2) begin : double_switch_box_element_one
 	 switch_box_element_one elem 
 	   (
-	    .north(north_double[WD/4]),
-	    .east(east_double[WD/2+WD/4]),
-	    .south(south_double[WD/2+WD/4]),
-	    .west(west_double[WD/4]),
+	    .north(north_double[WD/2-1]),
+	    .east(east_double[WD-1]),
+	    .south(south_double[WD-1]),
+	    .west(west_double[WD/2-1]),
 	    .c(c[WD/2*6-1+BASE:(WD/2-1)*6+BASE])
 	    );
       end
