@@ -18,7 +18,7 @@ module connection_block
    (
     inout [WS-1:0] 	    single0, single1,
     inout [WD-1:0] 	    double0, double1,
-    inout [WG-1:0] 	    global0, global1,
+    input [WG-1:0] 	    global0,
     input [CLBOUT0-1:0]     clb0_output,
     input [CLBOUT1-1:0]     clb1_output,
     input [CARRY0TO1-1:0]   clb0_cout,
@@ -47,9 +47,6 @@ module connection_block
       end
       for(i = 0; i < WD; i = i + 1) begin : double_wires
 	 tran(double0[i], double1[i]);
-      end
-      for(i = 0; i < WG; i = i + 1) begin : global_wires
-	 tran(global0[i], global1[i]);
       end
    endgenerate
 

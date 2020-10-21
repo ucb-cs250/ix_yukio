@@ -1,13 +1,11 @@
 module universal_switch_box 
   #(
     parameter WS = 8,
-    parameter WD= 8, // WD must be multiple of 2
-    parameter WG = 3
+    parameter WD= 8 // WD must be multiple of 2
     ) 
    (
     inout [WS-1:0] 	    north_single, east_single, south_single, west_single,
     inout [WD-1:0] 	    north_double, east_double, south_double, west_double,
-    inout [WG-1:0] 	    north_global, east_global, south_global, west_global,
     input [WS*6+WD/2*6-1:0] c
     );
    
@@ -59,11 +57,6 @@ module universal_switch_box
 	    .west(west_double[WD/2-1]),
 	    .c(c[WD/2*6-1+BASE:(WD/2-1)*6+BASE])
 	    );
-      end
-      
-      for(i = 0; i < WG; i = i + 1) begin : global_direct_connection
-	 tran(north_global[i], south_global[i]);
-	 tran(east_global[i], west_global[i]);
       end
    endgenerate
    

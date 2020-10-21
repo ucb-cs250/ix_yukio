@@ -1,18 +1,15 @@
 module universal_switch_box_tb;
    localparam WS = 7;
    localparam WD = 6;
-   localparam WG = 3;
    
    reg clk = 0;
    always #10 clk = ~clk;
    
    reg [WS-1:0] ns, es, ss, ws, nse, ese, sse, wse;
    reg [WD-1:0] nd, ed, sd, wd, nde, ede, sde, wde;
-   reg [WG-1:0] ng, eg, sg, wg, nge, ege, sge, wge;
    reg [WS*6+WD/2*6-1:0] c;
    wire [WS-1:0] 	 north_single, east_single, south_single, west_single;
    wire [WD-1:0] 	 north_double, east_double, south_double, west_double;
-   wire [WG-1:0] 	 north_global, east_global, south_global, west_global;
 
    genvar 		 k;
    generate
@@ -28,18 +25,12 @@ module universal_switch_box_tb;
 	 assign south_double[k] = sde[k]? sd[k]: 1'bz;
 	 assign west_double[k] = wde[k]? wd[k]: 1'bz;
       end
-      for(k = 0; k < WG; k = k + 1) begin
-	 assign north_global[k] = nge[k]? ng[k]: 1'bz;
-	 assign east_global[k] = ege[k]? eg[k]: 1'bz;
-	 assign south_global[k] = sge[k]? sg[k]: 1'bz;
-	 assign west_global[k] = wge[k]? wg[k]: 1'bz;
-      end
    endgenerate
    
    universal_switch_box
-     #(.WS(WS),
-       .WD(WD),
-       .WG(WG)
+     #(
+       .WS(WS),
+       .WD(WD)
        )
    dut
      (
@@ -51,10 +42,6 @@ module universal_switch_box_tb;
       .east_double(east_double),
       .south_double(south_double),
       .west_double(west_double),
-      .north_global(north_global),
-      .east_global(east_global),
-      .south_global(south_global),
-      .west_global(west_global),
       .c(c)
       );
 
@@ -114,9 +101,7 @@ module universal_switch_box_tb;
    
    integer   count = 0;
    always @(posedge clk) begin
-      if(north_global !== south_global) count = count + 1;
-      else if(east_global !== west_global) count = count + 1;
-      else if(!(&single_valid)) count = count + 1;
+      if(!(&single_valid)) count = count + 1;
       else if(north_double[WD-1:WD/2] !== south_double[WD/2-1:0]) count = count + 1;
       else if(east_double[WD/2-1:0] !== west_double[WD-1:WD/2]) count = count + 1;
       else if(!(&double_valid)) count = count + 1;
@@ -134,10 +119,6 @@ module universal_switch_box_tb;
 	 ed = $random;
 	 sd = $random;
 	 wd = $random;
-	 ng = $random;
-	 eg = $random;
-	 sg = $random;
-	 wg = $random;
 	 nse = $random;
 	 ese = $random;
 	 sse = $random;
@@ -146,10 +127,6 @@ module universal_switch_box_tb;
 	 ede = $random;
 	 sde = $random;
 	 wde = $random;
-	 nge = $random;
-	 ege = $random;
-	 sge = $random;
-	 wge = $random;
 	 for(j = 0; j < WS*6+WD/2*6; j = j + 1) begin
 	    c[j] = $random;
 	 end

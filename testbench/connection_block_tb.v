@@ -19,7 +19,7 @@ module connection_block_tb;
    
    wire [WS-1:0] 		     single0, single1;
    wire [WD-1:0] 		     double0, double1;
-   wire [WG-1:0] 		     global0, global1;
+   reg [WG-1:0] 		     global0;
    reg [CLBOUT0-1:0] 		     clb0_output;
    reg [CLBOUT1-1:0] 		     clb1_output;
    reg [CARRY0TO1-1:0] 		     clb0_cout;
@@ -35,7 +35,6 @@ module connection_block_tb;
    
    reg [WS-1:0] 			     s0, s1, s0e, s1e;
    reg [WD-1:0] 			     d0, d1, d0e, d1e;
-   reg [WG-1:0] 			     g0, g1, g0e, g1e;
    
    genvar 				     k;
    generate
@@ -46,10 +45,6 @@ module connection_block_tb;
       for(k = 0; k < WD; k = k + 1) begin
 	 assign double0[k] = d0e[k]? d0[k]: 1'bz;
 	 assign double1[k] = d1e[k]? d1[k]: 1'bz;
-      end
-      for(k = 0; k < WG; k = k + 1) begin
-	 assign global0[k] = g0e[k]? g0[k]: 1'bz;
-	 assign global1[k] = g1e[k]? g1[k]: 1'bz;
       end
    endgenerate
 
@@ -77,7 +72,6 @@ module connection_block_tb;
       .double0(double0),
       .double1(double1),
       .global0(global0),
-      .global1(global1),
       .clb0_output(clb0_output),
       .clb1_output(clb1_output),
       .clb0_cout(clb0_cout),
@@ -93,7 +87,6 @@ module connection_block_tb;
    always @(posedge clk) begin
       if(single0 !== single1) count = count + 1;
       else if(double0 !== double1) count = count + 1;
-      else if(global0 !== global1) count = count + 1;
       else if(clb0_cout !== clb1_cin) count = count + 1;
       else if(clb1_cout !== clb0_cin) count = count + 1;
    end
@@ -102,10 +95,8 @@ module connection_block_tb;
    initial begin
       s0e = 0;
       d0e = 0;
-      g0e = 0;
       s1e = 0;
       d1e = 0;
-      g1e = 0;
       for(j = 0; j < CLBOUT0*(CLBOS+CLBOD)+CLBIN0*(WS+WD+WG+CLBX*CLBOUT1)+CLBOUT1*(CLBOS+CLBOD)+CLBIN1*(WS+WD+WG+CLBX*CLBOUT0); j = j + 1) begin
 	 c[j] = 0;
       end
@@ -115,11 +106,10 @@ module connection_block_tb;
 	 clb1_output = $random;
 	 s0 = $random;
 	 d0 = $random;
-	 g0 = $random;
+	 global0 = $random;
 	 BASE = 0;
 	 for(j = 0; j < WS; j = j + 1) s0e[j] = 1;
 	 for(j = 0; j < WD; j = j + 1) d0e[j] = 1;
-	 for(j = 0; j < WG; j = j + 1) g0e[j] = 1;
 	 for(i = 0; i < CLBIN0; i = i + 1) begin
 	    @(negedge clk);
 	    j = $urandom % WS;
@@ -155,7 +145,6 @@ module connection_block_tb;
 	 
 	 s0e = 0;
 	 d0e = 0;
-	 g0e = 0;
 	 for(i = 0; i < CLBOUT0; i = i + 1) begin
 	    @(negedge clk);
 	    j = $urandom % CLBOS;
@@ -174,12 +163,8 @@ module connection_block_tb;
 	    BASE = BASE + CLBOD;
 	 end
 	 
-	 s0 = $random;
-	 d0 = $random;
-	 g0 = $random;
 	 for(j = 0; j < WS; j = j + 1) s0e[j] = 1;
 	 for(j = 0; j < WD; j = j + 1) d0e[j] = 1;
-	 for(j = 0; j < WG; j = j + 1) g0e[j] = 1;
 	 for(i = 0; i < CLBIN1; i = i + 1) begin
 	    @(negedge clk);
 	    j = $urandom % WS;
@@ -215,7 +200,6 @@ module connection_block_tb;
 	 
 	 s0e = 0;
 	 d0e = 0;
-	 g0e = 0;
 	 for(i = 0; i < CLBOUT1; i = i + 1) begin
 	    @(negedge clk);
 	    j = $urandom % CLBOS;
@@ -241,8 +225,6 @@ module connection_block_tb;
 	 s1e = $random;
 	 d0e = $random;
 	 d1e = $random;
-	 g0e = $random;
-	 g1e = $random;
 	 clb0_output = $random;
 	 clb1_output = $random;
 	 clb0_cout = $random;
@@ -251,8 +233,7 @@ module connection_block_tb;
 	 s1 = $random;
 	 d0 = $random;
 	 d1 = $random;
-	 g0 = $random;
-	 g1 = $random;
+	 global0 = $random;
       end
 
    
