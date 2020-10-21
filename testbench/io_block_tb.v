@@ -54,12 +54,12 @@ module io_block_tb;
 
    integer   i, j, BASE, t;
    initial begin
+      for(j = 0; j < (EXTIN+EXTOUT)*(WS+WD+WG); j = j + 1) c[j] = 0;
       for(t = 0; t < 10; t = t + 1) begin
 	 BASE = 0;
 	 se = 0;
 	 de = 0;
 	 ge = 0;
-	 for(j = 0; j < (EXTIN+EXTOUT)*(WS+WD+WG); j = j + 1) c[j] = 0;
 	 s = $random;
 	 d = $random;
 	 g = $random;
