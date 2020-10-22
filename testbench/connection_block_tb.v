@@ -6,8 +6,7 @@ module connection_block_tb;
    localparam CLBIN1 = 6;
    localparam CLBOUT0 = 1;
    localparam CLBOUT1 = 1;
-   localparam CARRY0TO1 = 1;
-   localparam CARRY1TO0 = 1;
+   localparam CARRY = 1;
    localparam CLBOS = 2;
    localparam CLBOS_BIAS = 1;
    localparam CLBOD = 2;
@@ -22,12 +21,12 @@ module connection_block_tb;
    reg [WG-1:0] 		     global0;
    reg [CLBOUT0-1:0] 		     clb0_output;
    reg [CLBOUT1-1:0] 		     clb1_output;
-   reg [CARRY0TO1-1:0] 		     clb0_cout;
-   reg [CARRY1TO0-1:0] 		     clb1_cout;
+   reg [CARRY-1:0] 		     clb0_cout;
+   reg [CARRY-1:0] 		     clb1_cout;
    wire [CLBIN0-1:0] 		     clb0_input;
    wire [CLBIN1-1:0] 		     clb1_input;
-   wire [CARRY1TO0-1:0] 	     clb0_cin;
-   wire [CARRY0TO1-1:0] 	     clb1_cin;
+   wire [CARRY-1:0] 		     clb0_cin;
+   wire [CARRY-1:0] 		     clb1_cin;
    reg [CLBOUT0*(CLBOS+CLBOD)
 	+CLBIN0*(WS+WD+WG+CLBX*CLBOUT1)
 	+CLBOUT1*(CLBOS+CLBOD)
@@ -57,8 +56,7 @@ module connection_block_tb;
        .CLBIN1(CLBIN1),
        .CLBOUT0(CLBOUT0),
        .CLBOUT1(CLBOUT1),
-       .CARRY0TO1(CARRY0TO1),
-       .CARRY1TO0(CARRY1TO0),
+       .CARRY(CARRY),
        .CLBOS(CLBOS),
        .CLBOS_BIAS(CLBOS_BIAS),
        .CLBOD(CLBOD),
@@ -101,7 +99,7 @@ module connection_block_tb;
 	 c[j] = 0;
       end
 
-      for(t = 0; t < 100; t = t + 1)  begin
+      for(t = 0; t < 10; t = t + 1)  begin
 	 clb0_output = $random;
 	 clb1_output = $random;
 	 s0 = $random;

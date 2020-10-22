@@ -7,8 +7,7 @@ module connection_block
     parameter CLBIN1 = 6,
     parameter CLBOUT0 = 1,
     parameter CLBOUT1 = 1,
-    parameter CARRY0TO1 = 1,
-    parameter CARRY1TO0 = 1,
+    parameter CARRY = 1,
     parameter CLBOS = 2,
     parameter CLBOS_BIAS = 0,
     parameter CLBOD = 2,
@@ -16,23 +15,23 @@ module connection_block
     parameter CLBX = 1 // toggle using direct connections between CLBs or not
     ) 
    (
-    inout [WS-1:0] 	    single0, single1,
-    inout [WD-1:0] 	    double0, double1,
-    input [WG-1:0] 	    global0,
-    input [CLBOUT0-1:0]     clb0_output,
-    input [CLBOUT1-1:0]     clb1_output,
-    input [CARRY0TO1-1:0]   clb0_cout,
-    input [CARRY1TO0-1:0]   clb1_cout,
-    output [CLBIN0-1:0]     clb0_input,
-    output [CLBIN1-1:0]     clb1_input,
-    output [CARRY1TO0-1:0]  clb0_cin,
-    output [CARRY0TO1-1:0]  clb1_cin,
+    inout [WS-1:0] 	single0, single1,
+    inout [WD-1:0] 	double0, double1,
+    input [WG-1:0] 	global0,
+    input [CLBOUT0-1:0] clb0_output,
+    input [CLBOUT1-1:0] clb1_output,
+    input [CARRY-1:0] 	clb0_cout,
+    input [CARRY-1:0] 	clb1_cout,
+    output [CLBIN0-1:0] clb0_input,
+    output [CLBIN1-1:0] clb1_input,
+    output [CARRY-1:0] 	clb0_cin,
+    output [CARRY-1:0] 	clb1_cin,
     input [
 	   CLBOUT0*(CLBOS+CLBOD)
 	   +CLBIN0*(WS+WD+WG+CLBX*CLBOUT1)
 	   +CLBOUT1*(CLBOS+CLBOD)
 	   +CLBIN1*(WS+WD+WG+CLBX*CLBOUT0)-1:0
-	   ] c
+	   ] 			c
     );
    
    localparam SWITCH_PER_IN0 = WS + WD + WG + CLBX * CLBOUT1;
@@ -50,15 +49,8 @@ module connection_block
       end
    endgenerate
 
-   generate
-      for(i = 0; i < CARRY0TO1; i = i + 1) begin
-	 assign clb1_cin[i] = clb0_cout[i];
-      end
-      for(i = 0; i < CARRY1TO0; i = i + 1) begin
-	 assign clb0_cin[i] = clb1_cout[i];
-      end
-   endgenerate
-   
+   assign clb1_cin = clb0_cout;
+   assign clb0_cin = clb1_cout;
    
    generate
       for(i = 0; i < CLBIN0; i = i + 1) begin
