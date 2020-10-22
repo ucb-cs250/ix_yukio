@@ -2,11 +2,14 @@ module connection_block_tb;
    localparam WS = 7;
    localparam WD = 6;
    localparam WG = 3;
-   localparam CLBIN0 = 6;
-   localparam CLBIN1 = 6;
-   localparam CLBOUT0 = 1;
-   localparam CLBOUT1 = 1;
+   localparam CLBIN = 6;
+   localparam CLBIN0 = 2;
+   localparam CLBIN1 = 2;
+   localparam CLBOUT = 2;
+   localparam CLBOUT0 = 2;
+   localparam CLBOUT1 = 2;
    localparam CARRY = 1;
+   localparam CARRYTYPE = 2;
    localparam CLBOS = 2;
    localparam CLBOS_BIAS = 1;
    localparam CLBOD = 2;
@@ -19,12 +22,12 @@ module connection_block_tb;
    wire [WS-1:0] 		     single0, single1;
    wire [WD-1:0] 		     double0, double1;
    reg [WG-1:0] 		     global0;
-   reg [CLBOUT0-1:0] 		     clb0_output;
-   reg [CLBOUT1-1:0] 		     clb1_output;
+   reg [CLBOUT-1:0] 		     clb0_output;
+   reg [CLBOUT-1:0] 		     clb1_output;
    reg [CARRY-1:0] 		     clb0_cout;
    reg [CARRY-1:0] 		     clb1_cout;
-   wire [CLBIN0-1:0] 		     clb0_input;
-   wire [CLBIN1-1:0] 		     clb1_input;
+   wire [CLBIN-1:0] 		     clb0_input;
+   wire [CLBIN-1:0] 		     clb1_input;
    wire [CARRY-1:0] 		     clb0_cin;
    wire [CARRY-1:0] 		     clb1_cin;
    reg [CLBOUT0*(CLBOS+CLBOD)
@@ -52,8 +55,10 @@ module connection_block_tb;
        .WS(WS),
        .WD(WD),
        .WG(WG),
+       .CLBIN(CLBIN),
        .CLBIN0(CLBIN0),
        .CLBIN1(CLBIN1),
+       .CLBOUT(CLBOUT),
        .CLBOUT0(CLBOUT0),
        .CLBOUT1(CLBOUT1),
        .CARRY(CARRY),
@@ -85,8 +90,8 @@ module connection_block_tb;
    always @(posedge clk) begin
       if(single0 !== single1) count = count + 1;
       else if(double0 !== double1) count = count + 1;
-      else if(clb0_cout !== clb1_cin) count = count + 1;
-      else if(clb1_cout !== clb0_cin) count = count + 1;
+      else if(CARRYTYPE%2 == 1 && clb0_cout !== clb1_cin) count = count + 1;
+      else if(CARRYTYPE/2 == 1 && clb1_cout !== clb0_cin) count = count + 1;
    end
    
    integer   i, j, BASE, t;

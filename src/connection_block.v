@@ -3,11 +3,14 @@ module connection_block
     parameter WS = 8,
     parameter WD= 8, // WD must be multiple of 2
     parameter WG = 3,
+    parameter CLBIN = 6,
     parameter CLBIN0 = 6,
     parameter CLBIN1 = 6,
+    parameter CLBOUT = 1,
     parameter CLBOUT0 = 1,
     parameter CLBOUT1 = 1,
     parameter CARRY = 1,
+    parameter CARRYTYPE = 2,
     parameter CLBOS = 2,
     parameter CLBOS_BIAS = 0,
     parameter CLBOD = 2,
@@ -18,12 +21,12 @@ module connection_block
     inout [WS-1:0] 	single0, single1,
     inout [WD-1:0] 	double0, double1,
     input [WG-1:0] 	global0,
-    input [CLBOUT0-1:0] clb0_output,
-    input [CLBOUT1-1:0] clb1_output,
+    input [CLBOUT-1:0] clb0_output,
+    input [CLBOUT-1:0] clb1_output,
     input [CARRY-1:0] 	clb0_cout,
     input [CARRY-1:0] 	clb1_cout,
-    output [CLBIN0-1:0] clb0_input,
-    output [CLBIN1-1:0] clb1_input,
+    output [CLBIN-1:0] clb0_input,
+    output [CLBIN-1:0] clb1_input,
     output [CARRY-1:0] 	clb0_cin,
     output [CARRY-1:0] 	clb1_cin,
     input [
@@ -49,8 +52,18 @@ module connection_block
       end
    endgenerate
 
-   assign clb1_cin = clb0_cout;
-   assign clb0_cin = clb1_cout;
+   generate
+      if(CARRYTYPE%2 == 1) begin
+	 assign clb1_cin = clb0_cout;
+      end else begin
+	 assign clb1_cin = {CARRY{1'b0}};
+      end
+      if(CARRYTYPE/2 == 1) begin
+	 assign clb0_cin = clb1_cout;
+      end else begin
+	 assign clb0_cin = {CARRY{1'b0}};
+      end
+   endgenerate
    
    generate
       for(i = 0; i < CLBIN0; i = i + 1) begin
