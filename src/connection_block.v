@@ -10,7 +10,6 @@ module connection_block
     parameter CLBOUT0 = 1,
     parameter CLBOUT1 = 1,
     parameter CARRY = 1,
-    parameter CARRYTYPE = 2,
     parameter CLBOS = 2,
     parameter CLBOS_BIAS = 0,
     parameter CLBOD = 2,
@@ -40,6 +39,8 @@ module connection_block
    localparam SWITCH_PER_IN0 = WS + WD + WG + CLBX * CLBOUT1;
    localparam SWITCH_PER_IN1 = WS + WD + WG + CLBX * CLBOUT0;
    localparam SWITCH_PER_OUT = CLBOS + CLBOD;
+   localparam CLBOS_BIAS_WIDTH = (CLBOS_BIAS * CLBOS * (CLBOUT0 + CLBOUT1)) % WS;
+   localparam CLBOD_BIAS_WIDTH = (CLBOD_BIAS * CLBOD * (CLBOUT0 + CLBOUT1)) % (WD/2);
    
    genvar 		       i, j;
 
@@ -52,18 +53,8 @@ module connection_block
       end
    endgenerate
 
-   generate
-      if(CARRYTYPE%2 == 1) begin
-	 assign clb1_cin = clb0_cout;
-      end else begin
-	 assign clb1_cin = {CARRY{1'b0}};
-      end
-      if(CARRYTYPE/2 == 1) begin
-	 assign clb0_cin = clb1_cout;
-      end else begin
-	 assign clb0_cin = {CARRY{1'b0}};
-      end
-   endgenerate
+   assign clb1_cin = clb0_cout;
+   assign clb0_cin = clb1_cout;
    
    generate
       for(i = 0; i < CLBIN0; i = i + 1) begin
@@ -84,14 +75,14 @@ module connection_block
       end
       for(i = 0; i < CLBOUT0; i = i + 1) begin
 	 for(j = 0; j < WS; j = j + 1) begin : clb0_output_single_switches
-	    if((j + i * CLBOS + CLBOS_BIAS) % WS < CLBOS) begin
-	       transmission_gate s(clb0_output[i], single0[j], c[(j+i*CLBOS+CLBOS_BIAS)%WS
+	    if((j + WS-(i*CLBOS)%WS + WS-CLBOS_BIAS_WIDTH) % WS < CLBOS) begin
+	       transmission_gate s(clb0_output[i], single0[j], c[(j+WS-(i*CLBOS)%WS+WS-CLBOS_BIAS_WIDTH)%WS
 								 +i*SWITCH_PER_OUT+CLBIN0*SWITCH_PER_IN0]);
 	    end
 	 end
 	 for(j = 0; j < WD/2; j = j + 1) begin : clb0_output_double_switches
-	    if((j + i * CLBOD + CLBOD_BIAS) % (WD / 2) < CLBOD) begin
-	       transmission_gate s(clb0_output[i], double0[j], c[(j+i*CLBOD+CLBOD_BIAS)%(WD/2)
+	    if((j + WD/2-(i*CLBOD)%(WD/2) + WD/2-CLBOD_BIAS_WIDTH) % (WD/2) < CLBOD) begin
+	       transmission_gate s(clb0_output[i], double0[j], c[(j+WD/2-(i*CLBOD)%(WD/2)+WD/2-CLBOD_BIAS_WIDTH)%(WD/2)
 								 +CLBOS+i*SWITCH_PER_OUT+CLBIN0*SWITCH_PER_IN0]);
 	    end
 	 end
@@ -119,14 +110,14 @@ module connection_block
       end
       for(i = 0; i < CLBOUT1; i = i + 1) begin
 	 for(j = 0; j < WS; j = j + 1) begin : clb1_output_single_switches
-	    if((j + i * CLBOS + CLBOS_BIAS) % WS < CLBOS) begin
-	       transmission_gate s(clb1_output[i], single0[j], c[BASE+(j+i*CLBOS+CLBOS_BIAS)%WS
+	    if((j + WS-((i+CLBOUT0)*CLBOS)%WS + WS-CLBOS_BIAS_WIDTH) % WS < CLBOS) begin
+	       transmission_gate s(clb1_output[i], single0[j], c[BASE+(j+WS-((i+CLBOUT0)*CLBOS)%WS+WS-CLBOS_BIAS_WIDTH)%WS
 								 +i*SWITCH_PER_OUT+CLBIN1*SWITCH_PER_IN1]);
 	    end
 	 end
 	 for(j = 0; j < WD/2; j = j + 1) begin : clb1_output_double_switches
-	    if((j + i * CLBOD + CLBOD_BIAS) % (WD / 2) < CLBOD) begin
-	       transmission_gate s(clb1_output[i], double0[j], c[BASE+(j+i*CLBOD+CLBOD_BIAS)%(WD/2)
+	    if((j + WD/2-((i+CLBOUT0)*CLBOD)%(WD/2) + WD/2-CLBOD_BIAS_WIDTH) % (WD/2) < CLBOD) begin
+	       transmission_gate s(clb1_output[i], double0[j], c[BASE+(j+WD/2-((i+CLBOUT0)*CLBOD)%(WD/2)+WD/2-CLBOD_BIAS_WIDTH)%(WD/2)
 								 +CLBOS+i*SWITCH_PER_OUT+CLBIN1*SWITCH_PER_IN1]);
 	    end
 	 end
