@@ -1,7 +1,7 @@
 module universal_switch_box 
   #(
     parameter WS = 8,
-    parameter WD= 8 // WD must be multiple of 2
+    parameter WD = 8 // WD must be multiple of 2
     ) 
    (
     inout [WS-1:0] 	    north_single, east_single, south_single, west_single,
