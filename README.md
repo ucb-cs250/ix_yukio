@@ -43,7 +43,7 @@ I define a big-tile as a figure below. It has one column for MAC and MEM in the 
 
 fpga.v in fpgatop branch implements this, but it has problems and yet to be simulated. iverilog ran into internal errors (buffer overflaw) when I increased some parameters. verilator seems to have problems in 2D array. Anyway it might help you understand how these parameters should be treated.
 
-![図1](https://user-images.githubusercontent.com/18373300/96968489-01fd3000-154c-11eb-8ab9-a37260a91608.png)
+![図2](https://user-images.githubusercontent.com/18373300/96973575-07aa4400-1553-11eb-8530-51e3b2d9d46c.png)
 
 ## modules
 The signals starting with "c" represent configuration bits.
