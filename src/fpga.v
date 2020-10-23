@@ -191,7 +191,7 @@ module fpga
 	    if(i%NSB != 0 && i != NCLBFLAT && j != 0 && j != MCLBFLAT+M && j%(MCLB+1) != MCLB/2 && j%(MCLB+1) != MCLB/2+1) begin
 	       // disjointing box
 	    end else begin
-	       universal_switch_box 
+	       clb_switch_box 
 		 #(
 		   .WS(WS),
 		   .WD(WD)
@@ -393,7 +393,7 @@ module fpga
 		     .single1(switch_box_east_single[(j+1)+k*(MCLB+1)+i*(MCLBFLAT+M+1)+(j>=MCLB/2)]),
 		     .double0(switch_box_west_double[j+k*(MCLB+1)+i*(MCLBFLAT+M+1)+(j>=MCLB/2)]),
 		     .double1(switch_box_east_double[(j+1)+k*(MCLB+1)+i*(MCLBFLAT+M+1)+(j>=MCLB/2)]),
-		     .global0(horizontal_global[i]),
+		     .global(horizontal_global[i]),
 		     .clb0_output(clb_output_south[(j+1)+k*MCLB+i*MCLBFLAT]),
 		     .clb1_output(clb_output_north[(j+1)+k*MCLB+(i+1)*MCLBFLAT]),
 		     .clb0_cout(clb_cout[(j+1)+k*MCLB+i*MCLBFLAT]),
@@ -438,7 +438,7 @@ module fpga
 		     .single1(switch_box_north_single[j+k*(MCLB+1)+(i+1)*(MCLBFLAT+M+1)]),
 		     .double0(switch_box_south_double[j+k*(MCLB+1)+i*(MCLBFLAT+M+1)]),
 		     .double1(switch_box_north_double[j+k*(MCLB+1)+(i+1)*(MCLBFLAT+M+1)]),
-		     .global0(vertical_global[j]),
+		     .global(vertical_global[j]),
 		     .clb0_output(clb_output_west[j+k*MCLB+(i+1)*MCLBFLAT-(j>MCLB/2)]),
 		     .clb1_output(clb_output_east[(j+1)+k*MCLB+(i+1)*MCLBFLAT-(j>MCLB/2)]),
 		     .clb0_cout(clb_cout[j+k*MCLB+(i+1)*MCLBFLAT-(j>MCLB/2)]),
