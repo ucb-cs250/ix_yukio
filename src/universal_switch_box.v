@@ -19,7 +19,7 @@ module universal_switch_box
 	       .c(c[12*(i+1)-1:12*i])
 	       );
       end
-      if(W%2) begin : switch_box_element_one
+      if(W%2 == 1) begin : switch_box_element_one
 	 switch_box_element_one elem 
 	   (
 	    .north(north[W-1]),
