@@ -19,25 +19,25 @@ module io_block
    generate
       for(i = 0; i < EXTIN; i = i + 1) begin
 	 for(j = 0; j < WS; j = j + 1) begin
-	    transmission_gate s(single[j], external_input[i], c[j+i*(WS+WD+WG)]);
+	    transmission_gate_oneway s(single[j], external_input[i], c[j+i*(WS+WD+WG)]);
 	 end
 	 for(j = 0; j < WD; j = j + 1) begin
-	    transmission_gate s(double[j], external_input[i], c[WS+j+i*(WS+WD+WG)]);
+	    transmission_gate_oneway s(double[j], external_input[i], c[WS+j+i*(WS+WD+WG)]);
 	 end
 	 for(j = 0; j < WG; j = j + 1) begin
-	    transmission_gate s(global[j], external_input[i], c[WS+WD+j+i*(WS+WD+WG)]);
+	    transmission_gate_oneway s(global[j], external_input[i], c[WS+WD+j+i*(WS+WD+WG)]);
 	 end
       end
       
       for(i = 0; i < EXTOUT; i = i + 1) begin
 	 for(j = 0; j < WS; j = j + 1) begin
-	    transmission_gate s(single[j], external_output[i], c[j+i*(WS+WD+WG)+EXTIN*(WS+WD+WG)]);
+	    transmission_gate_oneway s(external_output[i], single[j], c[j+i*(WS+WD+WG)+EXTIN*(WS+WD+WG)]);
 	 end
 	 for(j = 0; j < WD; j = j + 1) begin
-	    transmission_gate s(double[j], external_output[i], c[WS+j+i*(WS+WD+WG)+EXTIN*(WS+WD+WG)]);
+	    transmission_gate_oneway s(external_output[i], double[j], c[WS+j+i*(WS+WD+WG)+EXTIN*(WS+WD+WG)]);
 	 end
 	 for(j = 0; j < WG; j = j + 1) begin
-	    transmission_gate s(global[j], external_output[i], c[WS+WD+j+i*(WS+WD+WG)+EXTIN*(WS+WD+WG)]);
+	    transmission_gate_oneway s(external_output[i], global[j], c[WS+WD+j+i*(WS+WD+WG)+EXTIN*(WS+WD+WG)]);
 	 end
       end
    endgenerate

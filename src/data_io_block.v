@@ -16,13 +16,13 @@ module data_io_block
    generate
       for(i = 0; i < EXTDATAIN; i = i + 1) begin
 	 for(j = 0; j < W; j = j + 1) begin
-	    transmission_gate s(data[j], external_input[j%WW+i*WW], c[j+i*W]);
+	    transmission_gate_oneway s(data[j], external_input[j%WW+i*WW], c[j+i*W]);
 	 end
       end
       
       for(i = 0; i < EXTDATAOUT; i = i + 1) begin
 	 for(j = 0; j < W; j = j + 1) begin
-	    transmission_gate s(data[j], external_output[j%WW+i*WW], c[j+i*W+EXTDATAIN*W]);
+	    transmission_gate_oneway s(external_output[j%WW+i*WW], data[j], c[j+i*W+EXTDATAIN*W]);
 	 end
       end
    endgenerate

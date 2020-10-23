@@ -19,15 +19,15 @@ module data_connection_block
 	 tran(north[i], south[i]);
       end
       
-      for(i = 0; i < DATAIN; i = i + 1) begin
-	 for(j = 0; j < W; j = j + 1) begin : input_switches
-	    transmission_gate s(data_input[j%WW+i*WW], north[j], c[j+i*W]);
+      for(i = 0; i < DATAIN; i = i + 1) begin : inputs
+	 for(j = 0; j < W; j = j + 1) begin : switches
+	    transmission_gate_oneway s(data_input[j%WW+i*WW], north[j], c[j+i*W]);
 	 end
       end
       
-      for(i = 0; i < DATAOUT; i = i + 1) begin
-	 for(j = 0; j < W; j = j + 1) begin : input_switches
-	    transmission_gate s(data_output[j%WW+i*WW], north[j], c[j+i*W+DATAIN*W]);
+      for(i = 0; i < DATAOUT; i = i + 1) begin : outputs
+	 for(j = 0; j < W; j = j + 1) begin : switches
+	    transmission_gate_oneway s(north[j], data_output[j%WW+i*WW], c[j+i*W+DATAIN*W]);
 	 end
       end
    endgenerate
