@@ -189,7 +189,16 @@ module fpga
       for(i = 0; i < NCLBFLAT+1; i = i + 1) begin
 	 for(j = 0; j < MCLBFLAT+M+1; j = j + 1) begin : switch_box
 	    if(i%NSB != 0 && i != NCLBFLAT && j != 0 && j != MCLBFLAT+M && j%(MCLB+1) != MCLB/2 && j%(MCLB+1) != MCLB/2+1) begin
-	       // disjointing box
+	       vertical_disjoint_switch_box
+		 #(
+		   .W(WS+WD)
+		   )
+	       vdsb
+		 (
+		  .north({switch_box_north_double[j+i*(MCLBFLAT+M+1)], switch_box_north_single[j+i*(MCLBFLAT+M+1)]}),
+		  .south({switch_box_south_double[j+i*(MCLBFLAT+M+1)], switch_box_south_single[j+i*(MCLBFLAT+M+1)]}),
+		  .c()
+		  );
 	    end else begin
 	       clb_switch_box 
 		 #(
