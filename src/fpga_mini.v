@@ -16,214 +16,131 @@ module fpga
     parameter COLUMN = 3 // the column index of the tile (this affects which switches CLB outputs are connected)
     )
    (
-
+    inout [WS-1:0]     switch_box_00_north_single,
+    inout [WD-1:0]     switch_box_00_north_double,
+    inout [WS-1:0]     switch_box_00_east_single,
+    inout [WD-1:0]     switch_box_00_east_double,
+    inout [WS-1:0]     switch_box_01_north_single,
+    inout [WD-1:0]     switch_box_01_north_double,
+    inout [WS-1:0]     switch_box_02_north_single,
+    inout [WD-1:0]     switch_box_02_north_double,
+    inout [WS-1:0]     switch_box_02_west_single,
+    inout [WD-1:0]     switch_box_02_west_double,
+    inout [WS-1:0]     switch_box_10_east_single,
+    inout [WD-1:0]     switch_box_10_east_double,
+    inout [WS-1:0]     switch_box_10_south_single,
+    inout [WD-1:0]     switch_box_10_south_double,
+    inout [WS-1:0]     switch_box_11_south_single,
+    inout [WD-1:0]     switch_box_11_south_double,
+    inout [WS-1:0]     switch_box_12_south_single,
+    inout [WD-1:0]     switch_box_12_south_double,
+    inout [WS-1:0]     switch_box_12_west_single,
+    inout [WD-1:0]     switch_box_12_west_double,
+    input [CLBIN-1:0]  clb_01_input_south,
+    input [CLBOUT-1:0] clb_01_output_south,
+    input [CARRY-1:0]  clb_01_cin_south,
+    input [CARRY-1:0]  clb_01_cout, 
+    input [CLBIN-1:0]  clb_02_input_south,
+    input [CLBOUT-1:0] clb_02_output_south,
+    input [CARRY-1:0]  clb_02_cin_south,
+    input [CARRY-1:0]  clb_02_cout,
+    input [CLBIN-1:0]  clb_10_input_west,
+    input [CLBOUT-1:0] clb_10_output_west,
+    input [CARRY-1:0]  clb_10_cin_west,
+    input [CARRY-1:0]  clb_10_cout,
+    input [CLBIN-1:0]  clb_13_input_east,
+    input [CLBOUT-1:0] clb_13_output_east,
+    input [CARRY-1:0]  clb_13_cin_east,
+    input [CARRY-1:0]  clb_13_cout,
+    input [CLBIN-1:0]  clb_21_input_north,
+    input [CLBOUT-1:0] clb_21_output_north,
+    input [CARRY-1:0]  clb_21_cin_north,
+    input [CARRY-1:0]  clb_21_cout,
+    input [CLBIN-1:0]  clb_22_input_north,
+    input [CLBOUT-1:0] clb_22_output_north,
+    input [CARRY-1:0]  clb_22_cin_north,
+    input [CARRY-1:0]  clb_22_cout,
+    input [WG-1:0]     horizontal_global_0,
+    input [WG-1:0]     horizontal_global_1,
+    input [WG-1:0]     vertical_global_0,
+    input [WG-1:0]     vertical_global_1,
+    input [WG-1:0]     vertical_global_2
     );
    
    // parameters from modules
    localparam CLBIN = 4;
    localparam CLBOUT = 4;
    localparam CARRY = 1; // bit-width of carry
-
+   
    // wires for switch boxes
-   wire [WS-1:0] switch_box_00_north_single;
-   wire [WD-1:0] switch_box_00_north_double;
-   wire [WS-1:0] switch_box_00_east_single;
-   wire [WD-1:0] switch_box_00_east_double;
-   wire [WS-1:0] switch_box_00_south_single;
-   wire [WD-1:0] switch_box_00_south_double;
-   wire [WS-1:0] switch_box_00_west_single;
-   wire [WD-1:0] switch_box_00_west_double;
-
-   wire [WS-1:0] switch_box_01_north_single;
-   wire [WD-1:0] switch_box_01_north_double;
-   wire [WS-1:0] switch_box_01_east_single;
-   wire [WD-1:0] switch_box_01_east_double;
-   wire [WS-1:0] switch_box_01_south_single;
-   wire [WD-1:0] switch_box_01_south_double;
-   wire [WS-1:0] switch_box_01_west_single;
-   wire [WD-1:0] switch_box_01_west_double;
-
-   wire [WS-1:0] switch_box_02_north_single;
-   wire [WD-1:0] switch_box_02_north_double;
-   wire [WS-1:0] switch_box_02_east_single;
-   wire [WD-1:0] switch_box_02_east_double;
-   wire [WS-1:0] switch_box_02_south_single;
-   wire [WD-1:0] switch_box_02_south_double;
-   wire [WS-1:0] switch_box_02_west_single;
-   wire [WD-1:0] switch_box_02_west_double;
-
-   wire [WS-1:0] switch_box_10_north_single;
-   wire [WD-1:0] switch_box_10_north_double;
-   wire [WS-1:0] switch_box_10_east_single;
-   wire [WD-1:0] switch_box_10_east_double;
-   wire [WS-1:0] switch_box_10_south_single;
-   wire [WD-1:0] switch_box_10_south_double;
-   wire [WS-1:0] switch_box_10_west_single;
-   wire [WD-1:0] switch_box_10_west_double;
-
-   wire [WS-1:0] switch_box_11_north_single;
-   wire [WD-1:0] switch_box_11_north_double;
-   wire [WS-1:0] switch_box_11_east_single;
-   wire [WD-1:0] switch_box_11_east_double;
-   wire [WS-1:0] switch_box_11_south_single;
-   wire [WD-1:0] switch_box_11_south_double;
-   wire [WS-1:0] switch_box_11_west_single;
-   wire [WD-1:0] switch_box_11_west_double;
-
-   wire [WS-1:0] switch_box_12_north_single;
-   wire [WD-1:0] switch_box_12_north_double;
-   wire [WS-1:0] switch_box_12_east_single;
-   wire [WD-1:0] switch_box_12_east_double;
-   wire [WS-1:0] switch_box_12_south_single;
-   wire [WD-1:0] switch_box_12_south_double;
-   wire [WS-1:0] switch_box_12_west_single;
-   wire [WD-1:0] switch_box_12_west_double;
-
+   wire [WS-1:0]       switch_box_00_south_single;
+   wire [WD-1:0]       switch_box_00_south_double;
+   wire [WS-1:0]       switch_box_00_west_single;
+   wire [WD-1:0]       switch_box_00_west_double;
+   
+   wire [WS-1:0]       switch_box_01_east_single;
+   wire [WD-1:0]       switch_box_01_east_double;
+   wire [WS-1:0]       switch_box_01_south_single;
+   wire [WD-1:0]       switch_box_01_south_double;
+   wire [WS-1:0]       switch_box_01_west_single;
+   wire [WD-1:0]       switch_box_01_west_double;
+   
+   wire [WS-1:0]       switch_box_02_east_single;
+   wire [WD-1:0]       switch_box_02_east_double;
+   wire [WS-1:0]       switch_box_02_south_single;
+   wire [WD-1:0]       switch_box_02_south_double;
+   
+   wire [WS-1:0]       switch_box_10_north_single;
+   wire [WD-1:0]       switch_box_10_north_double;
+   wire [WS-1:0]       switch_box_10_west_single;
+   wire [WD-1:0]       switch_box_10_west_double;
+   
+   wire [WS-1:0]       switch_box_11_north_single;
+   wire [WD-1:0]       switch_box_11_north_double;
+   wire [WS-1:0]       switch_box_11_east_single;
+   wire [WD-1:0]       switch_box_11_east_double;
+   wire [WS-1:0]       switch_box_11_west_single;
+   wire [WD-1:0]       switch_box_11_west_double;
+   
+   wire [WS-1:0]       switch_box_12_north_single;
+   wire [WD-1:0]       switch_box_12_north_double;
+   wire [WS-1:0]       switch_box_12_east_single;
+   wire [WD-1:0]       switch_box_12_east_double;
+   
    // wires for clbs   
-   wire [CLBIN-1:0] clb_11_input;
-   wire [CLBIN-1:0] clb_11_input_north;
-   wire [CLBIN-1:0] clb_11_input_east;
-   wire [CLBIN-1:0] clb_11_input_south;
-   wire [CLBIN-1:0] clb_11_input_west;
-   wire [CLBOUT-1:0] clb_11_output;
-   wire [CLBOUT-1:0] clb_11_output_north;
-   wire [CLBOUT-1:0] clb_11_output_east;
-   wire [CLBOUT-1:0] clb_11_output_south;
-   wire [CLBOUT-1:0] clb_11_output_west;
-   wire [CARRY-1:0] clb_11_cin;
-   wire [CARRY-1:0] clb_11_cin_north;
-   wire [CARRY-1:0] clb_11_cin_east;
-   wire [CARRY-1:0] clb_11_cin_south;
-   wire [CARRY-1:0] clb_11_cin_west;
-   wire [CARRY-1:0] clb_11_cout;
-
-   wire [CLBIN-1:0] clb_12_input;
-   wire [CLBIN-1:0] clb_12_input_north;
-   wire [CLBIN-1:0] clb_12_input_east;
-   wire [CLBIN-1:0] clb_12_input_south;
-   wire [CLBIN-1:0] clb_12_input_west;
-   wire [CLBOUT-1:0] clb_12_output;
-   wire [CLBOUT-1:0] clb_12_output_north;
-   wire [CLBOUT-1:0] clb_12_output_east;
-   wire [CLBOUT-1:0] clb_12_output_south;
-   wire [CLBOUT-1:0] clb_12_output_west;
-   wire [CARRY-1:0] clb_12_cin;
-   wire [CARRY-1:0] clb_12_cin_north;
-   wire [CARRY-1:0] clb_12_cin_east;
-   wire [CARRY-1:0] clb_12_cin_south;
-   wire [CARRY-1:0] clb_12_cin_west;
-   wire [CARRY-1:0] clb_12_cout;
-
-   // dummy wires for adjacent clbs outside of the tile
-   wire [CLBIN-1:0] clb_01_input;
-   wire [CLBIN-1:0] clb_01_input_north;
-   wire [CLBIN-1:0] clb_01_input_east;
-   wire [CLBIN-1:0] clb_01_input_south;
-   wire [CLBIN-1:0] clb_01_input_west;
-   wire [CLBOUT-1:0] clb_01_output;
-   wire [CLBOUT-1:0] clb_01_output_north;
-   wire [CLBOUT-1:0] clb_01_output_east;
-   wire [CLBOUT-1:0] clb_01_output_south;
-   wire [CLBOUT-1:0] clb_01_output_west;
-   wire [CARRY-1:0] clb_01_cin;
-   wire [CARRY-1:0] clb_01_cin_north;
-   wire [CARRY-1:0] clb_01_cin_east;
-   wire [CARRY-1:0] clb_01_cin_south;
-   wire [CARRY-1:0] clb_01_cin_west;
-   wire [CARRY-1:0] clb_01_cout;
-
-   wire [CLBIN-1:0] clb_02_input;
-   wire [CLBIN-1:0] clb_02_input_north;
-   wire [CLBIN-1:0] clb_02_input_east;
-   wire [CLBIN-1:0] clb_02_input_south;
-   wire [CLBIN-1:0] clb_02_input_west;
-   wire [CLBOUT-1:0] clb_02_output;
-   wire [CLBOUT-1:0] clb_02_output_north;
-   wire [CLBOUT-1:0] clb_02_output_east;
-   wire [CLBOUT-1:0] clb_02_output_south;
-   wire [CLBOUT-1:0] clb_02_output_west;
-   wire [CARRY-1:0] clb_02_cin;
-   wire [CARRY-1:0] clb_02_cin_north;
-   wire [CARRY-1:0] clb_02_cin_east;
-   wire [CARRY-1:0] clb_02_cin_south;
-   wire [CARRY-1:0] clb_02_cin_west;
-   wire [CARRY-1:0] clb_02_cout;
-
-   wire [CLBIN-1:0] clb_10_input;
-   wire [CLBIN-1:0] clb_10_input_north;
-   wire [CLBIN-1:0] clb_10_input_east;
-   wire [CLBIN-1:0] clb_10_input_south;
-   wire [CLBIN-1:0] clb_10_input_west;
-   wire [CLBOUT-1:0] clb_10_output;
-   wire [CLBOUT-1:0] clb_10_output_north;
-   wire [CLBOUT-1:0] clb_10_output_east;
-   wire [CLBOUT-1:0] clb_10_output_south;
-   wire [CLBOUT-1:0] clb_10_output_west;
-   wire [CARRY-1:0] clb_10_cin;
-   wire [CARRY-1:0] clb_10_cin_north;
-   wire [CARRY-1:0] clb_10_cin_east;
-   wire [CARRY-1:0] clb_10_cin_south;
-   wire [CARRY-1:0] clb_10_cin_west;
-   wire [CARRY-1:0] clb_10_cout;
-
-   wire [CLBIN-1:0] clb_13_input;
-   wire [CLBIN-1:0] clb_13_input_north;
-   wire [CLBIN-1:0] clb_13_input_east;
-   wire [CLBIN-1:0] clb_13_input_south;
-   wire [CLBIN-1:0] clb_13_input_west;
-   wire [CLBOUT-1:0] clb_13_output;
-   wire [CLBOUT-1:0] clb_13_output_north;
-   wire [CLBOUT-1:0] clb_13_output_east;
-   wire [CLBOUT-1:0] clb_13_output_south;
-   wire [CLBOUT-1:0] clb_13_output_west;
-   wire [CARRY-1:0] clb_13_cin;
-   wire [CARRY-1:0] clb_13_cin_north;
-   wire [CARRY-1:0] clb_13_cin_east;
-   wire [CARRY-1:0] clb_13_cin_south;
-   wire [CARRY-1:0] clb_13_cin_west;
-   wire [CARRY-1:0] clb_13_cout;
+   wire [CLBIN-1:0]    clb_11_input;
+   wire [CLBIN-1:0]    clb_11_input_north;
+   wire [CLBIN-1:0]    clb_11_input_east;
+   wire [CLBIN-1:0]    clb_11_input_south;
+   wire [CLBIN-1:0]    clb_11_input_west;
+   wire [CLBOUT-1:0]   clb_11_output;
+   wire [CLBOUT-1:0]   clb_11_output_north;
+   wire [CLBOUT-1:0]   clb_11_output_east;
+   wire [CLBOUT-1:0]   clb_11_output_south;
+   wire [CLBOUT-1:0]   clb_11_output_west;
+   wire [CARRY-1:0]    clb_11_cin;
+   wire [CARRY-1:0]    clb_11_cin_north;
+   wire [CARRY-1:0]    clb_11_cin_east;
+   wire [CARRY-1:0]    clb_11_cin_south;
+   wire [CARRY-1:0]    clb_11_cin_west;
+   wire [CARRY-1:0]    clb_11_cout;
    
-   wire [CLBIN-1:0] clb_21_input;
-   wire [CLBIN-1:0] clb_21_input_north;
-   wire [CLBIN-1:0] clb_21_input_east;
-   wire [CLBIN-1:0] clb_21_input_south;
-   wire [CLBIN-1:0] clb_21_input_west;
-   wire [CLBOUT-1:0] clb_21_output;
-   wire [CLBOUT-1:0] clb_21_output_north;
-   wire [CLBOUT-1:0] clb_21_output_east;
-   wire [CLBOUT-1:0] clb_21_output_south;
-   wire [CLBOUT-1:0] clb_21_output_west;
-   wire [CARRY-1:0] clb_21_cin;
-   wire [CARRY-1:0] clb_21_cin_north;
-   wire [CARRY-1:0] clb_21_cin_east;
-   wire [CARRY-1:0] clb_21_cin_south;
-   wire [CARRY-1:0] clb_21_cin_west;
-   wire [CARRY-1:0] clb_21_cout;
-
-   wire [CLBIN-1:0] clb_22_input;
-   wire [CLBIN-1:0] clb_22_input_north;
-   wire [CLBIN-1:0] clb_22_input_east;
-   wire [CLBIN-1:0] clb_22_input_south;
-   wire [CLBIN-1:0] clb_22_input_west;
-   wire [CLBOUT-1:0] clb_22_output;
-   wire [CLBOUT-1:0] clb_22_output_north;
-   wire [CLBOUT-1:0] clb_22_output_east;
-   wire [CLBOUT-1:0] clb_22_output_south;
-   wire [CLBOUT-1:0] clb_22_output_west;
-   wire [CARRY-1:0] clb_22_cin;
-   wire [CARRY-1:0] clb_22_cin_north;
-   wire [CARRY-1:0] clb_22_cin_east;
-   wire [CARRY-1:0] clb_22_cin_south;
-   wire [CARRY-1:0] clb_22_cin_west;
-   wire [CARRY-1:0] clb_22_cout;
-
-   // global wires
-   wire [WG-1:0]    horizontal_global_0;
-   wire [WG-1:0]    horizontal_global_1;
-   
-   wire [WG-1:0]    vertical_global_0;
-   wire [WG-1:0]    vertical_global_1;
-   wire [WG-1:0]    vertical_global_2;
+   wire [CLBIN-1:0]    clb_12_input;
+   wire [CLBIN-1:0]    clb_12_input_north;
+   wire [CLBIN-1:0]    clb_12_input_east;
+   wire [CLBIN-1:0]    clb_12_input_south;
+   wire [CLBIN-1:0]    clb_12_input_west;
+   wire [CLBOUT-1:0]   clb_12_output;
+   wire [CLBOUT-1:0]   clb_12_output_north;
+   wire [CLBOUT-1:0]   clb_12_output_east;
+   wire [CLBOUT-1:0]   clb_12_output_south;
+   wire [CLBOUT-1:0]   clb_12_output_west;
+   wire [CARRY-1:0]    clb_12_cin;
+   wire [CARRY-1:0]    clb_12_cin_north;
+   wire [CARRY-1:0]    clb_12_cin_east;
+   wire [CARRY-1:0]    clb_12_cin_south;
+   wire [CARRY-1:0]    clb_12_cin_west;
+   wire [CARRY-1:0]    clb_12_cout;
    
    genvar 	    l;
    
