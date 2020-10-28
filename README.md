@@ -80,9 +80,15 @@ The signals starting with "c" represent configuration bits.
  
  - clb_switch_box.v
  
- one universal switch box for single lines and the following circuit for double lines.
+ One universal switch box for single lines and the following circuit for double lines.
  
  ![universal_swtich_box_double](https://user-images.githubusercontent.com/18373300/96964553-a16af480-1545-11eb-9dc0-19efc26c21c4.png)
+ 
+ - vertical_disjoint_switch_box.v
+ 
+ This is used as a switch box where there is no horizontal line in layered interconnect.
+ 
+ ![vertical_disjoint_switch_box](https://user-images.githubusercontent.com/18373300/97480049-4185ab00-1996-11eb-9149-67dc0bc53fcd.png)
  
  - connection_block.v
  
