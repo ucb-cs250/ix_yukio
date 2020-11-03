@@ -1,4 +1,4 @@
-nsmission_gate_oneway_tb();
+module transmission_gate_oneway_tb();
 
   reg b, c;
   wire a;

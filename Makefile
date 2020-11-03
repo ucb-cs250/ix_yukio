@@ -6,7 +6,7 @@ src_dir = $(base_dir)/src
 tb_dir = $(base_dir)/testbench
 sim_rundir := ./sim-rundir
 
-top := tranif1_tb
+top := transmission_gate_oneway_tb
 tb := $(tb_dir)/$(top).v
 
 sim_vsrcs := \
@@ -43,4 +43,9 @@ $(simv):
 $(simv)-exec: $(simv)
 	$(simv) -q +ntb_random_seed_automatic
 
+# run the testbenches
 test:	$(simv)-exec
+
+# clean up the directory
+clean:
+	rm -rf $(sim_rundir) ucli.key
