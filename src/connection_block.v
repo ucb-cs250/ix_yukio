@@ -14,7 +14,12 @@ module connection_block
     parameter CLBOS_BIAS = 0,
     parameter CLBOD = 2,
     parameter CLBOD_BIAS = 0,
-    parameter CLBX = 1 // toggle using direct connections between CLBs or not
+    parameter CLBX = 1, // toggle using direct connections between CLBs or not
+    parameter SWITCH_PER_IN0 = WS + WD + WG + CLBX * CLBOUT1,
+    parameter SWITCH_PER_IN1 = WS + WD + WG + CLBX * CLBOUT0,
+    parameter SWITCH_PER_OUT = CLBOS + CLBOD,
+    parameter CLBOS_BIAS_WIDTH = (CLBOS_BIAS * CLBOS * (CLBOUT0 + CLBOUT1)) % WS,
+    parameter CLBOD_BIAS_WIDTH = (CLBOD_BIAS * CLBOD * (CLBOUT0 + CLBOUT1)) % (WD/2)
     ) 
    (
     inout [WS-1:0]     single0, single1,
@@ -35,11 +40,6 @@ module connection_block
 	   -1:0] 	       c
     );
    
-   localparam SWITCH_PER_IN0 = WS + WD + WG + CLBX * CLBOUT1;
-   localparam SWITCH_PER_IN1 = WS + WD + WG + CLBX * CLBOUT0;
-   localparam SWITCH_PER_OUT = CLBOS + CLBOD;
-   localparam CLBOS_BIAS_WIDTH = (CLBOS_BIAS * CLBOS * (CLBOUT0 + CLBOUT1)) % WS;
-   localparam CLBOD_BIAS_WIDTH = (CLBOD_BIAS * CLBOD * (CLBOUT0 + CLBOUT1)) % (WD/2);
    
    genvar 		       i, j;
    
