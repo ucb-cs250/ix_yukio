@@ -11,7 +11,7 @@ module disjoint_switch_box
     input cset,
     input [CONF_WIDTH-1:0] c,
 
-    inout [W-1:0]   north, east, south, west,
+    inout [W-1:0]   north, east, south, west
     );
 
    reg [CONF_WIDTH-1:0] c_reg;
