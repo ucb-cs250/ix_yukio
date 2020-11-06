@@ -94,6 +94,8 @@ The signals starting with "c" represent configuration bits.
  
  The number of inputs of CLB is CLBIN, but only first  CLBIN0(CLBIN1) bits are connected to the tracks. When CLBX, a boolean parameter, is 1, there are direct connections. The number of switches for each output is limited by a parameter, and the place of switches is shifted per output. The amount of the last shift is passed to the next connection block as a bias.
  
+ This figure is wrong in that c31 and c32 are reverse.
+ 
  ![connection_block](https://user-images.githubusercontent.com/18373300/96964599-b9427880-1545-11eb-88cd-175456e18784.png)
 
  - data_connection_block.v
