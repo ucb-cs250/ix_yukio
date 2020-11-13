@@ -1,6 +1,6 @@
 module clb_tile
   #(
-    // parameter from top module
+    // parameters from top module
     parameter WS = 4,
     parameter WD = 4, // WD must be multiple of 2
     parameter WG = 3,
@@ -15,12 +15,11 @@ module clb_tile
     parameter WESTMOST = 0, // boolean
     parameter ROW = 5, // the row index of the tile (this affects which switches CLB outputs are connected)
     parameter COLUMN = 3, // the column index of the tile (this affects which switches CLB outputs are connected)
-    // parameter for child module
-   // parameters from modules
+    // parameters for sub modules
     parameter CLBIN = 4,
     parameter CLBOUT = 4,
     parameter CARRY = 1, // bit-width of carry
-    // useful parameter
+    // useful parameters
     parameter CONF_SB = (WS+WD/2)*8,
     parameter CLBIN0H = (NORTHMOST || CLBIOTYPE == 1? 0: CLBIOTYPE == 2? CLBIN/4: CLBIN),
     parameter CLBIN1H = (CLBIOTYPE == 1? 0: CLBIOTYPE == 2? CLBIN/4: CLBIN),
