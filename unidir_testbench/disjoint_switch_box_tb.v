@@ -7,11 +7,16 @@ module disjoint_switch_box_tb;
    reg [W-1:0] ni, ei, si, wi;
    wire [W-1:0] no, eo, so, wo;
    reg [W*8-1:0] c;
+
+   reg 		 rst, cset;
    
    disjoint_switch_box
      #(.W(W))
    dut
      (
+      .clk(clk),
+      .rst(rst),
+      .cset(cset),
       .north_in(ni),
       .east_in(ei),
       .south_in(si),
@@ -28,6 +33,7 @@ module disjoint_switch_box_tb;
    generate 
       for(k = 0; k < W; k = k + 1) begin
 	 always @(posedge clk) begin
+	    #1;
 	    case(c[1+8*k:8*k])
 	      2'd0: if(no[k] != ei[k]) count = count + 1;
 	      2'd1: if(no[k] != si[k]) count = count + 1;
@@ -54,6 +60,8 @@ module disjoint_switch_box_tb;
    
    integer   i, j;
    initial begin
+      rst = 0;
+      cset  = 1;
       for(i = 0; i < 100; i = i + 1) begin
 	 @(negedge clk);
 	 ni = $random;

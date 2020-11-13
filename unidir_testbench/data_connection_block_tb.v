@@ -29,16 +29,16 @@ module data_connection_block_tb;
        )
    dut
      (
+      .clk(clk),
+      .rst(rst),
+      .cset(cset),
       .north_in(ni),
       .south_in(si),
       .north_out(no),
       .south_out(so),
       .data_input(data_input),
       .data_output(data_output),
-      .c(c),
-      .clk(clk),
-      .rst(rst),
-      .cset(cset)
+      .c(c)
       );
    
    integer   count = 0;
