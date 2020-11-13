@@ -3,15 +3,28 @@ module clb_switch_box
     // the number of pairs of in and out for single wires each side
     parameter WS = 8,
     // the number of pairs of in and out for double wires each side, must be multiple of 2.
-    parameter WD = 8
+    parameter WD = 8,
+    parameter CONF_WIDTH = (WS+WD/2)*8
     ) 
    (
+    input 		    clk,
+    input 		    rst,
+    input 		    cset,
+    
     input [WS-1:0] 	    north_single_in, east_single_in, south_single_in, west_single_in,
     output [WS-1:0] 	    north_single_out, east_single_out, south_single_out, west_single_out,
     input [WD-1:0] 	    north_double_in, east_double_in, south_double_in, west_double_in,
     output [WD-1:0] 	    north_double_out, east_double_out, south_double_out, west_double_out,
     input [(WS+WD/2)*8-1:0] c
     );
+
+   reg [CONF_WIDTH-1:0]     c_reg;
+   always @(posedge clk) begin
+      if (rst)
+	c_reg <= {CONF_WIDTH{1'b0}};
+      else if (cset)
+	c_reg <= c;
+   end
    
    universal_switch_box 
      #(
@@ -27,7 +40,7 @@ module clb_switch_box
       .east_out(east_single_out),
       .south_out(south_single_out),
       .west_out(west_single_out),
-      .c(c[WS*8-1:0])
+      .c(c_reg[WS*8-1:0])
       );
    
    universal_switch_box 
@@ -44,7 +57,7 @@ module clb_switch_box
       .east_out(east_double_out[WD-1:WD/2]),
       .south_out(south_double_out[WD-1:WD/2]),
       .west_out(west_double_out[WD/2-1:0]),
-      .c(c[(WS+WD/2)*8-1:WS*8])
+      .c(c_reg[(WS+WD/2)*8-1:WS*8])
       );
    
    genvar 		    i;

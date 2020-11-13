@@ -17,28 +17,40 @@ module connection_block
     parameter CLBX = 1, // toggle using direct connections between CLBs or not
     parameter SEL_PER_IN0 = $clog2((WS + WD) * 2 + WG + CLBX * CLBOUT1),
     parameter SEL_PER_IN1 = $clog2((WS + WD) * 2 + WG + CLBX * CLBOUT0),
-    parameter SEL_PER_OUT = $clog2(CLBOUT0+CLBOUT1+1)
+    parameter SEL_PER_OUT = $clog2(CLBOUT0+CLBOUT1+1),
+    parameter CONF_WIDTH = SEL_PER_OUT*2*(CLBOS+CLBOD)+SEL_PER_IN0*CLBIN0+SEL_PER_IN1*CLBIN1
     ) 
    (
-    input [WS-1:0]     single0_in, single1_in,
-    output [WS-1:0]    single0_out, single1_out,
-    input [WD-1:0]     double0_in, double1_in,
-    output [WD-1:0]    double0_out, double1_out,
-    input [WG-1:0]     global,
-    input [CLBOUT-1:0] clb0_output,
-    input [CLBOUT-1:0] clb1_output,
-    input [CARRY-1:0]  clb0_cout,
-    input [CARRY-1:0]  clb1_cout,
-    output [CLBIN-1:0] clb0_input,
-    output [CLBIN-1:0] clb1_input,
-    output [CARRY-1:0] clb0_cin,
-    output [CARRY-1:0] clb1_cin,
-    input [SEL_PER_OUT*2*(CLBOS+CLBOD)+SEL_PER_IN0*CLBIN0+SEL_PER_IN1*CLBIN1
-	   -1:0] 	       c
+    input 		   clk,
+    input 		   rst,
+    input 		   cset,
+    
+    input [WS-1:0] 	    single0_in, single1_in,
+    output [WS-1:0] 	    single0_out, single1_out,
+    input [WD-1:0] 	    double0_in, double1_in,
+    output [WD-1:0] 	    double0_out, double1_out,
+    input [WG-1:0] 	    global,
+    input [CLBOUT-1:0] 	    clb0_output,
+    input [CLBOUT-1:0] 	    clb1_output,
+    input [CARRY-1:0] 	    clb0_cout,
+    input [CARRY-1:0] 	    clb1_cout,
+    output [CLBIN-1:0] 	    clb0_input,
+    output [CLBIN-1:0] 	    clb1_input,
+    output [CARRY-1:0] 	    clb0_cin,
+    output [CARRY-1:0] 	    clb1_cin,
+    input [CONF_WIDTH -1:0] c
     );
 
    wire [WS-1:0] 	       single0, single1;
    wire [WD-1:0] 	       double0, double1;
+
+   reg [CONF_WIDTH-1:0]        c_reg;
+   always @(posedge clk) begin
+      if (rst)
+	c_reg <= {CONF_WIDTH{1'b0}};
+     else if (cset)
+       c_reg <= c;
+   end
    
    genvar 		       i, j;
 
@@ -71,13 +83,13 @@ module connection_block
 	    m0 (
 	       .out(single0[(i+CLBOS_BIAS_WIDTH)%WS]),
 	       .in({clb_output, single0_in[(i+CLBOS_BIAS_WIDTH)%WS]}),
-	       .sel(c[SEL_PER_OUT*((2*i)+1)-1:SEL_PER_OUT*(2*i)])
+	       .sel(c_reg[SEL_PER_OUT*((2*i)+1)-1:SEL_PER_OUT*(2*i)])
 	    );
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m1 (
 	       .out(single1[(i+CLBOS_BIAS_WIDTH)%WS]),
 	       .in({clb_output, single1_in[(i+CLBOS_BIAS_WIDTH)%WS]}),
-	       .sel(c[SEL_PER_OUT*((2*i+1)+1)-1:SEL_PER_OUT*(2*i+1)])
+	       .sel(c_reg[SEL_PER_OUT*((2*i+1)+1)-1:SEL_PER_OUT*(2*i+1)])
 	    );
 	 end
 	 for(i = CLBOS; i < WS; i = i + 1) begin
@@ -90,13 +102,13 @@ module connection_block
 	    m0 (
 		.out(double0[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
 		.in({clb_output, double0_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)]}),
-		.sel(c[BASE1+SEL_PER_OUT*((2*i)+1)-1:BASE1+SEL_PER_OUT*(2*i)])
+		.sel(c_reg[BASE1+SEL_PER_OUT*((2*i)+1)-1:BASE1+SEL_PER_OUT*(2*i)])
 		);
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m1 (
 		.out(double1[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
 		.in({clb_output, double1_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)]}),
-		.sel(c[BASE1+SEL_PER_OUT*((2*i+1)+1)-1:BASE1+SEL_PER_OUT*(2*i+1)])
+		.sel(c_reg[BASE1+SEL_PER_OUT*((2*i+1)+1)-1:BASE1+SEL_PER_OUT*(2*i+1)])
 		);
 	 end
 	 for(i = CLBOD; i < WD/2; i = i + 1) begin
@@ -128,7 +140,7 @@ module connection_block
 		 (
 		  .out(clb0_input[i]),
 		  .in({clb1_output[CLBOUT1-1:0], global, double1, double0, single1, single0}),
-		  .sel(c[BASE2+SEL_PER_IN0*(i+1)-1:BASE2+SEL_PER_IN0*i])
+		  .sel(c_reg[BASE2+SEL_PER_IN0*(i+1)-1:BASE2+SEL_PER_IN0*i])
 		  );
 	 end
       end // if (CLBX && CLBOUT1 != 0)
@@ -139,7 +151,7 @@ module connection_block
 		 (
 		  .out(clb0_input[i]),
 		  .in({global, double1, double0, single1, single0}),
-		  .sel(c[BASE2+SEL_PER_IN0*(i+1)-1:BASE2+SEL_PER_IN0*i])
+		  .sel(c_reg[BASE2+SEL_PER_IN0*(i+1)-1:BASE2+SEL_PER_IN0*i])
 		  );
 	 end
       end
@@ -154,7 +166,7 @@ module connection_block
 		 (
 		  .out(clb1_input[i]),
 		  .in({clb0_output[CLBOUT0-1:0], global, double1, double0, single1, single0}),
-		  .sel(c[BASE3+SEL_PER_IN1*(i+1)-1:BASE3+SEL_PER_IN1*i])
+		  .sel(c_reg[BASE3+SEL_PER_IN1*(i+1)-1:BASE3+SEL_PER_IN1*i])
 		  );
 	 end
       end // if (CLBX && CLBOUT0 != 0)
@@ -165,7 +177,7 @@ module connection_block
 		 (
 		  .out(clb1_input[i]),
 		  .in({global, double1, double0, single1, single0}),
-		  .sel(c[BASE3+SEL_PER_IN1*(i+1)-1:BASE3+SEL_PER_IN1*i])
+		  .sel(c_reg[BASE3+SEL_PER_IN1*(i+1)-1:BASE3+SEL_PER_IN1*i])
 		  );
 	 end
       end

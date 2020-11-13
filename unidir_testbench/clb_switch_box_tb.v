@@ -11,6 +11,8 @@ module clb_switch_box_tb;
    wire [WD-1:0] ndo, edo, sdo, wdo;
    reg [WS*8+WD/2*8-1:0] c;
 
+   reg 			 rst, cset;
+
    clb_switch_box
      #(
        .WS(WS),
@@ -18,6 +20,9 @@ module clb_switch_box_tb;
        )
    dut
      (
+      .clk(clk),
+      .rst(rst),
+      .cset(cset),
       .north_single_in(nsi),
       .east_single_in(esi),
       .south_single_in(ssi),
@@ -42,6 +47,7 @@ module clb_switch_box_tb;
    generate 
       for(k = 0; k < WS/2; k = k + 1) begin
 	 always @(posedge clk) begin
+	    #1;
 	    case(c[k*16+1:k*16+0])
 	      2'd0: if(nso[k*2+0] != esi[k*2+0]) count = count + 1;
 	      2'd1: if(nso[k*2+0] != ssi[k*2+0]) count = count + 1;
@@ -86,6 +92,7 @@ module clb_switch_box_tb;
       end
       if(WS%2) begin
 	 always @ (posedge clk) begin
+	    #1;
 	    case(c[1+8*(WS-1):8*(WS-1)])
 	      2'd0: if(nso[(WS-1)] != esi[(WS-1)]) count = count + 1;
 	      2'd1: if(nso[(WS-1)] != ssi[(WS-1)]) count = count + 1;
@@ -114,6 +121,7 @@ module clb_switch_box_tb;
    generate
       for(k = 0; k < WD/4; k = k + 1) begin
 	 always @(posedge clk) begin
+	    #1;
 	    case(c[BASE+k*16+1:BASE+k*16+0])
 	      2'd0: if(ndo[k*2+0] != edi[WD/2+k*2+0]) count = count + 1;
 	      2'd1: if(ndo[k*2+0] != sdi[WD/2+k*2+0]) count = count + 1;
@@ -158,6 +166,7 @@ module clb_switch_box_tb;
       end
       if(WD/2%2) begin
 	 always @ (posedge clk) begin
+	    #1;
 	    case(c[BASE+1+8*(WD/2-1):BASE+8*(WD/2-1)])
 	      2'd0: if(ndo[(WD/2-1)] != edi[(WD-1)]) count = count + 1;
 	      2'd1: if(ndo[(WD/2-1)] != sdi[(WD-1)]) count = count + 1;
@@ -183,6 +192,7 @@ module clb_switch_box_tb;
    endgenerate
 
    always @(posedge clk) begin
+      #1;
       if(ndo[WD-1:WD/2] != sdi[WD/2-1:0]) count = count + 1;
       if(edo[WD/2-1:0] != wdi[WD-1:WD/2]) count = count + 1;
       if(sdo[WD/2-1:0] != ndi[WD-1:WD/2]) count = count + 1;
@@ -191,6 +201,8 @@ module clb_switch_box_tb;
 
    integer   i, j;
    initial begin
+      rst = 0;
+      cset = 1;
       for(i = 0; i < 100; i = i + 1) begin
 	 @(negedge clk);
 	 nsi = $random;

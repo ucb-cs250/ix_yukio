@@ -18,6 +18,8 @@ module connection_block_tb;
    reg 				     clk = 0;
    always #10 clk = ~clk;
 
+   reg 				     rst, cset;
+
    localparam SEL_PER_OUT = $clog2(CLBOUT0+CLBOUT1+1);
    localparam SEL_PER_IN0 = $clog2((WS + WD) * 2 + WG + CLBX * CLBOUT1);
    localparam SEL_PER_IN1 = $clog2((WS + WD) * 2 + WG + CLBX * CLBOUT0);
@@ -60,6 +62,9 @@ module connection_block_tb;
        )
    dut
      (
+      .clk(clk),
+      .rst(rst),
+      .cset(cset),
       .single0_in(single0_in),
       .single1_in(single1_in),
       .double0_in(double0_in),
@@ -82,6 +87,7 @@ module connection_block_tb;
    
    integer   count = 0;
    always @(posedge clk) begin
+      #1;
       if(clb0_cout != clb1_cin) count = count + 1;
       if(clb1_cout != clb0_cin) count = count + 1;
    end
@@ -96,6 +102,8 @@ module connection_block_tb;
    
    integer   i, j, k, j_tmp, BASE, t;
    initial begin
+      rst = 0;
+      cset = 1;
       single0_in = $random;
       single1_in = $random;
       double0_in = $random;
@@ -111,6 +119,7 @@ module connection_block_tb;
       
       // output default
       @(posedge clk);
+      #1;
       if(single1_out != single0_in) count = count + 1;
       if(single0_out != single1_in) count = count + 1;
       if(double1_out != double0_in) count = count + 1;
@@ -137,18 +146,17 @@ module connection_block_tb;
 	       c[BASE+k] = j_tmp%2;
 	       j_tmp = j_tmp/2;
 	    end
-	    @(posedge clk);
+	    @(negedge clk);
 	    if(j == 0 && single1_out[(i+CLBOS_BIAS*CLBOS)%WS] != single0_in[(i+CLBOS_BIAS*CLBOS)%WS]) count = count + 1;
 	    if(j != 0 && single1_out[(i+CLBOS_BIAS*CLBOS)%WS] != clb_output_candidate[j-1]) count = count + 1;
 	    BASE = BASE + SEL_PER_OUT;
-	    @(negedge clk);
 	    j = $urandom % (OUT_CAND + 1);
 	    j_tmp = j;
 	    for(k = 0; k < SEL_PER_OUT; k = k + 1) begin
 	       c[BASE+k] = j_tmp%2;
 	       j_tmp = j_tmp/2;
 	    end
-	    @(posedge clk);
+	    @(negedge clk);
 	    if(j == 0 && single0_out[(i+CLBOS_BIAS*CLBOS)%WS] != single1_in[(i+CLBOS_BIAS*CLBOS)%WS]) count = count + 1;
 	    if(j != 0 && single0_out[(i+CLBOS_BIAS*CLBOS)%WS] != clb_output_candidate[j-1]) count = count + 1;
 	    BASE = BASE + SEL_PER_OUT;
@@ -165,18 +173,17 @@ module connection_block_tb;
 	       c[BASE+k] = j_tmp%2;
 	       j_tmp = j_tmp/2;
 	    end
-	    @(posedge clk);
+	    @(negedge clk);
 	    if(j == 0 && double1_out[(i+CLBOD_BIAS*CLBOD)%(WD/2)] != double0_in[(i+CLBOD_BIAS*CLBOD)%(WD/2)]) count = count + 1;
 	    if(j != 0 && double1_out[(i+CLBOD_BIAS*CLBOD)%(WD/2)] != clb_output_candidate[j-1]) count = count + 1;
 	    BASE = BASE + SEL_PER_OUT;
-	    @(negedge clk);
 	    j = $urandom % (OUT_CAND + 1);
 	    j_tmp = j;
 	    for(k = 0; k < SEL_PER_OUT; k = k + 1) begin
 	       c[BASE+k] = j_tmp%2;
 	       j_tmp = j_tmp/2;
 	    end
-	    @(posedge clk);
+	    @(negedge clk);
 	    if(j == 0 && double0_out[(i+CLBOD_BIAS*CLBOD)%(WD/2)] != double1_in[(i+CLBOD_BIAS*CLBOD)%(WD/2)]) count = count + 1;
 	    if(j != 0 && double0_out[(i+CLBOD_BIAS*CLBOD)%(WD/2)] != clb_output_candidate[j-1]) count = count + 1;
 	    BASE = BASE + SEL_PER_OUT;
@@ -199,7 +206,7 @@ module connection_block_tb;
 	       c[BASE+k] = j_tmp%2;
 	       j_tmp = j_tmp/2;
 	    end
-	    @(posedge clk);
+	    @(negedge clk);
 	    if(clb0_input[i] != clb0_input_candidate[j]) count = count + 1;
 	    BASE = BASE + SEL_PER_IN0;
 	 end // for (i = 0; i < CLBIN0; i = i + 1)
@@ -211,7 +218,7 @@ module connection_block_tb;
 	       c[BASE+k] = j_tmp%2;
 	       j_tmp = j_tmp/2;
 	    end
-	    @(posedge clk);
+	    @(negedge clk);
 	    if(clb1_input[i] != clb1_input_candidate[j]) count = count + 1;
 	    BASE = BASE + SEL_PER_IN1;
 	 end

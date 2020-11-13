@@ -6,6 +6,8 @@ module control_connection_block_tb;
    
    reg clk = 0;
    always #10 clk = ~clk;
+
+   reg rst, cset;
    
    reg [W-1:0] ei, wi;
    wire [W-1:0] eo, wo;
@@ -20,6 +22,9 @@ module control_connection_block_tb;
        )
    dut
      (
+      .clk(clk),
+      .rst(rst),
+      .cset(cset),
       .east_in(ei),
       .west_in(wi),
       .east_out(eo),
@@ -30,6 +35,7 @@ module control_connection_block_tb;
    
    integer   count = 0;
    always @(posedge clk) begin
+      #1;
       if(eo != wi) count = count + 1;
       if(wo != ei) count = count + 1;
    end
@@ -38,6 +44,8 @@ module control_connection_block_tb;
    
    integer   i, j, j_tmp, t, k, BASE;
    initial begin
+      rst = 0;
+      cset = 1;
       ei = 0;
       wi = 0;
       for(j = 0; j < SEL_PER_IN*CONTROLIN; j = j + 1) begin
@@ -57,6 +65,7 @@ module control_connection_block_tb;
 	       j_tmp = j_tmp/2;
 	    end
 	    @(posedge clk);
+	    #1;
 	    if(control_input[i] !== candidate[j]) count = count + 1;
 	    BASE = BASE + SEL_PER_IN;
 	 end

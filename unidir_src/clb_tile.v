@@ -59,21 +59,21 @@ module clb_tile
 
     input [WS-1:0] 	 south_single_in,
     input [WD-1:0] 	 south_double_in,
-    input [CLBOUT-1:0] 	 south_clb_output,
-    input [CARRY-1:0] 	 south_clb_cout, 
+    output [CLBOUT-1:0]  clb_output_south,
+    output [CARRY-1:0] 	 clb_cout_south,
     output [WS-1:0] 	 south_single_out,
     output [WD-1:0] 	 south_double_out,
-    output [CLBIN-1:0] 	 south_clb_input,
-    output [CARRY-1:0] 	 south_clb_cin,
+    input [CLBIN-1:0] 	 clb_input_south,
+    input [CARRY-1:0] 	 clb_cin_south,
 
     input [WS-1:0] 	 west_single_in,
     input [WD-1:0] 	 west_double_in,
-    input [CLBOUT-1:0] 	 west_clb_output,
-    input [CARRY-1:0] 	 west_clb_cout, 
+    output [CLBOUT-1:0]  clb_output_west,
+    output [CARRY-1:0] 	 clb_cout_west,
     output [WS-1:0] 	 west_single_out,
     output [WD-1:0] 	 west_double_out,
-    output [CLBIN-1:0] 	 west_clb_input,
-    output [CARRY-1:0] 	 west_clb_cin,
+    input [CLBIN-1:0] 	 clb_input_west,
+    input [CARRY-1:0] 	 clb_cin_west,
    
     input [WG-1:0] 	 horizontal_global,
     input [WG-1:0] 	 vertical_global,
@@ -85,7 +85,11 @@ module clb_tile
     input [2*CLBIN-1:0]  conf_io_type0,
     input [CLBIN-1:0] 	 conf_io_type1,
     input [2*CARRY-1:0]  conf_cin_type0,
-    input [CARRY-1:0]  conf_cin_type1
+    input [CARRY-1:0] 	 conf_cin_type1,
+
+    input 		 clk,
+    input 		 rst,
+    input 		 cset
     );
       
    // wires for switch box
@@ -102,19 +106,17 @@ module clb_tile
    wire [CLBIN-1:0]    clb_input;
    wire [CLBIN-1:0]    clb_input_north;
    wire [CLBIN-1:0]    clb_input_east;
-   wire [CLBIN-1:0]    clb_input_south;
-   wire [CLBIN-1:0]    clb_input_west;
    wire [CLBOUT-1:0]   clb_output;
    wire [CLBOUT-1:0]   clb_output_north;
    wire [CLBOUT-1:0]   clb_output_east;
-   wire [CLBOUT-1:0]   clb_output_south;
-   wire [CLBOUT-1:0]   clb_output_west;
    wire [CARRY-1:0]    clb_cin;
    wire [CARRY-1:0]    clb_cin_north;
    wire [CARRY-1:0]    clb_cin_east;
-   wire [CARRY-1:0]    clb_cin_south;
-   wire [CARRY-1:0]    clb_cin_west;
    wire [CARRY-1:0]    clb_cout;
+
+   assign clb_cout_south = clb_cout;
+   assign clb_cout_west = clb_cout;
+   
 
    genvar 	       l;
    
@@ -126,6 +128,9 @@ module clb_tile
        )
    sb
      (
+      .clk(clk),
+      .rst(rst),
+      .cset(cset),
       .north_single_in(north_single_in),
       .east_single_in(east_single_in),
       .south_single_in(switch_box_south_single_in),
@@ -273,6 +278,9 @@ module clb_tile
        .CLBX(CLBX)
        )
    hcb (
+	.clk(clk),
+	.rst(rst),
+	.cset(cset),
 	.single0_in(switch_box_west_single_out),
 	.single0_out(switch_box_west_single_in),
 	.single1_in(west_single_in),
@@ -314,6 +322,9 @@ module clb_tile
        .CLBX(CLBX)
        )
    vcb (
+	.clk(clk),
+	.rst(rst),
+	.cset(cset),
 	.single0_in(switch_box_south_single_out),
 	.single0_out(switch_box_south_single_in),
 	.single1_in(south_single_in),
