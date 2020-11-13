@@ -78,18 +78,20 @@ module connection_block
 	 if(CLBOUT0 != 0) assign clb_output[CLBOUT0-1:0] = clb0_output[CLBOUT0-1:0];
 	 if(CLBOUT1 != 0) assign clb_output[CLBOUT0+CLBOUT1-1:CLBOUT0] = clb1_output[CLBOUT1-1:0];
 	 
-	 for(i = 0; i < CLBOS; i = i + 1) begin : clb_output_single
+	 for(i = 0; i < CLBOS; i = i + 1) begin : clb_output_single0
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m0 (
 	       .out(single0[(i+CLBOS_BIAS_WIDTH)%WS]),
 	       .in({clb_output, single0_in[(i+CLBOS_BIAS_WIDTH)%WS]}),
-	       .sel(c_reg[SEL_PER_OUT*((2*i)+1)-1:SEL_PER_OUT*(2*i)])
+	       .sel(c_reg[SEL_PER_OUT*(i+1)-1:SEL_PER_OUT*i])
 	    );
+	 end
+	 for(i = 0; i < CLBOS; i = i + 1) begin : clb_output_single1
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m1 (
 	       .out(single1[(i+CLBOS_BIAS_WIDTH)%WS]),
 	       .in({clb_output, single1_in[(i+CLBOS_BIAS_WIDTH)%WS]}),
-	       .sel(c_reg[SEL_PER_OUT*((2*i+1)+1)-1:SEL_PER_OUT*(2*i+1)])
+	       .sel(c_reg[SEL_PER_OUT*CLBOS+SEL_PER_OUT*(i+1)-1:SEL_PER_OUT*CLBOS+SEL_PER_OUT*i])
 	    );
 	 end
 	 for(i = CLBOS; i < WS; i = i + 1) begin
@@ -97,18 +99,20 @@ module connection_block
 	    assign single1[(i+CLBOS_BIAS_WIDTH)%WS] = single1_in[(i+CLBOS_BIAS_WIDTH)%WS];
 	 end
 	 
-	 for(i = 0; i < CLBOD; i = i + 1) begin : clb_output_double
+	 for(i = 0; i < CLBOD; i = i + 1) begin : clb_output_double0
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m0 (
 		.out(double0[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
 		.in({clb_output, double0_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)]}),
-		.sel(c_reg[BASE1+SEL_PER_OUT*((2*i)+1)-1:BASE1+SEL_PER_OUT*(2*i)])
+		.sel(c_reg[BASE1+SEL_PER_OUT*(i+1)-1:BASE1+SEL_PER_OUT*i])
 		);
+	 end
+	 for(i = 0; i < CLBOD; i = i + 1) begin : clb_output_double1
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m1 (
 		.out(double1[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
 		.in({clb_output, double1_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)]}),
-		.sel(c_reg[BASE1+SEL_PER_OUT*((2*i+1)+1)-1:BASE1+SEL_PER_OUT*(2*i+1)])
+		.sel(c_reg[BASE1+SEL_PER_OUT*CLBOD+SEL_PER_OUT*(i+1)-1:BASE1+SEL_PER_OUT*CLBOD+SEL_PER_OUT*i])
 		);
 	 end
 	 for(i = CLBOD; i < WD/2; i = i + 1) begin

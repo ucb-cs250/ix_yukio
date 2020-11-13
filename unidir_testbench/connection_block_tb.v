@@ -150,6 +150,8 @@ module connection_block_tb;
 	    if(j == 0 && single1_out[(i+CLBOS_BIAS*CLBOS)%WS] != single0_in[(i+CLBOS_BIAS*CLBOS)%WS]) count = count + 1;
 	    if(j != 0 && single1_out[(i+CLBOS_BIAS*CLBOS)%WS] != clb_output_candidate[j-1]) count = count + 1;
 	    BASE = BASE + SEL_PER_OUT;
+	 end // for (i = 0; i < CLBOS; i = i + 1)
+	 for(i = 0; i < CLBOS; i = i + 1) begin
 	    j = $urandom % (OUT_CAND + 1);
 	    j_tmp = j;
 	    for(k = 0; k < SEL_PER_OUT; k = k + 1) begin
@@ -177,6 +179,8 @@ module connection_block_tb;
 	    if(j == 0 && double1_out[(i+CLBOD_BIAS*CLBOD)%(WD/2)] != double0_in[(i+CLBOD_BIAS*CLBOD)%(WD/2)]) count = count + 1;
 	    if(j != 0 && double1_out[(i+CLBOD_BIAS*CLBOD)%(WD/2)] != clb_output_candidate[j-1]) count = count + 1;
 	    BASE = BASE + SEL_PER_OUT;
+	 end // for (i = 0; i < CLBOD; i = i + 1)
+	 for(i = 0; i < CLBOD; i = i + 1) begin
 	    j = $urandom % (OUT_CAND + 1);
 	    j_tmp = j;
 	    for(k = 0; k < SEL_PER_OUT; k = k + 1) begin
