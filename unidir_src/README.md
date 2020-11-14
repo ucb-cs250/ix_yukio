@@ -45,7 +45,7 @@ The signals starting with "c" represent configuration bits.
  
  For data input/output for MAC/MEM.
  
- ![data_connection_block](https://user-images.githubusercontent.com/18373300/96966034-12aba700-1548-11eb-9e36-c9936c738c75.png)
+ ![data_connection_block_uni](https://user-images.githubusercontent.com/18373300/99134002-8cbedf80-265f-11eb-85cf-b24e993e7beb.png)
 
  - control_connection_block.v
  
