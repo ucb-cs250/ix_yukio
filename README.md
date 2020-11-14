@@ -3,6 +3,8 @@ Yukio's interconnect
 
 The modules are in src directory. There is a testbench for each module in testbench directory.
 
+The unidirectional version is in unidir_src directory. Its README is also in that directory.
+
 ## parameters
 ### parameters from modules
  - CLBIN ... number of input-bits to one CLB
