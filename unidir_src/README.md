@@ -45,27 +45,22 @@ The signals starting with "c" represent configuration bits.
  
  For data input/output for MAC/MEM.
  
- ![data_connection_block_uni](https://user-images.githubusercontent.com/18373300/99134002-8cbedf80-265f-11eb-85cf-b24e993e7beb.png)
+ ![data_connection_block_uni](https://user-images.githubusercontent.com/18373300/99138886-73299200-2677-11eb-88b4-f7dca1007719.png)
 
  - control_connection_block.v
  
  For control (address) input for MAC/MEM.
  
- ![control_connection_block](https://user-images.githubusercontent.com/18373300/96966636-1ab81680-1549-11eb-916d-e4433f3d66b9.png)
+ ![control_connection_block_uni](https://user-images.githubusercontent.com/18373300/99139044-b33d4480-2678-11eb-832d-8fbcd2425b0f.png)
 
  - io_block.v
  
- ![io_block](https://user-images.githubusercontent.com/18373300/96966388-abdabd80-1548-11eb-8a05-bddb7e26197c.png)
- 
  - data_io_block.v
- 
- ![data_io_block](https://user-images.githubusercontent.com/18373300/96966742-5bb02b00-1549-11eb-87e3-4a54d98da72f.png)
  
  - switch_box_connector.v
  
  Just connecting wires under modulus. Short circuit should not happen because the other end of wire can be 1'bz in switch boxes.
- 
- ![switch_box_connector v](https://user-images.githubusercontent.com/18373300/96971586-4a1e5180-1550-11eb-927b-afd4af3f2a82.png)
+
 
 ## parameters
 ### parameters from modules
