@@ -40,6 +40,9 @@ module data_connection_block_tb;
       .data_output(data_output),
       .c(c)
       );
+
+   wire [W*2-1:0] 		candidate = {si, ni};
+   
    
    integer   count = 0;
    
@@ -74,8 +77,7 @@ module data_connection_block_tb;
 		  k_tmp = k_tmp/2;
 	       end
 	       @(negedge clk);
-	       if(k%2 == 0 && data_input[j+i*WW] != ni[(k/2)*WW+j]) count = count + 1;
-	       if(k%2 && data_input[j+i*WW] != si[(k/2)*WW+j]) count = count + 1;
+	       if(data_input[j+i*WW] != candidate[k*WW+j]) count = count + 1;
 	       BASE = BASE + SEL_PER_IN;
 	    end
 	 end // for (i = 0; i < DATAIN; i = i + 1)
@@ -92,6 +94,8 @@ module data_connection_block_tb;
 	    if(k == 0 && no[i] != si[i]) count = count + 1;
 	    if(k != 0 && no[i] != data_output[i%WW+(k-1)*WW]) count = count + 1;
 	    BASE = BASE + SEL_PER_OUT;
+	 end // for (i = 0; i < W; i = i + 1)
+	 for(i = 0; i < W; i = i + 1) begin
 	    @(negedge clk);
 	    k = $urandom % (DATAOUT+1);
 	    k_tmp = k;

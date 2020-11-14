@@ -42,9 +42,11 @@ module data_connection_block
       for(i = 0; i < DATAIN; i = i + 1) begin : data_in
 	 for(j = 0; j < WW; j = j + 1) begin : bit_in
 	    wire [2*WN-1:0] candidates;
-	    for(k = 0; k < WN; k = k + 1) begin : mux_in
-	       assign candidates[2*k] = north_in[k*WW+j];
-	       assign candidates[2*k+1] = south_in[k*WW+j];
+	    for(k = 0; k < WN; k = k + 1) begin : mux_in_north
+	       assign candidates[k] = north_in[k*WW+j];
+	    end
+	    for(k = 0; k < WN; k = k + 1) begin : mux_in_south
+	       assign candidates[WN+k] = south_in[k*WW+j];
 	    end
 	    muxn #(.N(2*WN))
 	    m (
@@ -60,19 +62,20 @@ module data_connection_block
 	 for(i = 0; i < DATAOUT; i = i + 1) begin : mux_out
 	    assign candidates[i] = data_output[j+i*WW];
 	 end
-	 for(k = 0; k < WN; k = k + 1) begin : bit_out
+	 for(k = 0; k < WN; k = k + 1) begin : bit_out_north
 	    muxn #(.N(DATAOUT+1))
 	    mn (
 		.out(north_out[j+k*WW]),
 		.in({candidates, south_in[j+k*WW]}),
-		.sel(c_reg[BASE+SEL_PER_OUT*(2*j+2*k*WW+1)-1:BASE+SEL_PER_OUT*(2*j+2*k*WW)])
+		.sel(c_reg[BASE+SEL_PER_OUT*(j+k*WW+1)-1:BASE+SEL_PER_OUT*(j+k*WW)])
 		);
-	    
+	 end
+	 for(k = 0; k < WN; k = k + 1) begin : bit_out_south
 	    muxn #(.N(DATAOUT+1))
 	    ms (
 		.out(south_out[j+k*WW]),
 		.in({candidates, north_in[j+k*WW]}),
-		.sel(c_reg[BASE+SEL_PER_OUT*(2*j+1+2*k*WW+1)-1:BASE+SEL_PER_OUT*(2*j+1+2*k*WW)])
+		.sel(c_reg[BASE+SEL_PER_OUT*W+SEL_PER_OUT*(j+k*WW+1)-1:BASE+SEL_PER_OUT*W+SEL_PER_OUT*(j+k*WW)])
 		);
 	 end
       end
