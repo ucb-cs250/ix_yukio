@@ -96,9 +96,19 @@ module connection_block_tb;
    localparam IN1_CAND = (WS+WD)*2+WG+CLBX*CLBOUT0;
    localparam OUT_CAND = CLBOUT0+CLBOUT1;
 
-   wire [IN0_CAND-1:0] clb0_input_candidate = {clb1_output[CLBOUT1-1:0], global, double0_out, double1_out, single0_out, single1_out};
-   wire [IN1_CAND-1:0] clb1_input_candidate = {clb0_output[CLBOUT0-1:0], global, double0_out, double1_out, single0_out, single1_out};
+   wire [IN0_CAND-1:0] clb0_input_candidate;
+   wire [IN1_CAND-1:0] clb1_input_candidate;
    wire [OUT_CAND-1:0] clb_output_candidate = {clb1_output[CLBOUT1-1:0], clb0_output[CLBOUT0-1:0]};
+
+   generate
+      if(CLBX) begin
+	 assign clb0_input_candidate = {clb1_output[CLBOUT1-1:0], global, double0_out, double1_out, single0_out, single1_out};
+	 assign clb1_input_candidate = {clb0_output[CLBOUT0-1:0], global, double0_out, double1_out, single0_out, single1_out};
+      end else begin
+	 assign clb0_input_candidate = {clb1_output[CLBOUT1-1:0], global, double1_in, double0_in, single1_in, single0_in};
+	 assign clb1_input_candidate = {clb0_output[CLBOUT0-1:0], global, double1_in, double0_in, single1_in, single0_in};
+      end
+   endgenerate
    
    integer   i, j, k, j_tmp, BASE, t;
    initial begin

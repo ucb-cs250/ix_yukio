@@ -39,10 +39,7 @@ module connection_block
     output [CARRY-1:0] 	    clb0_cin,
     output [CARRY-1:0] 	    clb1_cin,
     input [CONF_WIDTH -1:0] c
-    );
-
-   wire [WS-1:0] 	       single0, single1;
-   wire [WD-1:0] 	       double0, double1;
+    );   
 
    reg [CONF_WIDTH-1:0]        c_reg;
    always @(posedge clk) begin
@@ -53,6 +50,23 @@ module connection_block
    end
    
    genvar 		       i, j;
+
+   wire [WS-1:0] 	       single0, single1;
+   wire [WD-1:0] 	       double0, double1;
+
+   generate
+      if(CLBX) begin
+	 assign single0 = single1_out;
+	 assign single1 = single0_out;
+	 assign double0 = double1_out;
+	 assign double1 = double0_out;
+      end else begin
+	 assign single0 = single0_in;
+	 assign single1 = single1_in;
+	 assign double0 = double0_in;
+	 assign double1 = double1_in;
+      end
+   endgenerate
 
    // carry
    assign clb1_cin = clb0_cout;
@@ -118,12 +132,12 @@ module connection_block
    generate
       if(CLBOUT0+CLBOUT1 == 0) begin
 	 for(i = 0; i < WS; i = i + 1) begin : single_in
-	    assign single0[i] = single0_in[i];
-	    assign single1[i] = single1_in[i];
+	    assign single1_out[i] = single0_in[i];
+	    assign single0_out[i] = single1_in[i];
 	 end
 	 for(i = 0; i < WD; i = i + 1) begin : double_in
-	    assign double0[i] = double0_in[i];
-	    assign double1[i] = double1_in[i];
+	    assign double1_out[i] = double0_in[i];
+	    assign double0_out[i] = double1_in[i];
 	 end
       end // if (CLBOUT0+CLBOUT1 == 0)
       else begin
@@ -134,7 +148,7 @@ module connection_block
 	 for(i = 0; i < CLBOS; i = i + 1) begin : clb_output_single0
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m0 (
-	       .out(single0[(i+CLBOS_BIAS_WIDTH)%WS]),
+	       .out(single1_out[(i+CLBOS_BIAS_WIDTH)%WS]),
 	       .in({clb_output, single0_in[(i+CLBOS_BIAS_WIDTH)%WS]}),
 	       .sel(c_reg[BASE2+SEL_PER_OUT*(i+1)-1:BASE2+SEL_PER_OUT*i])
 	    );
@@ -142,20 +156,20 @@ module connection_block
 	 for(i = 0; i < CLBOS; i = i + 1) begin : clb_output_single1
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m1 (
-	       .out(single1[(i+CLBOS_BIAS_WIDTH)%WS]),
+	       .out(single0_out[(i+CLBOS_BIAS_WIDTH)%WS]),
 	       .in({clb_output, single1_in[(i+CLBOS_BIAS_WIDTH)%WS]}),
 	       .sel(c_reg[BASE2+SEL_PER_OUT*CLBOS+SEL_PER_OUT*(i+1)-1:BASE2+SEL_PER_OUT*CLBOS+SEL_PER_OUT*i])
 	    );
 	 end
 	 for(i = CLBOS; i < WS; i = i + 1) begin
-	    assign single0[(i+CLBOS_BIAS_WIDTH)%WS] = single0_in[(i+CLBOS_BIAS_WIDTH)%WS];
-	    assign single1[(i+CLBOS_BIAS_WIDTH)%WS] = single1_in[(i+CLBOS_BIAS_WIDTH)%WS];
+	    assign single1_out[(i+CLBOS_BIAS_WIDTH)%WS] = single0_in[(i+CLBOS_BIAS_WIDTH)%WS];
+	    assign single0_out[(i+CLBOS_BIAS_WIDTH)%WS] = single1_in[(i+CLBOS_BIAS_WIDTH)%WS];
 	 end
 	 
 	 for(i = 0; i < CLBOD; i = i + 1) begin : clb_output_double0
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m0 (
-		.out(double0[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
+		.out(double1_out[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
 		.in({clb_output, double0_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)]}),
 		.sel(c_reg[BASE3+SEL_PER_OUT*(i+1)-1:BASE3+SEL_PER_OUT*i])
 		);
@@ -163,28 +177,20 @@ module connection_block
 	 for(i = 0; i < CLBOD; i = i + 1) begin : clb_output_double1
 	    muxn #(.N(CLBOUT0+CLBOUT1+1))
 	    m1 (
-		.out(double1[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
+		.out(double0_out[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
 		.in({clb_output, double1_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)]}),
 		.sel(c_reg[BASE3+SEL_PER_OUT*CLBOD+SEL_PER_OUT*(i+1)-1:BASE3+SEL_PER_OUT*CLBOD+SEL_PER_OUT*i])
 		);
 	 end
 	 for(i = CLBOD; i < WD/2; i = i + 1) begin
-	    assign double0[(i+CLBOD_BIAS_WIDTH)%(WD/2)] = double0_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)];
-	    assign double1[(i+CLBOD_BIAS_WIDTH)%(WD/2)] = double1_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)];
+	    assign double1_out[(i+CLBOD_BIAS_WIDTH)%(WD/2)] = double0_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)];
+	    assign double0_out[(i+CLBOD_BIAS_WIDTH)%(WD/2)] = double1_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)];
 	 end
 	 for(i = WD/2; i < WD; i = i + 1) begin : double_in
-	    assign double0[i] = double0_in[i];
-	    assign double1[i] = double1_in[i];
+	    assign double1_out[i] = double0_in[i];
+	    assign double0_out[i] = double1_in[i];
 	 end
       end // else: !if(CLBOUT0+CLBOUT1 == 0)
-      for(i = 0; i < WS; i = i + 1) begin : single_out
-	 assign single0_out[i] = single1[i];
-	 assign single1_out[i] = single0[i];
-      end
-      for(i = 0; i < WD; i = i + 1) begin : double_out
-	 assign double0_out[i] = double1[i];
-	 assign double1_out[i] = double0[i];
-      end
    endgenerate
    
 endmodule
