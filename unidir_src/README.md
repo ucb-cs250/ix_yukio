@@ -37,9 +37,17 @@ The signals starting with "c" represent configuration bits.
  
  - connection_block.v
  
- The number of inputs of CLB is CLBIN, but only first  CLBIN0(CLBIN1) bits are connected to the tracks. When CLBX, a boolean parameter, is 1, there are direct connections (CLB's outputs are connected to the MUX of the other CLB's each input). For each direction, CLBOS single-tracks are the outputs of MUXs selecting from the input track and the CLBs' outputs, while the other tracks are just the input tracks. The same for the first half of the double-tracks, the latter half are always directly used (because half of double-tracks should go thorough a connection block without updated). The tracks where the MUXs with CLBs' outputs are placed are shifted by CLBOS\*CLBOS_BIAS%WS for single-tracks, CLBOD\*CLBOD_BIAS%(WD/2) for double-tracks. To change the tracks to be updated in another connectoin block, CLBOS_BIAS should be incremented by 1 after each connection block, and CLBOB_BIAS by 1 after every two connection blocks (remember double-tracks are swapped in switch box).
+   - When CLBX is 0 (no direct connection)
+   
+   The number of inputs of CLB is CLBIN, but only first  CLBIN0(CLBIN1) bits are connected to the tracks. For each direction, CLBOS single-tracks are the outputs of MUXs selecting from the input track and the CLBs' outputs, while the other tracks are just the input tracks. The same for the first half of the double-tracks, the latter half are always directly used (because half of double-tracks should go thorough a connection block without updated). The tracks where the MUXs with CLBs' outputs are placed are shifted by CLBOS\*CLBOS_BIAS%WS for single-tracks, CLBOD\*CLBOD_BIAS%(WD/2) for double-tracks. To change the tracks to be updated in another connectoin block, CLBOS_BIAS should be incremented by 1 after each connection block, and CLBOB_BIAS by 1 after every two connection blocks (remember double-tracks are swapped in switch box).
+   
+   ![connection_block_uni_clbx0](https://user-images.githubusercontent.com/18373300/99216238-84f66b00-2818-11eb-873d-8a4970521a30.png)
  
- ![connection_block_uni](https://user-images.githubusercontent.com/18373300/99128134-655f1700-264d-11eb-9bd5-ea04d06f6bbf.png)
+   - When CLBX is 1 (use direct connections)
+   
+    CLBX, a boolean parameter, enables direct connections (CLB's outputs are connected to the MUX of the other CLB's each input). In this case, we don't use tracks to pass the output of a CLB to the other CLB. So, the places of MUXs to update the values of tracks are moved to the other side, and the MUXs for the inputs of the CLBs select from the original tracks instead of the outputs of the MUXs.
+    
+    ![connection_block_uni_clbx1](https://user-images.githubusercontent.com/18373300/99215980-d94d1b00-2817-11eb-8897-0b15f50ceafb.png)
 
  - data_connection_block.v
  
