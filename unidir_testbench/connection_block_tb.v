@@ -136,8 +136,34 @@ module connection_block_tb;
 	 clb0_cout = $random;
 	 clb1_cout = $random;
 
-	 // output mux
 	 BASE = 0;
+	 // input
+	 for(i = 0; i < CLBIN0; i = i + 1) begin
+	    @(negedge clk);
+	    j = $urandom % IN0_CAND;
+	    j_tmp = j;
+	    for(k = 0; k < SEL_PER_IN0; k = k + 1) begin
+	       c[BASE+k] = j_tmp%2;
+	       j_tmp = j_tmp/2;
+	    end
+	    @(negedge clk);
+	    if(clb0_input[i] != clb0_input_candidate[j]) count = count + 1;
+	    BASE = BASE + SEL_PER_IN0;
+	 end // for (i = 0; i < CLBIN0; i = i + 1)
+	 for(i = 0; i < CLBIN1; i = i + 1) begin
+	    @(negedge clk);
+	    j = $urandom % IN1_CAND;
+	    j_tmp = j;
+	    for(k = 0; k < SEL_PER_IN1; k = k + 1) begin
+	       c[BASE+k] = j_tmp%2;
+	       j_tmp = j_tmp/2;
+	    end
+	    @(negedge clk);
+	    if(clb1_input[i] != clb1_input_candidate[j]) count = count + 1;
+	    BASE = BASE + SEL_PER_IN1;
+	 end
+
+	 // output mux
 	 for(i = 0; i < CLBOS; i = i + 1) begin
 	    @(negedge clk);
 	    j = $urandom % (OUT_CAND + 1);
@@ -199,32 +225,6 @@ module connection_block_tb;
 	 for(i = WD/2; i < WD; i = i + 1) begin
 	    if(double1_out[i] != double0_in[i]) count = count + 1;	    
 	    if(double0_out[i] != double1_in[i]) count = count + 1;
-	 end
-	 
-	 // input
-	 for(i = 0; i < CLBIN0; i = i + 1) begin
-	    @(negedge clk);
-	    j = $urandom % IN0_CAND;
-	    j_tmp = j;
-	    for(k = 0; k < SEL_PER_IN0; k = k + 1) begin
-	       c[BASE+k] = j_tmp%2;
-	       j_tmp = j_tmp/2;
-	    end
-	    @(negedge clk);
-	    if(clb0_input[i] != clb0_input_candidate[j]) count = count + 1;
-	    BASE = BASE + SEL_PER_IN0;
-	 end // for (i = 0; i < CLBIN0; i = i + 1)
-	 for(i = 0; i < CLBIN1; i = i + 1) begin
-	    @(negedge clk);
-	    j = $urandom % IN1_CAND;
-	    j_tmp = j;
-	    for(k = 0; k < SEL_PER_IN1; k = k + 1) begin
-	       c[BASE+k] = j_tmp%2;
-	       j_tmp = j_tmp/2;
-	    end
-	    @(negedge clk);
-	    if(clb1_input[i] != clb1_input_candidate[j]) count = count + 1;
-	    BASE = BASE + SEL_PER_IN1;
 	 end
       end
       
