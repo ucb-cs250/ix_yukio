@@ -1,0 +1,25 @@
+OpenROAD 0.9.0 e582f2522b
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of this program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/merged_unpadded.lef
+Notice 0:     Created 11 technology layers
+Notice 0:     Created 25 technology vias
+Notice 0:     Created 437 library cells
+Notice 0: Finished LEF file:  /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/merged_unpadded.lef
+Notice 0: 
+Reading DEF file: /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/floorplan/ioPlacer.def
+Notice 0: Design: clb_tile
+Notice 0:     Created 638 pins.
+Notice 0:     Created 4085 components and 21680 component-terminals.
+Notice 0:     Created 4574 nets and 13450 connections.
+Notice 0: Finished DEF file: /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/floorplan/ioPlacer.def
+Running tapcell...
+Step 1: Cut rows...
+[INFO] Macro blocks found: 0
+[INFO] #Original rows: 155
+[INFO] #Cut rows: 0
+Step 2: Insert endcaps...
+[INFO] #Endcaps inserted: 310
+Step 3: Insert tapcells...
+[INFO] #Tapcells inserted: 2353
+Running tapcell... Done!

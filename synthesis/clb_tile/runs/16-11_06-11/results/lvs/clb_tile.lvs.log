@@ -1,0 +1,1451 @@
+
+Cell sky130_fd_sc_hd__or2_4 disconnected node: A
+Cell sky130_fd_sc_hd__or2_4 disconnected node: B
+Cell sky130_fd_sc_hd__or2_4 disconnected node: X
+Cell sky130_fd_sc_hd__or2_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__or2_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__or2_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__or2_4          |Circuit 2: sky130_fd_sc_hd__or2_4          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__or2_4 and sky130_fd_sc_hd__or2_4 are equivalent.
+
+Cell sky130_fd_sc_hd__tapvpwrvgnd_1 disconnected node: VGND
+Cell sky130_fd_sc_hd__tapvpwrvgnd_1 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__tapvpwrvgnd_1 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__tapvpwrvgnd_1  |Circuit 2: sky130_fd_sc_hd__tapvpwrvgnd_1  
+-------------------------------------------|-------------------------------------------
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__tapvpwrvgnd_1 and sky130_fd_sc_hd__tapvpwrvgnd_1 are equivalent.
+
+Cell sky130_fd_sc_hd__and2_4 disconnected node: A
+Cell sky130_fd_sc_hd__and2_4 disconnected node: B
+Cell sky130_fd_sc_hd__and2_4 disconnected node: X
+Cell sky130_fd_sc_hd__and2_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__and2_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__and2_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__and2_4         |Circuit 2: sky130_fd_sc_hd__and2_4         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__and2_4 and sky130_fd_sc_hd__and2_4 are equivalent.
+
+Cell sky130_fd_sc_hd__nor2_4 disconnected node: A
+Cell sky130_fd_sc_hd__nor2_4 disconnected node: B
+Cell sky130_fd_sc_hd__nor2_4 disconnected node: Y
+Cell sky130_fd_sc_hd__nor2_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__nor2_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__nor2_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__nor2_4         |Circuit 2: sky130_fd_sc_hd__nor2_4         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__nor2_4 and sky130_fd_sc_hd__nor2_4 are equivalent.
+
+Cell sky130_fd_sc_hd__or3_4 disconnected node: A
+Cell sky130_fd_sc_hd__or3_4 disconnected node: B
+Cell sky130_fd_sc_hd__or3_4 disconnected node: C
+Cell sky130_fd_sc_hd__or3_4 disconnected node: X
+Cell sky130_fd_sc_hd__or3_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__or3_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__or3_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__or3_4          |Circuit 2: sky130_fd_sc_hd__or3_4          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__or3_4 and sky130_fd_sc_hd__or3_4 are equivalent.
+
+Cell sky130_fd_sc_hd__buf_1 disconnected node: A
+Cell sky130_fd_sc_hd__buf_1 disconnected node: X
+Cell sky130_fd_sc_hd__buf_1 disconnected node: VGND
+Cell sky130_fd_sc_hd__buf_1 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__buf_1 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__buf_1          |Circuit 2: sky130_fd_sc_hd__buf_1          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__buf_1 and sky130_fd_sc_hd__buf_1 are equivalent.
+
+Cell sky130_fd_sc_hd__and4_4 disconnected node: A
+Cell sky130_fd_sc_hd__and4_4 disconnected node: B
+Cell sky130_fd_sc_hd__and4_4 disconnected node: C
+Cell sky130_fd_sc_hd__and4_4 disconnected node: D
+Cell sky130_fd_sc_hd__and4_4 disconnected node: X
+Cell sky130_fd_sc_hd__and4_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__and4_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__and4_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__and4_4         |Circuit 2: sky130_fd_sc_hd__and4_4         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+D                                          |D                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__and4_4 and sky130_fd_sc_hd__and4_4 are equivalent.
+
+Cell sky130_fd_sc_hd__a32oi_4 disconnected node: A1
+Cell sky130_fd_sc_hd__a32oi_4 disconnected node: A2
+Cell sky130_fd_sc_hd__a32oi_4 disconnected node: A3
+Cell sky130_fd_sc_hd__a32oi_4 disconnected node: B1
+Cell sky130_fd_sc_hd__a32oi_4 disconnected node: B2
+Cell sky130_fd_sc_hd__a32oi_4 disconnected node: Y
+Cell sky130_fd_sc_hd__a32oi_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__a32oi_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__a32oi_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__a32oi_4        |Circuit 2: sky130_fd_sc_hd__a32oi_4        
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+A3                                         |A3                                         
+B1                                         |B1                                         
+B2                                         |B2                                         
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__a32oi_4 and sky130_fd_sc_hd__a32oi_4 are equivalent.
+
+Cell sky130_fd_sc_hd__a211o_4 disconnected node: A1
+Cell sky130_fd_sc_hd__a211o_4 disconnected node: A2
+Cell sky130_fd_sc_hd__a211o_4 disconnected node: B1
+Cell sky130_fd_sc_hd__a211o_4 disconnected node: C1
+Cell sky130_fd_sc_hd__a211o_4 disconnected node: X
+Cell sky130_fd_sc_hd__a211o_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__a211o_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__a211o_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__a211o_4        |Circuit 2: sky130_fd_sc_hd__a211o_4        
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+C1                                         |C1                                         
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__a211o_4 and sky130_fd_sc_hd__a211o_4 are equivalent.
+
+Cell sky130_fd_sc_hd__nor4_4 disconnected node: A
+Cell sky130_fd_sc_hd__nor4_4 disconnected node: B
+Cell sky130_fd_sc_hd__nor4_4 disconnected node: C
+Cell sky130_fd_sc_hd__nor4_4 disconnected node: D
+Cell sky130_fd_sc_hd__nor4_4 disconnected node: Y
+Cell sky130_fd_sc_hd__nor4_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__nor4_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__nor4_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__nor4_4         |Circuit 2: sky130_fd_sc_hd__nor4_4         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+D                                          |D                                          
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__nor4_4 and sky130_fd_sc_hd__nor4_4 are equivalent.
+
+Cell sky130_fd_sc_hd__a21o_4 disconnected node: A1
+Cell sky130_fd_sc_hd__a21o_4 disconnected node: A2
+Cell sky130_fd_sc_hd__a21o_4 disconnected node: B1
+Cell sky130_fd_sc_hd__a21o_4 disconnected node: X
+Cell sky130_fd_sc_hd__a21o_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__a21o_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__a21o_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__a21o_4         |Circuit 2: sky130_fd_sc_hd__a21o_4         
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__a21o_4 and sky130_fd_sc_hd__a21o_4 are equivalent.
+
+Cell sky130_fd_sc_hd__o21ai_4 disconnected node: A1
+Cell sky130_fd_sc_hd__o21ai_4 disconnected node: A2
+Cell sky130_fd_sc_hd__o21ai_4 disconnected node: B1
+Cell sky130_fd_sc_hd__o21ai_4 disconnected node: Y
+Cell sky130_fd_sc_hd__o21ai_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__o21ai_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__o21ai_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__o21ai_4        |Circuit 2: sky130_fd_sc_hd__o21ai_4        
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__o21ai_4 and sky130_fd_sc_hd__o21ai_4 are equivalent.
+
+Cell sky130_fd_sc_hd__dfxtp_4 disconnected node: D
+Cell sky130_fd_sc_hd__dfxtp_4 disconnected node: Q
+Cell sky130_fd_sc_hd__dfxtp_4 disconnected node: CLK
+Cell sky130_fd_sc_hd__dfxtp_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__dfxtp_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__dfxtp_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__dfxtp_4        |Circuit 2: sky130_fd_sc_hd__dfxtp_4        
+-------------------------------------------|-------------------------------------------
+D                                          |D                                          
+Q                                          |Q                                          
+CLK                                        |CLK                                        
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__dfxtp_4 and sky130_fd_sc_hd__dfxtp_4 are equivalent.
+
+Cell sky130_fd_sc_hd__a21oi_4 disconnected node: A1
+Cell sky130_fd_sc_hd__a21oi_4 disconnected node: A2
+Cell sky130_fd_sc_hd__a21oi_4 disconnected node: B1
+Cell sky130_fd_sc_hd__a21oi_4 disconnected node: Y
+Cell sky130_fd_sc_hd__a21oi_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__a21oi_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__a21oi_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__a21oi_4        |Circuit 2: sky130_fd_sc_hd__a21oi_4        
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__a21oi_4 and sky130_fd_sc_hd__a21oi_4 are equivalent.
+
+Cell sky130_fd_sc_hd__clkbuf_1 disconnected node: A
+Cell sky130_fd_sc_hd__clkbuf_1 disconnected node: X
+Cell sky130_fd_sc_hd__clkbuf_1 disconnected node: VGND
+Cell sky130_fd_sc_hd__clkbuf_1 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkbuf_1 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__clkbuf_1       |Circuit 2: sky130_fd_sc_hd__clkbuf_1       
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__clkbuf_1 and sky130_fd_sc_hd__clkbuf_1 are equivalent.
+
+Cell sky130_fd_sc_hd__inv_8 disconnected node: A
+Cell sky130_fd_sc_hd__inv_8 disconnected node: Y
+Cell sky130_fd_sc_hd__inv_8 disconnected node: VGND
+Cell sky130_fd_sc_hd__inv_8 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__inv_8 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__inv_8          |Circuit 2: sky130_fd_sc_hd__inv_8          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__inv_8 and sky130_fd_sc_hd__inv_8 are equivalent.
+
+Cell sky130_fd_sc_hd__and3_4 disconnected node: A
+Cell sky130_fd_sc_hd__and3_4 disconnected node: B
+Cell sky130_fd_sc_hd__and3_4 disconnected node: C
+Cell sky130_fd_sc_hd__and3_4 disconnected node: X
+Cell sky130_fd_sc_hd__and3_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__and3_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__and3_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__and3_4         |Circuit 2: sky130_fd_sc_hd__and3_4         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__and3_4 and sky130_fd_sc_hd__and3_4 are equivalent.
+
+Cell sky130_fd_sc_hd__or4_4 disconnected node: A
+Cell sky130_fd_sc_hd__or4_4 disconnected node: B
+Cell sky130_fd_sc_hd__or4_4 disconnected node: C
+Cell sky130_fd_sc_hd__or4_4 disconnected node: D
+Cell sky130_fd_sc_hd__or4_4 disconnected node: X
+Cell sky130_fd_sc_hd__or4_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__or4_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__or4_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__or4_4          |Circuit 2: sky130_fd_sc_hd__or4_4          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+D                                          |D                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__or4_4 and sky130_fd_sc_hd__or4_4 are equivalent.
+
+Cell sky130_fd_sc_hd__o21a_4 disconnected node: A1
+Cell sky130_fd_sc_hd__o21a_4 disconnected node: A2
+Cell sky130_fd_sc_hd__o21a_4 disconnected node: B1
+Cell sky130_fd_sc_hd__o21a_4 disconnected node: X
+Cell sky130_fd_sc_hd__o21a_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__o21a_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__o21a_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__o21a_4         |Circuit 2: sky130_fd_sc_hd__o21a_4         
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__o21a_4 and sky130_fd_sc_hd__o21a_4 are equivalent.
+
+Cell sky130_fd_sc_hd__conb_1 disconnected node: HI
+Cell sky130_fd_sc_hd__conb_1 disconnected node: LO
+Cell sky130_fd_sc_hd__conb_1 disconnected node: VGND
+Cell sky130_fd_sc_hd__conb_1 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__conb_1 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__conb_1         |Circuit 2: sky130_fd_sc_hd__conb_1         
+-------------------------------------------|-------------------------------------------
+LO                                         |LO                                         
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__conb_1 and sky130_fd_sc_hd__conb_1 are equivalent.
+
+Cell sky130_fd_sc_hd__nand2_4 disconnected node: A
+Cell sky130_fd_sc_hd__nand2_4 disconnected node: B
+Cell sky130_fd_sc_hd__nand2_4 disconnected node: Y
+Cell sky130_fd_sc_hd__nand2_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__nand2_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__nand2_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__nand2_4        |Circuit 2: sky130_fd_sc_hd__nand2_4        
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__nand2_4 and sky130_fd_sc_hd__nand2_4 are equivalent.
+
+Cell sky130_fd_sc_hd__diode_2 disconnected node: DIODE
+Cell sky130_fd_sc_hd__diode_2 disconnected node: VGND
+Cell sky130_fd_sc_hd__diode_2 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__diode_2 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__diode_2        |Circuit 2: sky130_fd_sc_hd__diode_2        
+-------------------------------------------|-------------------------------------------
+DIODE                                      |DIODE                                      
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__diode_2 and sky130_fd_sc_hd__diode_2 are equivalent.
+
+Cell sky130_fd_sc_hd__a32o_4 disconnected node: A1
+Cell sky130_fd_sc_hd__a32o_4 disconnected node: A2
+Cell sky130_fd_sc_hd__a32o_4 disconnected node: A3
+Cell sky130_fd_sc_hd__a32o_4 disconnected node: B1
+Cell sky130_fd_sc_hd__a32o_4 disconnected node: B2
+Cell sky130_fd_sc_hd__a32o_4 disconnected node: X
+Cell sky130_fd_sc_hd__a32o_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__a32o_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__a32o_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__a32o_4         |Circuit 2: sky130_fd_sc_hd__a32o_4         
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+A3                                         |A3                                         
+B1                                         |B1                                         
+B2                                         |B2                                         
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__a32o_4 and sky130_fd_sc_hd__a32o_4 are equivalent.
+
+Cell sky130_fd_sc_hd__o22a_4 disconnected node: A1
+Cell sky130_fd_sc_hd__o22a_4 disconnected node: A2
+Cell sky130_fd_sc_hd__o22a_4 disconnected node: B1
+Cell sky130_fd_sc_hd__o22a_4 disconnected node: B2
+Cell sky130_fd_sc_hd__o22a_4 disconnected node: X
+Cell sky130_fd_sc_hd__o22a_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__o22a_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__o22a_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__o22a_4         |Circuit 2: sky130_fd_sc_hd__o22a_4         
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+B2                                         |B2                                         
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__o22a_4 and sky130_fd_sc_hd__o22a_4 are equivalent.
+
+Cell sky130_fd_sc_hd__buf_2 disconnected node: A
+Cell sky130_fd_sc_hd__buf_2 disconnected node: X
+Cell sky130_fd_sc_hd__buf_2 disconnected node: VGND
+Cell sky130_fd_sc_hd__buf_2 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__buf_2 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__buf_2          |Circuit 2: sky130_fd_sc_hd__buf_2          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__buf_2 and sky130_fd_sc_hd__buf_2 are equivalent.
+
+Cell sky130_fd_sc_hd__o32a_4 disconnected node: A1
+Cell sky130_fd_sc_hd__o32a_4 disconnected node: A2
+Cell sky130_fd_sc_hd__o32a_4 disconnected node: A3
+Cell sky130_fd_sc_hd__o32a_4 disconnected node: B1
+Cell sky130_fd_sc_hd__o32a_4 disconnected node: B2
+Cell sky130_fd_sc_hd__o32a_4 disconnected node: X
+Cell sky130_fd_sc_hd__o32a_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__o32a_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__o32a_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__o32a_4         |Circuit 2: sky130_fd_sc_hd__o32a_4         
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+A3                                         |A3                                         
+B1                                         |B1                                         
+B2                                         |B2                                         
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__o32a_4 and sky130_fd_sc_hd__o32a_4 are equivalent.
+
+Cell sky130_fd_sc_hd__buf_8 disconnected node: A
+Cell sky130_fd_sc_hd__buf_8 disconnected node: X
+Cell sky130_fd_sc_hd__buf_8 disconnected node: VGND
+Cell sky130_fd_sc_hd__buf_8 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__buf_8 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__buf_8          |Circuit 2: sky130_fd_sc_hd__buf_8          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__buf_8 and sky130_fd_sc_hd__buf_8 are equivalent.
+
+Cell sky130_fd_sc_hd__clkbuf_16 disconnected node: A
+Cell sky130_fd_sc_hd__clkbuf_16 disconnected node: X
+Cell sky130_fd_sc_hd__clkbuf_16 disconnected node: VGND
+Cell sky130_fd_sc_hd__clkbuf_16 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__clkbuf_16 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__clkbuf_16      |Circuit 2: sky130_fd_sc_hd__clkbuf_16      
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__clkbuf_16 and sky130_fd_sc_hd__clkbuf_16 are equivalent.
+
+Cell sky130_fd_sc_hd__nor3_4 disconnected node: A
+Cell sky130_fd_sc_hd__nor3_4 disconnected node: B
+Cell sky130_fd_sc_hd__nor3_4 disconnected node: C
+Cell sky130_fd_sc_hd__nor3_4 disconnected node: Y
+Cell sky130_fd_sc_hd__nor3_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__nor3_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__nor3_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__nor3_4         |Circuit 2: sky130_fd_sc_hd__nor3_4         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__nor3_4 and sky130_fd_sc_hd__nor3_4 are equivalent.
+
+Cell sky130_fd_sc_hd__a21boi_4 disconnected node: A1
+Cell sky130_fd_sc_hd__a21boi_4 disconnected node: A2
+Cell sky130_fd_sc_hd__a21boi_4 disconnected node: B1_N
+Cell sky130_fd_sc_hd__a21boi_4 disconnected node: Y
+Cell sky130_fd_sc_hd__a21boi_4 disconnected node: VGND
+Cell sky130_fd_sc_hd__a21boi_4 disconnected node: VPWR
+Warning: Equate pins:  cell sky130_fd_sc_hd__a21boi_4 has no definition, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_sc_hd__a21boi_4       |Circuit 2: sky130_fd_sc_hd__a21boi_4       
+-------------------------------------------|-------------------------------------------
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1_N                                       |B1_N                                       
+Y                                          |Y                                          
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__a21boi_4 and sky130_fd_sc_hd__a21boi_4 are equivalent.
+
+Cell clb_tile disconnected node: clb_cin_west
+Cell clb_tile disconnected node: clb_input_south[10]
+Cell clb_tile disconnected node: clb_input_south[11]
+Cell clb_tile disconnected node: clb_input_south[12]
+Cell clb_tile disconnected node: clb_input_south[13]
+Cell clb_tile disconnected node: clb_input_south[14]
+Cell clb_tile disconnected node: clb_input_south[15]
+Cell clb_tile disconnected node: clb_input_south[16]
+Cell clb_tile disconnected node: clb_input_south[17]
+Cell clb_tile disconnected node: clb_input_south[18]
+Cell clb_tile disconnected node: clb_input_south[19]
+Cell clb_tile disconnected node: clb_input_south[20]
+Cell clb_tile disconnected node: clb_input_south[21]
+Cell clb_tile disconnected node: clb_input_south[22]
+Cell clb_tile disconnected node: clb_input_south[23]
+Cell clb_tile disconnected node: clb_input_south[24]
+Cell clb_tile disconnected node: clb_input_south[25]
+Cell clb_tile disconnected node: clb_input_south[26]
+Cell clb_tile disconnected node: clb_input_south[27]
+Cell clb_tile disconnected node: clb_input_south[28]
+Cell clb_tile disconnected node: clb_input_south[29]
+Cell clb_tile disconnected node: clb_input_south[30]
+Cell clb_tile disconnected node: clb_input_south[31]
+Cell clb_tile disconnected node: clb_input_south[8]
+Cell clb_tile disconnected node: clb_input_south[9]
+Cell clb_tile disconnected node: clb_input_west[10]
+Cell clb_tile disconnected node: clb_input_west[11]
+Cell clb_tile disconnected node: clb_input_west[12]
+Cell clb_tile disconnected node: clb_input_west[13]
+Cell clb_tile disconnected node: clb_input_west[14]
+Cell clb_tile disconnected node: clb_input_west[15]
+Cell clb_tile disconnected node: clb_input_west[16]
+Cell clb_tile disconnected node: clb_input_west[17]
+Cell clb_tile disconnected node: clb_input_west[18]
+Cell clb_tile disconnected node: clb_input_west[19]
+Cell clb_tile disconnected node: clb_input_west[20]
+Cell clb_tile disconnected node: clb_input_west[21]
+Cell clb_tile disconnected node: clb_input_west[22]
+Cell clb_tile disconnected node: clb_input_west[23]
+Cell clb_tile disconnected node: clb_input_west[24]
+Cell clb_tile disconnected node: clb_input_west[25]
+Cell clb_tile disconnected node: clb_input_west[26]
+Cell clb_tile disconnected node: clb_input_west[27]
+Cell clb_tile disconnected node: clb_input_west[28]
+Cell clb_tile disconnected node: clb_input_west[29]
+Cell clb_tile disconnected node: clb_input_west[30]
+Cell clb_tile disconnected node: clb_input_west[31]
+Cell clb_tile disconnected node: clb_input_west[8]
+Cell clb_tile disconnected node: clb_input_west[9]
+Cell clb_tile disconnected node: conf_cin_type0[0]
+Cell clb_tile disconnected node: conf_cin_type0[1]
+Cell clb_tile disconnected node: conf_cin_type1
+Cell clb_tile disconnected node: conf_io_type0[0]
+Cell clb_tile disconnected node: conf_io_type0[10]
+Cell clb_tile disconnected node: conf_io_type0[11]
+Cell clb_tile disconnected node: conf_io_type0[12]
+Cell clb_tile disconnected node: conf_io_type0[13]
+Cell clb_tile disconnected node: conf_io_type0[14]
+Cell clb_tile disconnected node: conf_io_type0[15]
+Cell clb_tile disconnected node: conf_io_type0[16]
+Cell clb_tile disconnected node: conf_io_type0[17]
+Cell clb_tile disconnected node: conf_io_type0[18]
+Cell clb_tile disconnected node: conf_io_type0[19]
+Cell clb_tile disconnected node: conf_io_type0[1]
+Cell clb_tile disconnected node: conf_io_type0[20]
+Cell clb_tile disconnected node: conf_io_type0[21]
+Cell clb_tile disconnected node: conf_io_type0[22]
+Cell clb_tile disconnected node: conf_io_type0[23]
+Cell clb_tile disconnected node: conf_io_type0[24]
+Cell clb_tile disconnected node: conf_io_type0[25]
+Cell clb_tile disconnected node: conf_io_type0[26]
+Cell clb_tile disconnected node: conf_io_type0[27]
+Cell clb_tile disconnected node: conf_io_type0[28]
+Cell clb_tile disconnected node: conf_io_type0[29]
+Cell clb_tile disconnected node: conf_io_type0[2]
+Cell clb_tile disconnected node: conf_io_type0[30]
+Cell clb_tile disconnected node: conf_io_type0[31]
+Cell clb_tile disconnected node: conf_io_type0[32]
+Cell clb_tile disconnected node: conf_io_type0[33]
+Cell clb_tile disconnected node: conf_io_type0[34]
+Cell clb_tile disconnected node: conf_io_type0[35]
+Cell clb_tile disconnected node: conf_io_type0[36]
+Cell clb_tile disconnected node: conf_io_type0[37]
+Cell clb_tile disconnected node: conf_io_type0[38]
+Cell clb_tile disconnected node: conf_io_type0[39]
+Cell clb_tile disconnected node: conf_io_type0[3]
+Cell clb_tile disconnected node: conf_io_type0[40]
+Cell clb_tile disconnected node: conf_io_type0[41]
+Cell clb_tile disconnected node: conf_io_type0[42]
+Cell clb_tile disconnected node: conf_io_type0[43]
+Cell clb_tile disconnected node: conf_io_type0[44]
+Cell clb_tile disconnected node: conf_io_type0[45]
+Cell clb_tile disconnected node: conf_io_type0[46]
+Cell clb_tile disconnected node: conf_io_type0[47]
+Cell clb_tile disconnected node: conf_io_type0[48]
+Cell clb_tile disconnected node: conf_io_type0[49]
+Cell clb_tile disconnected node: conf_io_type0[4]
+Cell clb_tile disconnected node: conf_io_type0[50]
+Cell clb_tile disconnected node: conf_io_type0[51]
+Cell clb_tile disconnected node: conf_io_type0[52]
+Cell clb_tile disconnected node: conf_io_type0[53]
+Cell clb_tile disconnected node: conf_io_type0[54]
+Cell clb_tile disconnected node: conf_io_type0[55]
+Cell clb_tile disconnected node: conf_io_type0[56]
+Cell clb_tile disconnected node: conf_io_type0[57]
+Cell clb_tile disconnected node: conf_io_type0[58]
+Cell clb_tile disconnected node: conf_io_type0[59]
+Cell clb_tile disconnected node: conf_io_type0[5]
+Cell clb_tile disconnected node: conf_io_type0[60]
+Cell clb_tile disconnected node: conf_io_type0[61]
+Cell clb_tile disconnected node: conf_io_type0[62]
+Cell clb_tile disconnected node: conf_io_type0[63]
+Cell clb_tile disconnected node: conf_io_type0[6]
+Cell clb_tile disconnected node: conf_io_type0[7]
+Cell clb_tile disconnected node: conf_io_type0[8]
+Cell clb_tile disconnected node: conf_io_type0[9]
+Cell clb_tile disconnected node: conf_io_type1[0]
+Cell clb_tile disconnected node: conf_io_type1[10]
+Cell clb_tile disconnected node: conf_io_type1[11]
+Cell clb_tile disconnected node: conf_io_type1[12]
+Cell clb_tile disconnected node: conf_io_type1[13]
+Cell clb_tile disconnected node: conf_io_type1[14]
+Cell clb_tile disconnected node: conf_io_type1[15]
+Cell clb_tile disconnected node: conf_io_type1[16]
+Cell clb_tile disconnected node: conf_io_type1[17]
+Cell clb_tile disconnected node: conf_io_type1[18]
+Cell clb_tile disconnected node: conf_io_type1[19]
+Cell clb_tile disconnected node: conf_io_type1[1]
+Cell clb_tile disconnected node: conf_io_type1[20]
+Cell clb_tile disconnected node: conf_io_type1[21]
+Cell clb_tile disconnected node: conf_io_type1[22]
+Cell clb_tile disconnected node: conf_io_type1[23]
+Cell clb_tile disconnected node: conf_io_type1[24]
+Cell clb_tile disconnected node: conf_io_type1[25]
+Cell clb_tile disconnected node: conf_io_type1[26]
+Cell clb_tile disconnected node: conf_io_type1[27]
+Cell clb_tile disconnected node: conf_io_type1[28]
+Cell clb_tile disconnected node: conf_io_type1[29]
+Cell clb_tile disconnected node: conf_io_type1[2]
+Cell clb_tile disconnected node: conf_io_type1[30]
+Cell clb_tile disconnected node: conf_io_type1[31]
+Cell clb_tile disconnected node: conf_io_type1[3]
+Cell clb_tile disconnected node: conf_io_type1[4]
+Cell clb_tile disconnected node: conf_io_type1[5]
+Cell clb_tile disconnected node: conf_io_type1[6]
+Cell clb_tile disconnected node: conf_io_type1[7]
+Cell clb_tile disconnected node: conf_io_type1[8]
+Cell clb_tile disconnected node: conf_io_type1[9]
+Cell clb_tile disconnected node: east_clb_cout
+Cell clb_tile disconnected node: east_clb_output[2]
+Cell clb_tile disconnected node: east_clb_output[3]
+Cell clb_tile disconnected node: east_clb_output[4]
+Cell clb_tile disconnected node: east_clb_output[5]
+Cell clb_tile disconnected node: east_clb_output[6]
+Cell clb_tile disconnected node: east_clb_output[7]
+Cell clb_tile disconnected node: north_clb_cout
+Cell clb_tile disconnected node: north_clb_output[2]
+Cell clb_tile disconnected node: north_clb_output[3]
+Cell clb_tile disconnected node: north_clb_output[4]
+Cell clb_tile disconnected node: north_clb_output[5]
+Cell clb_tile disconnected node: north_clb_output[6]
+Cell clb_tile disconnected node: north_clb_output[7]
+
+Cell clb_tile disconnected node: clb_cin_west
+Cell clb_tile disconnected node: clb_input_south[31]
+Cell clb_tile disconnected node: clb_input_south[30]
+Cell clb_tile disconnected node: clb_input_south[29]
+Cell clb_tile disconnected node: clb_input_south[28]
+Cell clb_tile disconnected node: clb_input_south[27]
+Cell clb_tile disconnected node: clb_input_south[26]
+Cell clb_tile disconnected node: clb_input_south[25]
+Cell clb_tile disconnected node: clb_input_south[24]
+Cell clb_tile disconnected node: clb_input_south[23]
+Cell clb_tile disconnected node: clb_input_south[22]
+Cell clb_tile disconnected node: clb_input_south[21]
+Cell clb_tile disconnected node: clb_input_south[20]
+Cell clb_tile disconnected node: clb_input_south[19]
+Cell clb_tile disconnected node: clb_input_south[18]
+Cell clb_tile disconnected node: clb_input_south[17]
+Cell clb_tile disconnected node: clb_input_south[16]
+Cell clb_tile disconnected node: clb_input_south[15]
+Cell clb_tile disconnected node: clb_input_south[14]
+Cell clb_tile disconnected node: clb_input_south[13]
+Cell clb_tile disconnected node: clb_input_south[12]
+Cell clb_tile disconnected node: clb_input_south[11]
+Cell clb_tile disconnected node: clb_input_south[10]
+Cell clb_tile disconnected node: clb_input_south[9]
+Cell clb_tile disconnected node: clb_input_south[8]
+Cell clb_tile disconnected node: clb_input_west[31]
+Cell clb_tile disconnected node: clb_input_west[30]
+Cell clb_tile disconnected node: clb_input_west[29]
+Cell clb_tile disconnected node: clb_input_west[28]
+Cell clb_tile disconnected node: clb_input_west[27]
+Cell clb_tile disconnected node: clb_input_west[26]
+Cell clb_tile disconnected node: clb_input_west[25]
+Cell clb_tile disconnected node: clb_input_west[24]
+Cell clb_tile disconnected node: clb_input_west[23]
+Cell clb_tile disconnected node: clb_input_west[22]
+Cell clb_tile disconnected node: clb_input_west[21]
+Cell clb_tile disconnected node: clb_input_west[20]
+Cell clb_tile disconnected node: clb_input_west[19]
+Cell clb_tile disconnected node: clb_input_west[18]
+Cell clb_tile disconnected node: clb_input_west[17]
+Cell clb_tile disconnected node: clb_input_west[16]
+Cell clb_tile disconnected node: clb_input_west[15]
+Cell clb_tile disconnected node: clb_input_west[14]
+Cell clb_tile disconnected node: clb_input_west[13]
+Cell clb_tile disconnected node: clb_input_west[12]
+Cell clb_tile disconnected node: clb_input_west[11]
+Cell clb_tile disconnected node: clb_input_west[10]
+Cell clb_tile disconnected node: clb_input_west[9]
+Cell clb_tile disconnected node: clb_input_west[8]
+Cell clb_tile disconnected node: conf_cin_type0[1]
+Cell clb_tile disconnected node: conf_cin_type0[0]
+Cell clb_tile disconnected node: conf_cin_type1
+Cell clb_tile disconnected node: conf_io_type0[63]
+Cell clb_tile disconnected node: conf_io_type0[62]
+Cell clb_tile disconnected node: conf_io_type0[61]
+Cell clb_tile disconnected node: conf_io_type0[60]
+Cell clb_tile disconnected node: conf_io_type0[59]
+Cell clb_tile disconnected node: conf_io_type0[58]
+Cell clb_tile disconnected node: conf_io_type0[57]
+Cell clb_tile disconnected node: conf_io_type0[56]
+Cell clb_tile disconnected node: conf_io_type0[55]
+Cell clb_tile disconnected node: conf_io_type0[54]
+Cell clb_tile disconnected node: conf_io_type0[53]
+Cell clb_tile disconnected node: conf_io_type0[52]
+Cell clb_tile disconnected node: conf_io_type0[51]
+Cell clb_tile disconnected node: conf_io_type0[50]
+Cell clb_tile disconnected node: conf_io_type0[49]
+Cell clb_tile disconnected node: conf_io_type0[48]
+Cell clb_tile disconnected node: conf_io_type0[47]
+Cell clb_tile disconnected node: conf_io_type0[46]
+Cell clb_tile disconnected node: conf_io_type0[45]
+Cell clb_tile disconnected node: conf_io_type0[44]
+Cell clb_tile disconnected node: conf_io_type0[43]
+Cell clb_tile disconnected node: conf_io_type0[42]
+Cell clb_tile disconnected node: conf_io_type0[41]
+Cell clb_tile disconnected node: conf_io_type0[40]
+Cell clb_tile disconnected node: conf_io_type0[39]
+Cell clb_tile disconnected node: conf_io_type0[38]
+Cell clb_tile disconnected node: conf_io_type0[37]
+Cell clb_tile disconnected node: conf_io_type0[36]
+Cell clb_tile disconnected node: conf_io_type0[35]
+Cell clb_tile disconnected node: conf_io_type0[34]
+Cell clb_tile disconnected node: conf_io_type0[33]
+Cell clb_tile disconnected node: conf_io_type0[32]
+Cell clb_tile disconnected node: conf_io_type0[31]
+Cell clb_tile disconnected node: conf_io_type0[30]
+Cell clb_tile disconnected node: conf_io_type0[29]
+Cell clb_tile disconnected node: conf_io_type0[28]
+Cell clb_tile disconnected node: conf_io_type0[27]
+Cell clb_tile disconnected node: conf_io_type0[26]
+Cell clb_tile disconnected node: conf_io_type0[25]
+Cell clb_tile disconnected node: conf_io_type0[24]
+Cell clb_tile disconnected node: conf_io_type0[23]
+Cell clb_tile disconnected node: conf_io_type0[22]
+Cell clb_tile disconnected node: conf_io_type0[21]
+Cell clb_tile disconnected node: conf_io_type0[20]
+Cell clb_tile disconnected node: conf_io_type0[19]
+Cell clb_tile disconnected node: conf_io_type0[18]
+Cell clb_tile disconnected node: conf_io_type0[17]
+Cell clb_tile disconnected node: conf_io_type0[16]
+Cell clb_tile disconnected node: conf_io_type0[15]
+Cell clb_tile disconnected node: conf_io_type0[14]
+Cell clb_tile disconnected node: conf_io_type0[13]
+Cell clb_tile disconnected node: conf_io_type0[12]
+Cell clb_tile disconnected node: conf_io_type0[11]
+Cell clb_tile disconnected node: conf_io_type0[10]
+Cell clb_tile disconnected node: conf_io_type0[9]
+Cell clb_tile disconnected node: conf_io_type0[8]
+Cell clb_tile disconnected node: conf_io_type0[7]
+Cell clb_tile disconnected node: conf_io_type0[6]
+Cell clb_tile disconnected node: conf_io_type0[5]
+Cell clb_tile disconnected node: conf_io_type0[4]
+Cell clb_tile disconnected node: conf_io_type0[3]
+Cell clb_tile disconnected node: conf_io_type0[2]
+Cell clb_tile disconnected node: conf_io_type0[1]
+Cell clb_tile disconnected node: conf_io_type0[0]
+Cell clb_tile disconnected node: conf_io_type1[31]
+Cell clb_tile disconnected node: conf_io_type1[30]
+Cell clb_tile disconnected node: conf_io_type1[29]
+Cell clb_tile disconnected node: conf_io_type1[28]
+Cell clb_tile disconnected node: conf_io_type1[27]
+Cell clb_tile disconnected node: conf_io_type1[26]
+Cell clb_tile disconnected node: conf_io_type1[25]
+Cell clb_tile disconnected node: conf_io_type1[24]
+Cell clb_tile disconnected node: conf_io_type1[23]
+Cell clb_tile disconnected node: conf_io_type1[22]
+Cell clb_tile disconnected node: conf_io_type1[21]
+Cell clb_tile disconnected node: conf_io_type1[20]
+Cell clb_tile disconnected node: conf_io_type1[19]
+Cell clb_tile disconnected node: conf_io_type1[18]
+Cell clb_tile disconnected node: conf_io_type1[17]
+Cell clb_tile disconnected node: conf_io_type1[16]
+Cell clb_tile disconnected node: conf_io_type1[15]
+Cell clb_tile disconnected node: conf_io_type1[14]
+Cell clb_tile disconnected node: conf_io_type1[13]
+Cell clb_tile disconnected node: conf_io_type1[12]
+Cell clb_tile disconnected node: conf_io_type1[11]
+Cell clb_tile disconnected node: conf_io_type1[10]
+Cell clb_tile disconnected node: conf_io_type1[9]
+Cell clb_tile disconnected node: conf_io_type1[8]
+Cell clb_tile disconnected node: conf_io_type1[7]
+Cell clb_tile disconnected node: conf_io_type1[6]
+Cell clb_tile disconnected node: conf_io_type1[5]
+Cell clb_tile disconnected node: conf_io_type1[4]
+Cell clb_tile disconnected node: conf_io_type1[3]
+Cell clb_tile disconnected node: conf_io_type1[2]
+Cell clb_tile disconnected node: conf_io_type1[1]
+Cell clb_tile disconnected node: conf_io_type1[0]
+Cell clb_tile disconnected node: east_clb_cout
+Cell clb_tile disconnected node: east_clb_output[7]
+Cell clb_tile disconnected node: east_clb_output[6]
+Cell clb_tile disconnected node: east_clb_output[5]
+Cell clb_tile disconnected node: east_clb_output[4]
+Cell clb_tile disconnected node: east_clb_output[3]
+Cell clb_tile disconnected node: east_clb_output[2]
+Cell clb_tile disconnected node: north_clb_cout
+Cell clb_tile disconnected node: north_clb_output[7]
+Cell clb_tile disconnected node: north_clb_output[6]
+Cell clb_tile disconnected node: north_clb_output[5]
+Cell clb_tile disconnected node: north_clb_output[4]
+Cell clb_tile disconnected node: north_clb_output[3]
+Cell clb_tile disconnected node: north_clb_output[2]
+
+Subcircuit summary:
+Circuit 1: clb_tile                        |Circuit 2: clb_tile                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_sc_hd__or2_4 (336)               |sky130_fd_sc_hd__or2_4 (336)               
+sky130_fd_sc_hd__tapvpwrvgnd_1 (2353)      |sky130_fd_sc_hd__tapvpwrvgnd_1 (2353)      
+sky130_fd_sc_hd__and2_4 (176)              |sky130_fd_sc_hd__and2_4 (176)              
+sky130_fd_sc_hd__nor2_4 (627)              |sky130_fd_sc_hd__nor2_4 (627)              
+sky130_fd_sc_hd__or3_4 (102)               |sky130_fd_sc_hd__or3_4 (102)               
+sky130_fd_sc_hd__buf_1 (891)               |sky130_fd_sc_hd__buf_1 (891)               
+sky130_fd_sc_hd__and4_4 (206)              |sky130_fd_sc_hd__and4_4 (206)              
+sky130_fd_sc_hd__a32oi_4 (173)             |sky130_fd_sc_hd__a32oi_4 (173)             
+sky130_fd_sc_hd__a211o_4 (165)             |sky130_fd_sc_hd__a211o_4 (165)             
+sky130_fd_sc_hd__nor4_4 (143)              |sky130_fd_sc_hd__nor4_4 (143)              
+sky130_fd_sc_hd__a21o_4 (268)              |sky130_fd_sc_hd__a21o_4 (268)              
+sky130_fd_sc_hd__o21ai_4 (59)              |sky130_fd_sc_hd__o21ai_4 (59)              
+sky130_fd_sc_hd__dfxtp_4 (256)             |sky130_fd_sc_hd__dfxtp_4 (256)             
+sky130_fd_sc_hd__a21oi_4 (19)              |sky130_fd_sc_hd__a21oi_4 (19)              
+sky130_fd_sc_hd__clkbuf_1 (62)             |sky130_fd_sc_hd__clkbuf_1 (62)             
+sky130_fd_sc_hd__inv_8 (384)               |sky130_fd_sc_hd__inv_8 (384)               
+sky130_fd_sc_hd__and3_4 (24)               |sky130_fd_sc_hd__and3_4 (24)               
+sky130_fd_sc_hd__or4_4 (111)               |sky130_fd_sc_hd__or4_4 (111)               
+sky130_fd_sc_hd__o21a_4 (39)               |sky130_fd_sc_hd__o21a_4 (39)               
+sky130_fd_sc_hd__conb_1 (60)               |sky130_fd_sc_hd__conb_1 (60)               
+sky130_fd_sc_hd__nand2_4 (31)              |sky130_fd_sc_hd__nand2_4 (31)              
+sky130_fd_sc_hd__diode_2 (16)              |sky130_fd_sc_hd__diode_2 (16)              
+sky130_fd_sc_hd__a32o_4 (24)               |sky130_fd_sc_hd__a32o_4 (24)               
+sky130_fd_sc_hd__o22a_4 (31)               |sky130_fd_sc_hd__o22a_4 (31)               
+sky130_fd_sc_hd__buf_2 (29)                |sky130_fd_sc_hd__buf_2 (29)                
+sky130_fd_sc_hd__o32a_4 (32)               |sky130_fd_sc_hd__o32a_4 (32)               
+sky130_fd_sc_hd__buf_8 (7)                 |sky130_fd_sc_hd__buf_8 (7)                 
+sky130_fd_sc_hd__clkbuf_16 (1)             |sky130_fd_sc_hd__clkbuf_16 (1)             
+sky130_fd_sc_hd__nor3_4 (3)                |sky130_fd_sc_hd__nor3_4 (3)                
+sky130_fd_sc_hd__a21boi_4 (1)              |sky130_fd_sc_hd__a21boi_4 (1)              
+Number of devices: 6629                    |Number of devices: 6629                    
+Number of nets: 4589                       |Number of nets: 4589                       
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match with 4 symmetries.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: clb_tile                        |Circuit 2: clb_tile                        
+-------------------------------------------|-------------------------------------------
+east_double_in[1]                          |east_double_in[1]                          
+clb_cout                                   |clb_cout                                   
+clb_output[2]                              |clb_output[2]                              
+south_double_out[3]                        |south_double_out[3]                        
+south_double_out[2]                        |south_double_out[2]                        
+south_double_in[3]                         |south_double_in[3]                         
+west_double_out[1]                         |west_double_out[1]                         
+north_double_out[3]                        |north_double_out[3]                        
+south_double_out[1]                        |south_double_out[1]                        
+south_double_out[0]                        |south_double_out[0]                        
+north_double_out[2]                        |north_double_out[2]                        
+west_double_out[0]                         |west_double_out[0]                         
+west_double_in[3]                          |west_double_in[3]                          
+west_single_out[3]                         |(no matching pin)                          
+west_double_in[2]                          |west_double_in[2]                          
+conf_sb[31]                                |conf_sb[31]                                
+conf_sb[30]                                |conf_sb[30]                                
+conf_sb[21]                                |conf_sb[21]                                
+conf_hcb[101]                              |conf_hcb[101]                              
+conf_hcb[100]                              |conf_hcb[100]                              
+conf_hcb[99]                               |conf_hcb[99]                               
+conf_hcb[102]                              |conf_hcb[102]                              
+conf_hcb[95]                               |conf_hcb[95]                               
+conf_hcb[98]                               |conf_hcb[98]                               
+conf_hcb[93]                               |conf_hcb[93]                               
+conf_hcb[85]                               |conf_hcb[85]                               
+conf_hcb[81]                               |conf_hcb[81]                               
+conf_hcb[68]                               |conf_hcb[68]                               
+conf_hcb[53]                               |conf_hcb[53]                               
+conf_hcb[52]                               |conf_hcb[52]                               
+conf_hcb[51]                               |conf_hcb[51]                               
+conf_hcb[50]                               |conf_hcb[50]                               
+conf_hcb[43]                               |conf_hcb[43]                               
+conf_hcb[73]                               |conf_hcb[73]                               
+conf_hcb[48]                               |conf_hcb[48]                               
+conf_hcb[78]                               |conf_hcb[78]                               
+conf_hcb[23]                               |conf_hcb[23]                               
+conf_hcb[63]                               |conf_hcb[63]                               
+conf_hcb[13]                               |conf_hcb[13]                               
+conf_hcb[58]                               |conf_hcb[58]                               
+conf_hcb[18]                               |conf_hcb[18]                               
+conf_hcb[8]                                |conf_hcb[8]                                
+conf_hcb[33]                               |conf_hcb[33]                               
+conf_hcb[28]                               |conf_hcb[28]                               
+conf_hcb[38]                               |conf_hcb[38]                               
+conf_hcb[3]                                |conf_hcb[3]                                
+conf_hcb[67]                               |conf_hcb[67]                               
+conf_hcb[77]                               |conf_hcb[77]                               
+conf_hcb[1]                                |conf_hcb[1]                                
+conf_hcb[0]                                |conf_hcb[0]                                
+conf_hcb[66]                               |conf_hcb[66]                               
+conf_hcb[65]                               |conf_hcb[65]                               
+conf_vcb[102]                              |conf_vcb[102]                              
+conf_vcb[97]                               |conf_vcb[97]                               
+conf_vcb[92]                               |conf_vcb[92]                               
+conf_vcb[98]                               |conf_vcb[98]                               
+conf_hcb[87]                               |conf_hcb[87]                               
+conf_vcb[90]                               |conf_vcb[90]                               
+conf_vcb[96]                               |conf_vcb[96]                               
+conf_vcb[95]                               |conf_vcb[95]                               
+conf_vcb[89]                               |conf_vcb[89]                               
+conf_vcb[99]                               |conf_vcb[99]                               
+conf_vcb[87]                               |conf_vcb[87]                               
+conf_hcb[90]                               |conf_hcb[90]                               
+conf_vcb[93]                               |conf_vcb[93]                               
+conf_hcb[92]                               |conf_hcb[92]                               
+conf_hcb[82]                               |conf_hcb[82]                               
+conf_vcb[85]                               |conf_vcb[85]                               
+conf_vcb[84]                               |conf_vcb[84]                               
+conf_hcb[86]                               |conf_hcb[86]                               
+conf_vcb[101]                              |conf_vcb[101]                              
+conf_vcb[86]                               |conf_vcb[86]                               
+conf_hcb[89]                               |conf_hcb[89]                               
+conf_hcb[96]                               |conf_hcb[96]                               
+conf_hcb[84]                               |conf_hcb[84]                               
+conf_vcb[82]                               |conf_vcb[82]                               
+conf_vcb[81]                               |conf_vcb[81]                               
+conf_vcb[103]                              |conf_vcb[103]                              
+conf_vcb[80]                               |conf_vcb[80]                               
+conf_vcb[79]                               |conf_vcb[79]                               
+conf_hcb[49]                               |conf_hcb[49]                               
+conf_vcb[73]                               |conf_vcb[73]                               
+conf_vcb[78]                               |conf_vcb[78]                               
+conf_vcb[72]                               |conf_vcb[72]                               
+conf_vcb[77]                               |conf_vcb[77]                               
+conf_vcb[59]                               |conf_vcb[59]                               
+conf_vcb[57]                               |conf_vcb[57]                               
+conf_vcb[56]                               |conf_vcb[56]                               
+conf_vcb[58]                               |conf_vcb[58]                               
+conf_vcb[55]                               |conf_vcb[55]                               
+conf_vcb[54]                               |conf_vcb[54]                               
+conf_vcb[53]                               |conf_vcb[53]                               
+conf_vcb[51]                               |conf_vcb[51]                               
+conf_vcb[50]                               |conf_vcb[50]                               
+conf_vcb[33]                               |conf_vcb[33]                               
+conf_vcb[28]                               |conf_vcb[28]                               
+conf_vcb[23]                               |conf_vcb[23]                               
+conf_vcb[38]                               |conf_vcb[38]                               
+conf_hcb[40]                               |conf_hcb[40]                               
+conf_vcb[20]                               |conf_vcb[20]                               
+conf_vcb[70]                               |conf_vcb[70]                               
+conf_vcb[35]                               |conf_vcb[35]                               
+conf_hcb[76]                               |conf_hcb[76]                               
+conf_hcb[42]                               |conf_hcb[42]                               
+conf_vcb[75]                               |conf_vcb[75]                               
+conf_hcb[75]                               |conf_hcb[75]                               
+conf_vcb[40]                               |conf_vcb[40]                               
+conf_hcb[47]                               |conf_hcb[47]                               
+conf_vcb[71]                               |conf_vcb[71]                               
+conf_vcb[42]                               |conf_vcb[42]                               
+conf_vcb[17]                               |conf_vcb[17]                               
+conf_vcb[52]                               |conf_vcb[52]                               
+conf_vcb[32]                               |conf_vcb[32]                               
+conf_vcb[76]                               |conf_vcb[76]                               
+conf_vcb[31]                               |conf_vcb[31]                               
+conf_vcb[41]                               |conf_vcb[41]                               
+conf_vcb[16]                               |conf_vcb[16]                               
+conf_vcb[61]                               |conf_vcb[61]                               
+conf_hcb[56]                               |conf_hcb[56]                               
+conf_hcb[31]                               |conf_hcb[31]                               
+conf_hcb[11]                               |conf_hcb[11]                               
+conf_hcb[55]                               |conf_hcb[55]                               
+conf_hcb[10]                               |conf_hcb[10]                               
+conf_hcb[22]                               |conf_hcb[22]                               
+conf_hcb[16]                               |conf_hcb[16]                               
+conf_hcb[46]                               |conf_hcb[46]                               
+conf_vcb[15]                               |conf_vcb[15]                               
+conf_hcb[57]                               |conf_hcb[57]                               
+conf_hcb[32]                               |conf_hcb[32]                               
+conf_hcb[6]                                |conf_hcb[6]                                
+conf_hcb[5]                                |conf_hcb[5]                                
+conf_vcb[13]                               |conf_vcb[13]                               
+conf_vcb[21]                               |conf_vcb[21]                               
+conf_vcb[36]                               |conf_vcb[36]                               
+conf_vcb[27]                               |conf_vcb[27]                               
+conf_vcb[26]                               |conf_vcb[26]                               
+conf_vcb[22]                               |conf_vcb[22]                               
+conf_vcb[12]                               |conf_vcb[12]                               
+conf_vcb[11]                               |conf_vcb[11]                               
+conf_vcb[37]                               |conf_vcb[37]                               
+conf_vcb[30]                               |conf_vcb[30]                               
+conf_hcb[71]                               |conf_hcb[71]                               
+conf_vcb[10]                               |conf_vcb[10]                               
+conf_hcb[7]                                |conf_hcb[7]                                
+conf_hcb[15]                               |conf_hcb[15]                               
+conf_hcb[70]                               |conf_hcb[70]                               
+conf_hcb[61]                               |conf_hcb[61]                               
+conf_hcb[12]                               |conf_hcb[12]                               
+conf_hcb[60]                               |conf_hcb[60]                               
+conf_vcb[25]                               |conf_vcb[25]                               
+conf_hcb[21]                               |conf_hcb[21]                               
+conf_hcb[20]                               |conf_hcb[20]                               
+conf_hcb[62]                               |conf_hcb[62]                               
+conf_hcb[17]                               |conf_hcb[17]                               
+conf_hcb[72]                               |conf_hcb[72]                               
+conf_vcb[18]                               |conf_vcb[18]                               
+conf_vcb[68]                               |conf_vcb[68]                               
+conf_vcb[8]                                |conf_vcb[8]                                
+conf_vcb[6]                                |conf_vcb[6]                                
+conf_vcb[4]                                |conf_vcb[4]                                
+conf_hcb[19]                               |conf_hcb[19]                               
+conf_vcb[9]                                |conf_vcb[9]                                
+conf_hcb[39]                               |conf_hcb[39]                               
+conf_vcb[19]                               |conf_vcb[19]                               
+conf_vcb[69]                               |conf_vcb[69]                               
+conf_hcb[54]                               |conf_hcb[54]                               
+conf_hcb[9]                                |conf_hcb[9]                                
+conf_hcb[29]                               |conf_hcb[29]                               
+conf_vcb[63]                               |conf_vcb[63]                               
+conf_vcb[48]                               |conf_vcb[48]                               
+conf_vcb[3]                                |conf_vcb[3]                                
+conf_vcb[43]                               |conf_vcb[43]                               
+conf_vcb[46]                               |conf_vcb[46]                               
+conf_vcb[67]                               |conf_vcb[67]                               
+conf_vcb[1]                                |conf_vcb[1]                                
+conf_vcb[7]                                |conf_vcb[7]                                
+conf_vcb[66]                               |conf_vcb[66]                               
+conf_vcb[47]                               |conf_vcb[47]                               
+conf_vcb[62]                               |conf_vcb[62]                               
+conf_vcb[2]                                |conf_vcb[2]                                
+conf_hcb[2]                                |conf_hcb[2]                                
+conf_vcb[5]                                |conf_vcb[5]                                
+conf_hcb[37]                               |conf_hcb[37]                               
+conf_vcb[45]                               |conf_vcb[45]                               
+conf_hcb[26]                               |conf_hcb[26]                               
+conf_hcb[30]                               |conf_hcb[30]                               
+conf_vcb[60]                               |conf_vcb[60]                               
+conf_vcb[0]                                |conf_vcb[0]                                
+conf_hcb[25]                               |conf_hcb[25]                               
+conf_hcb[45]                               |conf_hcb[45]                               
+conf_hcb[36]                               |conf_hcb[36]                               
+conf_hcb[35]                               |conf_hcb[35]                               
+conf_vcb[65]                               |conf_vcb[65]                               
+conf_hcb[41]                               |conf_hcb[41]                               
+conf_hcb[27]                               |conf_hcb[27]                               
+conf_hcb[80]                               |conf_hcb[80]                               
+conf_vcb[88]                               |conf_vcb[88]                               
+conf_hcb[91]                               |conf_hcb[91]                               
+conf_sb[45]                                |conf_sb[45]                                
+conf_vcb[91]                               |conf_vcb[91]                               
+conf_vcb[94]                               |conf_vcb[94]                               
+conf_vcb[100]                              |conf_vcb[100]                              
+conf_sb[47]                                |conf_sb[47]                                
+conf_sb[43]                                |conf_sb[43]                                
+conf_hcb[79]                               |conf_hcb[79]                               
+conf_sb[41]                                |conf_sb[41]                                
+conf_sb[44]                                |conf_sb[44]                                
+conf_sb[46]                                |conf_sb[46]                                
+conf_sb[42]                                |conf_sb[42]                                
+conf_hcb[83]                               |conf_hcb[83]                               
+conf_vcb[83]                               |conf_vcb[83]                               
+conf_sb[37]                                |conf_sb[37]                                
+conf_sb[40]                                |conf_sb[40]                                
+conf_sb[32]                                |conf_sb[32]                                
+conf_sb[39]                                |conf_sb[39]                                
+conf_hcb[88]                               |conf_hcb[88]                               
+conf_sb[35]                                |conf_sb[35]                                
+conf_sb[20]                                |conf_sb[20]                                
+conf_vcb[14]                               |conf_vcb[14]                               
+conf_sb[15]                                |conf_sb[15]                                
+conf_sb[18]                                |conf_sb[18]                                
+conf_vcb[29]                               |conf_vcb[29]                               
+conf_hcb[64]                               |conf_hcb[64]                               
+conf_vcb[34]                               |conf_vcb[34]                               
+conf_sb[17]                                |conf_sb[17]                                
+conf_hcb[14]                               |conf_hcb[14]                               
+conf_vcb[49]                               |conf_vcb[49]                               
+conf_sb[38]                                |conf_sb[38]                                
+conf_sb[34]                                |conf_sb[34]                                
+conf_hcb[34]                               |conf_hcb[34]                               
+conf_sb[11]                                |conf_sb[11]                                
+conf_sb[33]                                |conf_sb[33]                                
+conf_hcb[4]                                |conf_hcb[4]                                
+conf_sb[26]                                |conf_sb[26]                                
+conf_sb[36]                                |conf_sb[36]                                
+conf_vcb[44]                               |conf_vcb[44]                               
+conf_sb[13]                                |conf_sb[13]                                
+conf_vcb[64]                               |conf_vcb[64]                               
+conf_sb[19]                                |conf_sb[19]                                
+conf_sb[10]                                |conf_sb[10]                                
+conf_sb[14]                                |conf_sb[14]                                
+conf_sb[16]                                |conf_sb[16]                                
+conf_sb[12]                                |conf_sb[12]                                
+conf_sb[23]                                |conf_sb[23]                                
+conf_sb[6]                                 |conf_sb[6]                                 
+conf_sb[27]                                |conf_sb[27]                                
+conf_sb[8]                                 |conf_sb[8]                                 
+conf_sb[24]                                |conf_sb[24]                                
+conf_hcb[74]                               |conf_hcb[74]                               
+conf_hcb[59]                               |conf_hcb[59]                               
+conf_vcb[74]                               |conf_vcb[74]                               
+conf_vcb[39]                               |conf_vcb[39]                               
+conf_sb[5]                                 |conf_sb[5]                                 
+conf_sb[22]                                |conf_sb[22]                                
+conf_sb[25]                                |conf_sb[25]                                
+conf_sb[9]                                 |conf_sb[9]                                 
+conf_hcb[69]                               |conf_hcb[69]                               
+conf_vcb[24]                               |conf_vcb[24]                               
+conf_hcb[44]                               |conf_hcb[44]                               
+conf_sb[28]                                |conf_sb[28]                                
+conf_hcb[94]                               |conf_hcb[94]                               
+conf_sb[29]                                |conf_sb[29]                                
+conf_hcb[97]                               |conf_hcb[97]                               
+conf_sb[4]                                 |conf_sb[4]                                 
+conf_sb[7]                                 |conf_sb[7]                                 
+conf_hcb[24]                               |conf_hcb[24]                               
+conf_sb[3]                                 |conf_sb[3]                                 
+conf_sb[1]                                 |conf_sb[1]                                 
+conf_sb[2]                                 |conf_sb[2]                                 
+conf_sb[0]                                 |conf_sb[0]                                 
+north_double_in[3]                         |north_double_in[3]                         
+west_single_in[3]                          |west_single_in[3]                          
+west_single_in[2]                          |west_single_in[2]                          
+south_single_in[3]                         |south_single_in[3]                         
+south_double_in[1]                         |south_double_in[1]                         
+west_double_in[1]                          |west_double_in[1]                          
+west_double_in[0]                          |west_double_in[0]                          
+south_single_in[2]                         |south_single_in[2]                         
+south_double_in[0]                         |south_double_in[0]                         
+north_double_in[2]                         |north_double_in[2]                         
+north_single_out[0]                        |north_single_out[0]                        
+north_single_out[3]                        |north_single_out[3]                        
+east_single_out[0]                         |east_single_out[0]                         
+north_double_out[0]                        |north_double_out[0]                        
+north_single_out[2]                        |north_single_out[2]                        
+east_single_out[1]                         |east_single_out[1]                         
+north_single_out[1]                        |north_single_out[1]                        
+north_double_out[1]                        |north_double_out[1]                        
+east_single_out[2]                         |east_single_out[2]                         
+east_single_out[3]                         |east_single_out[3]                         
+east_double_out[3]                         |east_double_out[3]                         
+east_double_out[2]                         |east_double_out[2]                         
+horizontal_global[0]                       |horizontal_global[0]                       
+clb_input[11]                              |clb_input[11]                              
+east_clb_input[2]                          |east_clb_input[2]                          
+east_clb_input[1]                          |east_clb_input[1]                          
+east_clb_input[0]                          |east_clb_input[0]                          
+clb_input[2]                               |clb_input[2]                               
+clb_input[1]                               |clb_input[1]                               
+clb_input[0]                               |clb_input[0]                               
+north_clb_input[0]                         |north_clb_input[0]                         
+north_clb_input[2]                         |north_clb_input[2]                         
+north_clb_input[1]                         |north_clb_input[1]                         
+clb_input[10]                              |clb_input[10]                              
+clb_input[9]                               |clb_input[9]                               
+clb_input[8]                               |clb_input[8]                               
+clb_input[15]                              |clb_input[15]                              
+east_clb_input[7]                          |east_clb_input[7]                          
+east_clb_input[6]                          |east_clb_input[6]                          
+east_clb_input[5]                          |east_clb_input[5]                          
+east_clb_input[4]                          |east_clb_input[4]                          
+east_clb_input[3]                          |east_clb_input[3]                          
+north_clb_input[6]                         |north_clb_input[6]                         
+north_clb_input[5]                         |north_clb_input[5]                         
+north_clb_input[7]                         |north_clb_input[7]                         
+north_clb_input[4]                         |north_clb_input[4]                         
+north_clb_input[3]                         |north_clb_input[3]                         
+clb_input[7]                               |clb_input[7]                               
+clb_input[6]                               |clb_input[6]                               
+clb_input[5]                               |clb_input[5]                               
+clb_input[4]                               |clb_input[4]                               
+clb_input[3]                               |clb_input[3]                               
+clb_input[14]                              |clb_input[14]                              
+clb_input[13]                              |clb_input[13]                              
+clb_input[12]                              |clb_input[12]                              
+conf_hcb[103]                              |conf_hcb[103]                              
+clb_output_south[2]                        |clb_output_south[2]                        
+clb_output_south[3]                        |clb_output_south[3]                        
+clb_output_south[4]                        |clb_output_south[4]                        
+clb_output_south[5]                        |clb_output_south[5]                        
+clb_output_south[6]                        |clb_output_south[6]                        
+clb_output_south[7]                        |clb_output_south[7]                        
+clb_output_west[2]                         |clb_output_west[2]                         
+clb_output_west[3]                         |clb_output_west[3]                         
+clb_output_west[4]                         |clb_output_west[4]                         
+clb_output_west[5]                         |clb_output_west[5]                         
+clb_output_west[6]                         |clb_output_west[6]                         
+clb_output_west[7]                         |clb_output_west[7]                         
+east_clb_input[8]                          |east_clb_input[8]                          
+east_clb_input[9]                          |east_clb_input[9]                          
+east_clb_input[10]                         |east_clb_input[10]                         
+east_clb_input[11]                         |east_clb_input[11]                         
+east_clb_input[12]                         |east_clb_input[12]                         
+east_clb_input[13]                         |east_clb_input[13]                         
+east_clb_input[14]                         |east_clb_input[14]                         
+east_clb_input[15]                         |east_clb_input[15]                         
+east_clb_input[16]                         |east_clb_input[16]                         
+east_clb_input[17]                         |east_clb_input[17]                         
+east_clb_input[18]                         |east_clb_input[18]                         
+east_clb_input[19]                         |east_clb_input[19]                         
+east_clb_input[20]                         |east_clb_input[20]                         
+east_clb_input[21]                         |east_clb_input[21]                         
+east_clb_input[22]                         |east_clb_input[22]                         
+east_clb_input[23]                         |east_clb_input[23]                         
+east_clb_input[24]                         |east_clb_input[24]                         
+east_clb_input[25]                         |east_clb_input[25]                         
+east_clb_input[26]                         |east_clb_input[26]                         
+east_clb_input[27]                         |east_clb_input[27]                         
+east_clb_input[28]                         |east_clb_input[28]                         
+east_clb_input[29]                         |east_clb_input[29]                         
+east_clb_input[30]                         |east_clb_input[30]                         
+east_clb_input[31]                         |east_clb_input[31]                         
+north_clb_input[8]                         |north_clb_input[8]                         
+north_clb_input[9]                         |north_clb_input[9]                         
+north_clb_input[10]                        |north_clb_input[10]                        
+north_clb_input[11]                        |north_clb_input[11]                        
+north_clb_input[12]                        |north_clb_input[12]                        
+north_clb_input[13]                        |north_clb_input[13]                        
+north_clb_input[14]                        |north_clb_input[14]                        
+north_clb_input[15]                        |north_clb_input[15]                        
+north_clb_input[16]                        |north_clb_input[16]                        
+north_clb_input[17]                        |north_clb_input[17]                        
+north_clb_input[18]                        |north_clb_input[18]                        
+north_clb_input[19]                        |north_clb_input[19]                        
+north_clb_input[20]                        |north_clb_input[20]                        
+north_clb_input[21]                        |north_clb_input[21]                        
+north_clb_input[22]                        |north_clb_input[22]                        
+north_clb_input[23]                        |north_clb_input[23]                        
+north_clb_input[24]                        |north_clb_input[24]                        
+north_clb_input[25]                        |north_clb_input[25]                        
+north_clb_input[26]                        |north_clb_input[26]                        
+north_clb_input[27]                        |north_clb_input[27]                        
+north_clb_input[28]                        |north_clb_input[28]                        
+north_clb_input[29]                        |north_clb_input[29]                        
+north_clb_input[30]                        |north_clb_input[30]                        
+north_clb_input[31]                        |north_clb_input[31]                        
+clb_input[28]                              |clb_input[28]                              
+clb_input[19]                              |clb_input[19]                              
+clb_input[25]                              |clb_input[25]                              
+clb_input[26]                              |clb_input[26]                              
+clb_output_west[0]                         |clb_output_west[0]                         
+clb_cin_south                              |clb_cin_south                              
+clb_input_south[0]                         |clb_input_south[0]                         
+clb_input_south[1]                         |clb_input_south[1]                         
+clb_input_south[2]                         |clb_input_south[2]                         
+clb_input_south[4]                         |clb_input_south[4]                         
+clb_input_south[5]                         |clb_input_south[5]                         
+clb_input_south[6]                         |clb_input_south[6]                         
+clb_input_south[7]                         |clb_input_south[7]                         
+clb_input_west[0]                          |clb_input_west[0]                          
+clb_input_west[3]                          |clb_input_west[3]                          
+clb_input_west[5]                          |clb_input_west[5]                          
+clb_input_west[6]                          |clb_input_west[6]                          
+clb_input_west[7]                          |clb_input_west[7]                          
+clb_output[4]                              |clb_output[4]                              
+clb_output[5]                              |clb_output[5]                              
+clb_output[7]                              |clb_output[7]                              
+clb_cin                                    |clb_cin                                    
+clb_input[16]                              |clb_input[16]                              
+clb_input[17]                              |clb_input[17]                              
+clb_input[18]                              |clb_input[18]                              
+clb_input[20]                              |clb_input[20]                              
+clb_input[21]                              |clb_input[21]                              
+clb_input[22]                              |clb_input[22]                              
+clb_input[23]                              |clb_input[23]                              
+clb_input[24]                              |clb_input[24]                              
+clb_input[27]                              |clb_input[27]                              
+clb_input[29]                              |clb_input[29]                              
+clb_input[30]                              |clb_input[30]                              
+clb_input[31]                              |clb_input[31]                              
+clb_output_south[0]                        |clb_output_south[0]                        
+clb_output_south[1]                        |clb_output_south[1]                        
+clb_output_west[1]                         |clb_output_west[1]                         
+east_double_out[0]                         |east_double_out[0]                         
+east_double_out[1]                         |east_double_out[1]                         
+clb_cout_south                             |clb_cout_south                             
+clb_cout_west                              |clb_cout_west                              
+east_clb_cin                               |east_clb_cin                               
+north_clb_cin                              |north_clb_cin                              
+west_double_out[2]                         |west_double_out[2]                         
+west_double_out[3]                         |west_double_out[3]                         
+clk                                        |clk                                        
+east_double_in[0]                          |east_double_in[0]                          
+west_single_out[2]                         |(no matching pin)                          
+clb_output[6]                              |clb_output[6]                              
+clb_input_south[3]                         |clb_input_south[3]                         
+clb_input_west[1]                          |clb_input_west[1]                          
+clb_input_west[2]                          |clb_input_west[2]                          
+south_single_out[2]                        |south_single_out[2]                        
+south_single_out[3]                        |south_single_out[3]                        
+vertical_global[0]                         |vertical_global[0]                         
+south_single_out[0]                        |south_single_out[0]                        
+south_single_out[1]                        |south_single_out[1]                        
+west_single_out[0]                         |west_single_out[0]                         
+west_single_out[1]                         |west_single_out[1]                         
+clb_input_west[4]                          |clb_input_west[4]                          
+cset                                       |cset                                       
+clb_output[3]                              |clb_output[3]                              
+clb_output[1]                              |clb_output[1]                              
+north_double_in[1]                         |north_double_in[1]                         
+north_double_in[0]                         |north_double_in[0]                         
+east_double_in[2]                          |east_double_in[2]                          
+east_double_in[3]                          |east_double_in[3]                          
+east_single_in[2]                          |east_single_in[2]                          
+north_single_in[3]                         |north_single_in[3]                         
+north_single_in[2]                         |north_single_in[2]                         
+east_single_in[3]                          |east_single_in[3]                          
+west_single_in[1]                          |west_single_in[1]                          
+north_single_in[1]                         |north_single_in[1]                         
+east_single_in[0]                          |east_single_in[0]                          
+east_single_in[1]                          |east_single_in[1]                          
+north_single_in[0]                         |north_single_in[0]                         
+south_double_in[2]                         |south_double_in[2]                         
+south_single_in[1]                         |south_single_in[1]                         
+rst                                        |rst                                        
+east_clb_output[0]                         |east_clb_output[0]                         
+east_clb_output[1]                         |east_clb_output[1]                         
+north_clb_output[1]                        |north_clb_output[1]                        
+clb_output[0]                              |clb_output[0]                              
+north_clb_output[0]                        |north_clb_output[0]                        
+west_single_in[0]                          |west_single_in[0]                          
+south_single_in[0]                         |south_single_in[0]                         
+vertical_global[2]                         |vertical_global[2]                         
+horizontal_global[2]                       |horizontal_global[2]                       
+vertical_global[1]                         |vertical_global[1]                         
+horizontal_global[1]                       |horizontal_global[1]                       
+VGND                                       |VGND                                       
+VPWR                                       |VPWR                                       
+---------------------------------------------------------------------------------------
+Cell pin lists for clb_tile and clb_tile altered to match.
+The top level cell failed pin matching.

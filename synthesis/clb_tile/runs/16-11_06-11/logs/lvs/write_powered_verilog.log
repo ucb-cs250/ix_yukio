@@ -1,0 +1,19 @@
+Notice 0: Reading LEF file:  /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/merged.lef
+Notice 0:     Created 11 technology layers
+Notice 0:     Created 25 technology vias
+Notice 0:     Created 437 library cells
+Notice 0: Finished LEF file:  /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/merged.lef
+Notice 0: 
+Reading DEF file: /openLANE_flow/designs/clb_tile/runs/16-11_06-11/results/routing/clb_tile.def
+Notice 0: Design: clb_tile
+Notice 0:     Created 640 pins.
+Notice 0:     Created 19248 components and 52372 component-terminals.
+Notice 0:     Created 2 special nets and 0 connections.
+Notice 0:     Created 4749 nets and 13816 connections.
+Notice 0: Finished DEF file: /openLANE_flow/designs/clb_tile/runs/16-11_06-11/results/routing/clb_tile.def
+Top-level design name: clb_tile
+Found port VPWR of type SIGNAL
+Found port VGND of type SIGNAL
+Power net:  VPWR
+Ground net: VGND
+Modified power connections of 19248 cells (Remaining: 0 ).

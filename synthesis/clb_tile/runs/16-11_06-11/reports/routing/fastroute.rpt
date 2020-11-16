@@ -1,0 +1,1831 @@
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[4] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_3/X (sky130_fd_sc_hd__buf_1)
+   0.21    4.91 ^ _6112_/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.15 ^ psn_inst_psn_buff_0/X (sky130_fd_sc_hd__buf_8)
+   0.25    5.40 ^ psn_inst_psn_buff_22/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 v _6340_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.95    6.48 v _6341_/X (sky130_fd_sc_hd__or4_4)
+   0.60    7.08 v _6346_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.64 v _6352_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.20 v _6357_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.76 v _6361_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.99 v _6364_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.61 v _6365_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.87 v _6367_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.53 v _6368_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.63 ^ _6370_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.88 ^ _6372_/X (sky130_fd_sc_hd__and2_4)
+   0.20   11.08 ^ _6373_/X (sky130_fd_sc_hd__or2_4)
+   0.09   11.17 v _6374_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.44 v _6375_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.85 v _6377_/X (sky130_fd_sc_hd__or2_4)
+   0.26   12.10 v _6378_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.33 ^ _6380_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.34 ^ clb_input[4] (out)
+          12.34   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.34   data arrival time
+---------------------------------------------------------
+          -4.34   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[2] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_57/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.84 ^ psn_inst_psn_buff_37/X (sky130_fd_sc_hd__buf_1)
+   0.21    5.05 ^ _6403_/X (sky130_fd_sc_hd__buf_1)
+   0.26    5.31 ^ psn_inst_psn_buff_36/X (sky130_fd_sc_hd__buf_8)
+   0.14    5.45 v _6476_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.94    6.39 v _6477_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.99 v _6482_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.55 v _6487_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.11 v _6492_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.67 v _6498_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.90 v _6500_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.52 v _6501_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.78 v _6504_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.44 v _6505_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.54 ^ _6508_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.79 ^ _6511_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.99 ^ _6512_/X (sky130_fd_sc_hd__or2_4)
+   0.09   11.08 v _6513_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.35 v _6514_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.76 v _6516_/X (sky130_fd_sc_hd__or2_4)
+   0.26   12.02 v _6517_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.23 ^ _6519_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.25 ^ clb_input[2] (out)
+          12.25   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.25   data arrival time
+---------------------------------------------------------
+          -4.25   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[6] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_3/X (sky130_fd_sc_hd__buf_1)
+   0.21    4.91 ^ _6112_/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.15 ^ psn_inst_psn_buff_0/X (sky130_fd_sc_hd__buf_8)
+   0.25    5.40 ^ psn_inst_psn_buff_23/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 v _6215_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.37 v _6216_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.97 v _6220_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.53 v _6225_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    8.10 v _6230_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.65 v _6234_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.89 v _6236_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.51 v _6237_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.76 v _6239_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.42 v _6240_/X (sky130_fd_sc_hd__or3_4)
+   0.11   10.53 ^ _6242_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.77 ^ _6244_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.98 ^ _6245_/X (sky130_fd_sc_hd__or2_4)
+   0.09   11.07 v _6246_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.33 v _6247_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.74 v _6249_/X (sky130_fd_sc_hd__or2_4)
+   0.26   12.00 v _6250_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.22 ^ _6252_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.23 ^ clb_input[6] (out)
+          12.23   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.23   data arrival time
+---------------------------------------------------------
+          -4.23   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[5] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_3/X (sky130_fd_sc_hd__buf_1)
+   0.21    4.91 ^ _6112_/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.15 ^ psn_inst_psn_buff_0/X (sky130_fd_sc_hd__buf_8)
+   0.25    5.40 ^ psn_inst_psn_buff_21/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 v _6277_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.37 v _6278_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.97 v _6282_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.53 v _6287_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.09 v _6292_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.65 v _6296_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.88 v _6298_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.50 v _6299_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.75 v _6301_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.42 v _6302_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.52 ^ _6304_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.76 ^ _6306_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.97 ^ _6307_/X (sky130_fd_sc_hd__or2_4)
+   0.09   11.06 v _6308_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.32 v _6309_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.74 v _6311_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.99 v _6312_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.22 ^ _6314_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.23 ^ clb_input[5] (out)
+          12.23   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.23   data arrival time
+---------------------------------------------------------
+          -4.23   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[7] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_3/X (sky130_fd_sc_hd__buf_1)
+   0.21    4.91 ^ _6112_/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.15 ^ psn_inst_psn_buff_0/X (sky130_fd_sc_hd__buf_8)
+   0.25    5.40 ^ psn_inst_psn_buff_20/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.53 v _6143_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.36 v _6144_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.96 v _6150_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.53 v _6155_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    8.09 v _6160_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.65 v _6166_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.88 v _6168_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.50 v _6169_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.75 v _6172_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.41 v _6173_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.52 ^ _6177_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.77 ^ _6180_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.97 ^ _6181_/X (sky130_fd_sc_hd__or2_4)
+   0.09   11.06 v _6182_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.33 v _6183_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.74 v _6186_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.99 v _6187_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.21 ^ _6190_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.22 ^ clb_input[7] (out)
+          12.22   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.22   data arrival time
+---------------------------------------------------------
+          -4.22   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: north_clb_input[4] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.20    4.73 ^ psn_inst_psn_buff_31/X (sky130_fd_sc_hd__buf_1)
+   0.23    4.96 ^ _6734_/X (sky130_fd_sc_hd__buf_1)
+   0.25    5.21 ^ psn_inst_psn_buff_30/X (sky130_fd_sc_hd__buf_8)
+   0.14    5.36 v _6875_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.94    6.30 v _6876_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.90 v _6880_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.46 v _6885_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    8.03 v _6890_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.58 v _6894_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.82 v _6896_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.44 v _6897_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.69 v _6899_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.35 v _6900_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.45 ^ _6902_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.70 ^ _6904_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.90 ^ _6905_/X (sky130_fd_sc_hd__or2_4)
+   0.09   11.00 v _6906_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.26 v _6907_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.67 v _6909_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.93 v _6910_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.15 ^ _6912_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.15 ^ north_clb_input[4] (out)
+          12.15   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.15   data arrival time
+---------------------------------------------------------
+          -4.15   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[15] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.14    3.83 ^ psn_inst_psn_buff_108/X (sky130_fd_sc_hd__buf_1)
+   0.14    3.97 ^ psn_inst_psn_buff_105/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.11 ^ psn_inst_psn_buff_101/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.25 ^ psn_inst_psn_buff_64/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.39 ^ psn_inst_psn_buff_61/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.54 ^ psn_inst_psn_buff_58/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.68 ^ psn_inst_psn_buff_53/X (sky130_fd_sc_hd__buf_1)
+   0.15    4.83 ^ psn_inst_psn_buff_49/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.97 ^ psn_inst_psn_buff_38/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.11 ^ psn_inst_psn_buff_33/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.26 ^ psn_inst_psn_buff_27/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.40 ^ psn_inst_psn_buff_24/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 ^ psn_inst_psn_buff_4/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.78 ^ _5295_/X (sky130_fd_sc_hd__buf_1)
+   0.74    6.52 ^ _5859_/X (sky130_fd_sc_hd__buf_1)
+   0.26    6.79 v _7194_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.65    7.43 v _7197_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.00 v _7202_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _7206_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.79 v _7208_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.41 v _7209_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _7211_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.32 v _7212_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.43 ^ _7214_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _7216_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.88 ^ _7217_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.97 v _7218_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _7219_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _7221_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.90 v _7222_/X (sky130_fd_sc_hd__and2_4)
+   0.23   12.13 ^ _7224_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.14 ^ clb_input[15] (out)
+          12.14   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.14   data arrival time
+---------------------------------------------------------
+          -4.14   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: east_clb_input[0] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.14    3.83 ^ psn_inst_psn_buff_108/X (sky130_fd_sc_hd__buf_1)
+   0.14    3.97 ^ psn_inst_psn_buff_105/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.11 ^ psn_inst_psn_buff_101/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.25 ^ psn_inst_psn_buff_64/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.39 ^ psn_inst_psn_buff_61/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.54 ^ psn_inst_psn_buff_58/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.68 ^ psn_inst_psn_buff_53/X (sky130_fd_sc_hd__buf_1)
+   0.15    4.83 ^ psn_inst_psn_buff_49/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.97 ^ psn_inst_psn_buff_38/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.11 ^ psn_inst_psn_buff_33/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.26 ^ psn_inst_psn_buff_27/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.40 ^ psn_inst_psn_buff_24/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 ^ psn_inst_psn_buff_4/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.78 ^ _5295_/X (sky130_fd_sc_hd__buf_1)
+   0.74    6.52 ^ _5859_/X (sky130_fd_sc_hd__buf_1)
+   0.26    6.78 v _6004_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.65    7.43 v _6007_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.00 v _6012_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _6016_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.79 v _6018_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.41 v _6019_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _6021_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.32 v _6022_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.42 ^ _6025_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _6027_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.88 ^ _6028_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.97 v _6029_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _6030_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _6032_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.90 v _6033_/X (sky130_fd_sc_hd__and2_4)
+   0.23   12.13 ^ _6035_/Y (sky130_fd_sc_hd__nor2_4)
+   0.02   12.14 ^ east_clb_input[0] (out)
+          12.14   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.14   data arrival time
+---------------------------------------------------------
+          -4.14   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: east_clb_input[2] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.14    3.83 ^ psn_inst_psn_buff_108/X (sky130_fd_sc_hd__buf_1)
+   0.14    3.97 ^ psn_inst_psn_buff_105/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.11 ^ psn_inst_psn_buff_101/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.25 ^ psn_inst_psn_buff_64/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.39 ^ psn_inst_psn_buff_61/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.54 ^ psn_inst_psn_buff_58/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.68 ^ psn_inst_psn_buff_53/X (sky130_fd_sc_hd__buf_1)
+   0.15    4.83 ^ psn_inst_psn_buff_49/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.97 ^ psn_inst_psn_buff_38/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.11 ^ psn_inst_psn_buff_33/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.26 ^ psn_inst_psn_buff_27/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.40 ^ psn_inst_psn_buff_24/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 ^ psn_inst_psn_buff_4/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.78 ^ _5295_/X (sky130_fd_sc_hd__buf_1)
+   0.74    6.52 ^ _5859_/X (sky130_fd_sc_hd__buf_1)
+   0.26    6.78 v _5860_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.65    7.43 v _5863_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    8.00 v _5870_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _5876_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.78 v _5879_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.40 v _5880_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _5883_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.32 v _5884_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.42 ^ _5886_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _5888_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.87 ^ _5889_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.97 v _5890_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _5891_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _5893_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.90 v _5894_/X (sky130_fd_sc_hd__and2_4)
+   0.23   12.12 ^ _5896_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.14 ^ east_clb_input[2] (out)
+          12.14   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.14   data arrival time
+---------------------------------------------------------
+          -4.14   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: north_clb_input[7] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_57/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.84 ^ psn_inst_psn_buff_37/X (sky130_fd_sc_hd__buf_1)
+   0.21    5.05 ^ _6403_/X (sky130_fd_sc_hd__buf_1)
+   0.26    5.31 ^ psn_inst_psn_buff_36/X (sky130_fd_sc_hd__buf_8)
+   0.14    5.44 v _6669_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.27 v _6670_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.87 v _6675_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.43 v _6681_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.00 v _6686_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _6690_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.79 v _6693_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.41 v _6694_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _6696_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.32 v _6697_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.42 ^ _6699_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _6701_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.88 ^ _6702_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.97 v _6703_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _6704_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _6707_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.90 v _6708_/X (sky130_fd_sc_hd__and2_4)
+   0.23   12.13 ^ _6711_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.14 ^ north_clb_input[7] (out)
+          12.14   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.14   data arrival time
+---------------------------------------------------------
+          -4.14   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: east_clb_input[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.14    3.83 ^ psn_inst_psn_buff_108/X (sky130_fd_sc_hd__buf_1)
+   0.14    3.97 ^ psn_inst_psn_buff_105/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.11 ^ psn_inst_psn_buff_101/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.25 ^ psn_inst_psn_buff_64/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.39 ^ psn_inst_psn_buff_61/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.54 ^ psn_inst_psn_buff_58/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.68 ^ psn_inst_psn_buff_53/X (sky130_fd_sc_hd__buf_1)
+   0.15    4.83 ^ psn_inst_psn_buff_49/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.97 ^ psn_inst_psn_buff_38/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.11 ^ psn_inst_psn_buff_33/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.26 ^ psn_inst_psn_buff_27/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.40 ^ psn_inst_psn_buff_24/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 ^ psn_inst_psn_buff_4/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.78 ^ _5295_/X (sky130_fd_sc_hd__buf_1)
+   0.74    6.52 ^ _5859_/X (sky130_fd_sc_hd__buf_1)
+   0.26    6.78 v _5937_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.65    7.43 v _5941_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.99 v _5946_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _5950_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.78 v _5952_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.40 v _5953_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _5955_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.32 v _5956_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.42 ^ _5958_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _5961_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.87 ^ _5962_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.96 v _5963_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _5964_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _5966_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.89 v _5967_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.12 ^ _5969_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.13 ^ east_clb_input[1] (out)
+          12.13   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.13   data arrival time
+---------------------------------------------------------
+          -4.13   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[3] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_57/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.84 ^ psn_inst_psn_buff_37/X (sky130_fd_sc_hd__buf_1)
+   0.21    5.05 ^ _6403_/X (sky130_fd_sc_hd__buf_1)
+   0.26    5.31 ^ psn_inst_psn_buff_36/X (sky130_fd_sc_hd__buf_8)
+   0.13    5.44 v _6407_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.27 v _6408_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.86 v _6412_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.43 v _6418_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    8.00 v _6425_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _6429_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.78 v _6431_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.40 v _6432_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _6434_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.32 v _6435_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.42 ^ _6437_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _6439_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.87 ^ _6440_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.96 v _6441_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _6442_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _6444_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.89 v _6445_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.12 ^ _6447_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.13 ^ clb_input[3] (out)
+          12.13   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.13   data arrival time
+---------------------------------------------------------
+          -4.13   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_57/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.84 ^ psn_inst_psn_buff_37/X (sky130_fd_sc_hd__buf_1)
+   0.21    5.05 ^ _6403_/X (sky130_fd_sc_hd__buf_1)
+   0.26    5.31 ^ psn_inst_psn_buff_36/X (sky130_fd_sc_hd__buf_8)
+   0.14    5.44 v _6544_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.27 v _6545_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.87 v _6549_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.44 v _6554_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.00 v _6559_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _6563_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.79 v _6565_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.41 v _6566_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _6568_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.33 v _6569_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.42 ^ _6571_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _6573_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.87 ^ _6574_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.97 v _6575_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _6576_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _6578_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.90 v _6579_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.12 ^ _6581_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.13 ^ clb_input[1] (out)
+          12.13   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.13   data arrival time
+---------------------------------------------------------
+          -4.13   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[0] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_57/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.84 ^ psn_inst_psn_buff_37/X (sky130_fd_sc_hd__buf_1)
+   0.21    5.05 ^ _6403_/X (sky130_fd_sc_hd__buf_1)
+   0.26    5.31 ^ psn_inst_psn_buff_36/X (sky130_fd_sc_hd__buf_8)
+   0.14    5.44 v _6606_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.27 v _6607_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.87 v _6611_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.43 v _6616_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.00 v _6621_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _6625_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.78 v _6627_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.41 v _6628_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _6630_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.32 v _6631_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.42 ^ _6633_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _6635_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.88 ^ _6636_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.97 v _6637_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _6638_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _6640_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.90 v _6641_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.12 ^ _6643_/Y (sky130_fd_sc_hd__nor2_4)
+   0.00   12.12 ^ clb_input[0] (out)
+          12.12   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.12   data arrival time
+---------------------------------------------------------
+          -4.12   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[14] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.14    3.83 ^ psn_inst_psn_buff_108/X (sky130_fd_sc_hd__buf_1)
+   0.14    3.97 ^ psn_inst_psn_buff_105/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.11 ^ psn_inst_psn_buff_101/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.25 ^ psn_inst_psn_buff_64/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.39 ^ psn_inst_psn_buff_61/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.54 ^ psn_inst_psn_buff_58/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.68 ^ psn_inst_psn_buff_53/X (sky130_fd_sc_hd__buf_1)
+   0.15    4.83 ^ psn_inst_psn_buff_49/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.97 ^ psn_inst_psn_buff_38/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.11 ^ psn_inst_psn_buff_33/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.26 ^ psn_inst_psn_buff_27/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.40 ^ psn_inst_psn_buff_24/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 ^ psn_inst_psn_buff_4/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.78 ^ _5295_/X (sky130_fd_sc_hd__buf_1)
+   0.74    6.52 ^ _5859_/X (sky130_fd_sc_hd__buf_1)
+   0.26    6.78 v _7258_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.65    7.43 v _7261_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    8.00 v _7266_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.55 v _7270_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.78 v _7272_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.41 v _7273_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.66 v _7275_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.32 v _7276_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.42 ^ _7278_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.67 ^ _7280_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.87 ^ _7281_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.96 v _7282_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.23 v _7283_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.64 v _7285_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.90 v _7286_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.11 ^ _7288_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.12 ^ clb_input[14] (out)
+          12.12   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.12   data arrival time
+---------------------------------------------------------
+          -4.12   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: east_clb_input[7] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.22    4.54 v _5182_/X (sky130_fd_sc_hd__buf_1)
+   0.20    4.74 v psn_inst_psn_buff_78/X (sky130_fd_sc_hd__buf_1)
+   0.41    5.15 v _5486_/X (sky130_fd_sc_hd__or2_4)
+   0.26    5.41 v _5487_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.23 v _5488_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.83 v _5492_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.39 v _5497_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.96 v _5504_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.51 v _5510_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.75 v _5513_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.37 v _5514_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.62 v _5517_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.28 v _5518_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.39 ^ _5520_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.63 ^ _5522_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.84 ^ _5523_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.93 v _5524_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.19 v _5525_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.60 v _5528_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.86 v _5529_/X (sky130_fd_sc_hd__and2_4)
+   0.23   12.09 ^ _5532_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.10 ^ east_clb_input[7] (out)
+          12.10   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.10   data arrival time
+---------------------------------------------------------
+          -4.10   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: east_clb_input[4] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.22    4.54 v _5564_/X (sky130_fd_sc_hd__buf_1)
+   0.20    4.74 v psn_inst_psn_buff_93/X (sky130_fd_sc_hd__buf_1)
+   0.41    5.15 v _5698_/X (sky130_fd_sc_hd__or2_4)
+   0.26    5.41 v _5699_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.23 v _5700_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.83 v _5704_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.39 v _5708_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.96 v _5713_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    8.51 v _5717_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.75 v _5719_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.37 v _5720_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.62 v _5722_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.29 v _5723_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.39 ^ _5725_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.63 ^ _5727_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.84 ^ _5728_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.93 v _5729_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.19 v _5730_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.61 v _5732_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.86 v _5733_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.08 ^ _5735_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.09 ^ east_clb_input[4] (out)
+          12.09   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.09   data arrival time
+---------------------------------------------------------
+          -4.09   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: clb_input[9] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.22    4.54 v _5182_/X (sky130_fd_sc_hd__buf_1)
+   0.20    4.74 v psn_inst_psn_buff_73/X (sky130_fd_sc_hd__buf_1)
+   0.41    5.15 v _5357_/X (sky130_fd_sc_hd__or2_4)
+   0.26    5.41 v _5358_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.23 v _5359_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.83 v _5363_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.40 v _5367_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.96 v _5372_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.51 v _5376_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.75 v _5378_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.37 v _5379_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.62 v _5381_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.28 v _5382_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.38 ^ _5384_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.63 ^ _5386_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.83 ^ _5387_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.93 v _5388_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.19 v _5389_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.60 v _5391_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.86 v _5392_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.07 ^ _5394_/Y (sky130_fd_sc_hd__nor2_4)
+   0.02   12.09 ^ clb_input[9] (out)
+          12.09   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.09   data arrival time
+---------------------------------------------------------
+          -4.09   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: east_clb_input[3] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.22    4.54 v _5564_/X (sky130_fd_sc_hd__buf_1)
+   0.20    4.74 v psn_inst_psn_buff_96/X (sky130_fd_sc_hd__buf_1)
+   0.41    5.15 v _5776_/X (sky130_fd_sc_hd__or2_4)
+   0.26    5.41 v _5777_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.23 v _5778_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.83 v _5783_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.40 v _5787_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.96 v _5792_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.51 v _5796_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.75 v _5798_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.37 v _5799_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.62 v _5801_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.29 v _5802_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.39 ^ _5804_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.63 ^ _5806_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.84 ^ _5807_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.93 v _5808_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.19 v _5809_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.61 v _5811_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.86 v _5812_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.08 ^ _5814_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.09 ^ east_clb_input[3] (out)
+          12.09   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.09   data arrival time
+---------------------------------------------------------
+          -4.09   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: clb_input[13] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.22    4.54 v _5928_/X (sky130_fd_sc_hd__buf_1)
+   0.20    4.73 v psn_inst_psn_buff_91/X (sky130_fd_sc_hd__buf_1)
+   0.41    5.15 v _7315_/X (sky130_fd_sc_hd__or2_4)
+   0.26    5.40 v _7316_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.23 v _7317_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.83 v _7321_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.39 v _7325_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.96 v _7330_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.51 v _7334_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.74 v _7336_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.36 v _7337_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.62 v _7339_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.28 v _7340_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.38 ^ _7342_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.63 ^ _7344_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.83 ^ _7345_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.92 v _7346_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.18 v _7347_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.60 v _7349_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.85 v _7350_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.08 ^ _7352_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.08 ^ clb_input[13] (out)
+          12.08   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.08   data arrival time
+---------------------------------------------------------
+          -4.08   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: north_clb_input[5] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.20    4.73 ^ psn_inst_psn_buff_31/X (sky130_fd_sc_hd__buf_1)
+   0.23    4.96 ^ _6734_/X (sky130_fd_sc_hd__buf_1)
+   0.25    5.21 ^ psn_inst_psn_buff_30/X (sky130_fd_sc_hd__buf_8)
+   0.14    5.36 v _6807_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.18 v _6808_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.78 v _6813_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.34 v _6818_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.91 v _6823_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.46 v _6829_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.70 v _6831_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.32 v _6832_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.57 v _6835_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.23 v _6836_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.33 ^ _6839_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.58 ^ _6842_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.79 ^ _6843_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.88 v _6844_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.14 v _6845_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.55 v _6847_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.81 v _6848_/X (sky130_fd_sc_hd__and2_4)
+   0.23   12.04 ^ _6850_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.04 ^ north_clb_input[5] (out)
+          12.04   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.04   data arrival time
+---------------------------------------------------------
+          -4.04   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: north_clb_input[3] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.20    4.73 ^ psn_inst_psn_buff_31/X (sky130_fd_sc_hd__buf_1)
+   0.23    4.96 ^ _6734_/X (sky130_fd_sc_hd__buf_1)
+   0.25    5.21 ^ psn_inst_psn_buff_30/X (sky130_fd_sc_hd__buf_8)
+   0.15    5.36 v _6937_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.19 v _6938_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.78 v _6942_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.35 v _6947_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.91 v _6952_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.47 v _6956_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.70 v _6958_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.32 v _6959_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.58 v _6961_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.24 v _6962_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.34 ^ _6964_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.59 ^ _6966_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.79 ^ _6967_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.88 v _6968_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.15 v _6969_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.56 v _6971_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.82 v _6972_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.03 ^ _6974_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.04 ^ north_clb_input[3] (out)
+          12.04   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.04   data arrival time
+---------------------------------------------------------
+          -4.04   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: north_clb_input[6] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.20    4.73 ^ psn_inst_psn_buff_31/X (sky130_fd_sc_hd__buf_1)
+   0.23    4.96 ^ _6734_/X (sky130_fd_sc_hd__buf_1)
+   0.25    5.21 ^ psn_inst_psn_buff_30/X (sky130_fd_sc_hd__buf_8)
+   0.15    5.36 v _6738_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.19 v _6739_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.78 v _6743_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.35 v _6749_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.91 v _6756_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.47 v _6760_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.70 v _6762_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.32 v _6763_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.58 v _6765_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.24 v _6766_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.34 ^ _6768_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.59 ^ _6770_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.79 ^ _6771_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.88 v _6772_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.15 v _6773_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.56 v _6775_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.82 v _6776_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.04 ^ _6778_/Y (sky130_fd_sc_hd__nor2_4)
+   0.00   12.04 ^ north_clb_input[6] (out)
+          12.04   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.04   data arrival time
+---------------------------------------------------------
+          -4.04   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: north_clb_input[2] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.20    4.73 ^ psn_inst_psn_buff_31/X (sky130_fd_sc_hd__buf_1)
+   0.23    4.96 ^ _6734_/X (sky130_fd_sc_hd__buf_1)
+   0.25    5.21 ^ psn_inst_psn_buff_30/X (sky130_fd_sc_hd__buf_8)
+   0.15    5.36 v _6999_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.19 v _7000_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.78 v _7004_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.35 v _7009_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.91 v _7014_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.47 v _7018_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.70 v _7020_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.32 v _7021_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.57 v _7023_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.24 v _7024_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.34 ^ _7026_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.59 ^ _7028_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.79 ^ _7029_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.88 v _7030_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.14 v _7031_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.56 v _7033_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.81 v _7034_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.03 ^ _7036_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.04 ^ north_clb_input[2] (out)
+          12.04   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.04   data arrival time
+---------------------------------------------------------
+          -4.04   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: clb_input[8] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.22    4.54 v _5182_/X (sky130_fd_sc_hd__buf_1)
+   0.49    5.03 v _5421_/X (sky130_fd_sc_hd__or2_4)
+   0.31    5.34 v _5422_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.16 v _5423_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.76 v _5428_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.32 v _5432_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.89 v _5437_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.44 v _5441_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.68 v _5443_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.30 v _5444_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.55 v _5446_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.22 v _5447_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.31 ^ _5449_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.56 ^ _5451_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.77 ^ _5452_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.86 v _5453_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.12 v _5454_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.53 v _5456_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.79 v _5457_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.01 ^ _5459_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.03 ^ clb_input[8] (out)
+          12.03   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.03   data arrival time
+---------------------------------------------------------
+          -4.03   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: north_clb_input[0] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.17    4.70 ^ psn_inst_psn_buff_56/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.84 ^ psn_inst_psn_buff_52/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.98 ^ psn_inst_psn_buff_48/X (sky130_fd_sc_hd__buf_1)
+   0.23    5.21 ^ psn_inst_psn_buff_2/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.35 v _7123_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.18 v _7124_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.78 v _7128_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.34 v _7133_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.91 v _7138_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.46 v _7142_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.70 v _7144_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.32 v _7145_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.57 v _7147_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.23 v _7148_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.33 ^ _7150_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.58 ^ _7152_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.78 ^ _7153_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.87 v _7154_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.24   11.11 v _7155_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.53 v _7157_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.78 v _7158_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.01 ^ _7160_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.02 ^ north_clb_input[0] (out)
+          12.02   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.02   data arrival time
+---------------------------------------------------------
+          -4.02   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: east_clb_input[5] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.22    4.54 v _5564_/X (sky130_fd_sc_hd__buf_1)
+   0.49    5.03 v _5633_/X (sky130_fd_sc_hd__or2_4)
+   0.31    5.34 v _5634_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.17 v _5635_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.76 v _5639_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.33 v _5643_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.89 v _5648_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.44 v _5652_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.68 v _5654_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.30 v _5655_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.55 v _5657_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.22 v _5658_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.31 ^ _5661_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.56 ^ _5663_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.77 ^ _5664_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.86 v _5665_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.12 v _5666_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.53 v _5668_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.79 v _5669_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.00 ^ _5671_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.01 ^ east_clb_input[5] (out)
+          12.01   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.01   data arrival time
+---------------------------------------------------------
+          -4.01   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: clb_input[10] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.14    3.83 ^ psn_inst_psn_buff_108/X (sky130_fd_sc_hd__buf_1)
+   0.14    3.97 ^ psn_inst_psn_buff_105/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.11 ^ psn_inst_psn_buff_101/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.25 ^ psn_inst_psn_buff_64/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.39 ^ psn_inst_psn_buff_61/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.54 ^ psn_inst_psn_buff_58/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.68 ^ psn_inst_psn_buff_53/X (sky130_fd_sc_hd__buf_1)
+   0.15    4.83 ^ psn_inst_psn_buff_49/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.97 ^ psn_inst_psn_buff_38/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.11 ^ psn_inst_psn_buff_33/X (sky130_fd_sc_hd__buf_1)
+   0.15    5.26 ^ psn_inst_psn_buff_27/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.40 ^ psn_inst_psn_buff_24/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.54 ^ psn_inst_psn_buff_4/X (sky130_fd_sc_hd__buf_1)
+   0.24    5.78 ^ _5295_/X (sky130_fd_sc_hd__buf_1)
+   0.64    6.43 ^ _5296_/X (sky130_fd_sc_hd__buf_1)
+   0.24    6.66 v _5297_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.65    7.31 v _5300_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.88 v _5305_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.43 v _5309_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.67 v _5311_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.29 v _5312_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.54 v _5315_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.20 v _5316_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.30 ^ _5320_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.55 ^ _5322_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.75 ^ _5323_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.85 v _5324_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.11 v _5325_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.52 v _5327_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.78 v _5328_/X (sky130_fd_sc_hd__and2_4)
+   0.22   12.00 ^ _5330_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   12.01 ^ clb_input[10] (out)
+          12.01   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -12.01   data arrival time
+---------------------------------------------------------
+          -4.01   slack (VIOLATED)
+
+
+Startpoint: clb_output[3] (input port clocked by clk)
+Endpoint: north_clb_input[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[3] (in)
+   0.05    2.10 v _5065_/Y (sky130_fd_sc_hd__inv_8)
+   0.13    2.23 v psn_inst_psn_buff_10/X (sky130_fd_sc_hd__buf_1)
+   0.21    2.45 v _5066_/X (sky130_fd_sc_hd__buf_1)
+   0.86    3.31 v _5211_/X (sky130_fd_sc_hd__or4_4)
+   0.28    3.59 v _5212_/X (sky130_fd_sc_hd__o21a_4)
+   0.10    3.69 ^ _5294_/Y (sky130_fd_sc_hd__inv_8)
+   0.20    3.89 v _6105_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    4.12 ^ _6107_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.42    4.54 ^ _6111_/X (sky130_fd_sc_hd__a32o_4)
+   0.20    4.73 ^ psn_inst_psn_buff_31/X (sky130_fd_sc_hd__buf_1)
+   0.16    4.89 ^ psn_inst_psn_buff_32/X (sky130_fd_sc_hd__buf_1)
+   0.23    5.12 ^ psn_inst_psn_buff_1/X (sky130_fd_sc_hd__buf_1)
+   0.14    5.26 v _7061_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.83    6.09 v _7062_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.68 v _7066_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.25 v _7071_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.81 v _7076_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.37 v _7080_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.60 v _7082_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.22 v _7083_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.47 v _7085_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.14 v _7086_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.24 ^ _7088_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.48 ^ _7090_/X (sky130_fd_sc_hd__and2_4)
+   0.21   10.69 ^ _7091_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.78 v _7092_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.04 v _7093_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.45 v _7095_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.71 v _7096_/X (sky130_fd_sc_hd__and2_4)
+   0.23   11.94 ^ _7098_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   11.95 ^ north_clb_input[1] (out)
+          11.95   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -11.95   data arrival time
+---------------------------------------------------------
+          -3.95   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: east_clb_input[6] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.22    4.54 v _5564_/X (sky130_fd_sc_hd__buf_1)
+   0.46    4.99 v _5565_/X (sky130_fd_sc_hd__or2_4)
+   0.26    5.25 v _5566_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.08 v _5567_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.68 v _5572_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.24 v _5577_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.81 v _5582_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.36 v _5586_/X (sky130_fd_sc_hd__a211o_4)
+   0.23    8.59 v _5588_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.21 v _5589_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.47 v _5591_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.13 v _5592_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.23 ^ _5594_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.48 ^ _5597_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.68 ^ _5598_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.77 v _5599_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   11.04 v _5600_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.45 v _5602_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.71 v _5603_/X (sky130_fd_sc_hd__and2_4)
+   0.22   11.93 ^ _5605_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   11.94 ^ east_clb_input[6] (out)
+          11.94   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -11.94   data arrival time
+---------------------------------------------------------
+          -3.94   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: clb_input[12] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.85    2.95 v _5147_/X (sky130_fd_sc_hd__or4_4)
+   0.14    3.09 ^ _5148_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.25    3.33 ^ _5149_/X (sky130_fd_sc_hd__or2_4)
+   0.10    3.44 v _5151_/Y (sky130_fd_sc_hd__a32oi_4)
+   0.23    3.67 ^ _5153_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.53    4.20 ^ _5157_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.31 v _5181_/Y (sky130_fd_sc_hd__inv_8)
+   0.15    4.46 v psn_inst_psn_buff_104/X (sky130_fd_sc_hd__buf_1)
+   0.14    4.60 v psn_inst_psn_buff_75/X (sky130_fd_sc_hd__buf_1)
+   0.41    5.02 v _7379_/X (sky130_fd_sc_hd__or2_4)
+   0.26    5.27 v _7380_/X (sky130_fd_sc_hd__and3_4)
+   0.83    6.10 v _7381_/X (sky130_fd_sc_hd__or4_4)
+   0.60    6.70 v _7385_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    7.26 v _7389_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.83 v _7394_/X (sky130_fd_sc_hd__a211o_4)
+   0.55    8.38 v _7398_/X (sky130_fd_sc_hd__a211o_4)
+   0.24    8.62 v _7400_/X (sky130_fd_sc_hd__and2_4)
+   0.62    9.24 v _7401_/X (sky130_fd_sc_hd__or3_4)
+   0.25    9.49 v _7403_/X (sky130_fd_sc_hd__and2_4)
+   0.66   10.15 v _7404_/X (sky130_fd_sc_hd__or3_4)
+   0.10   10.25 ^ _7406_/Y (sky130_fd_sc_hd__nand2_4)
+   0.25   10.50 ^ _7408_/X (sky130_fd_sc_hd__and2_4)
+   0.20   10.71 ^ _7409_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.80 v _7410_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.24   11.04 v _7411_/X (sky130_fd_sc_hd__and2_4)
+   0.41   11.45 v _7413_/X (sky130_fd_sc_hd__or2_4)
+   0.26   11.71 v _7414_/X (sky130_fd_sc_hd__and2_4)
+   0.21   11.92 ^ _7416_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   11.93 ^ clb_input[12] (out)
+          11.93   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -11.93   data arrival time
+---------------------------------------------------------
+          -3.93   slack (VIOLATED)
+
+
+Startpoint: clb_output[1] (input port clocked by clk)
+Endpoint: clb_input[11] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.05    2.05 ^ clb_output[1] (in)
+   0.05    2.10 v _5087_/Y (sky130_fd_sc_hd__inv_8)
+   0.15    2.25 v _5088_/X (sky130_fd_sc_hd__buf_1)
+   0.83    3.08 v _5130_/X (sky130_fd_sc_hd__or4_4)
+   0.26    3.35 v _5131_/X (sky130_fd_sc_hd__o21a_4)
+   0.17    3.52 ^ _5134_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.23    3.74 ^ _5135_/X (sky130_fd_sc_hd__or3_4)
+   0.23    3.97 ^ _5136_/X (sky130_fd_sc_hd__a32o_4)
+   0.50    4.47 ^ _5140_/X (sky130_fd_sc_hd__a32o_4)
+   0.12    4.60 v _5187_/Y (sky130_fd_sc_hd__inv_8)
+   0.23    4.83 v _5188_/X (sky130_fd_sc_hd__buf_1)
+   0.21    5.04 v psn_inst_psn_buff_111/X (sky130_fd_sc_hd__buf_1)
+   0.16    5.20 v psn_inst_psn_buff_69/X (sky130_fd_sc_hd__buf_1)
+   0.56    5.77 v _5192_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    6.33 v _5193_/X (sky130_fd_sc_hd__a211o_4)
+   0.56    6.90 v _5205_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    7.46 v _5226_/X (sky130_fd_sc_hd__a211o_4)
+   0.57    8.03 v _5231_/X (sky130_fd_sc_hd__a211o_4)
+   0.59    8.61 v _5236_/X (sky130_fd_sc_hd__a211o_4)
+   0.20    8.81 ^ _5240_/Y (sky130_fd_sc_hd__a21oi_4)
+   0.17    8.98 ^ _5241_/X (sky130_fd_sc_hd__a211o_4)
+   0.34    9.32 ^ _5242_/X (sky130_fd_sc_hd__and3_4)
+   0.19    9.51 ^ _5245_/X (sky130_fd_sc_hd__or2_4)
+   0.24    9.75 ^ _5248_/X (sky130_fd_sc_hd__and2_4)
+   0.20    9.96 ^ _5249_/X (sky130_fd_sc_hd__or2_4)
+   0.09   10.05 v _5250_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.26   10.31 v _5251_/X (sky130_fd_sc_hd__and2_4)
+   0.41   10.72 v _5254_/X (sky130_fd_sc_hd__or2_4)
+   0.26   10.98 v _5255_/X (sky130_fd_sc_hd__and2_4)
+   0.22   11.19 ^ _5258_/Y (sky130_fd_sc_hd__nor2_4)
+   0.01   11.21 ^ clb_input[11] (out)
+          11.21   data arrival time
+
+  10.00   10.00   clock clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+  -2.00    8.00   output external delay
+           8.00   data required time
+---------------------------------------------------------
+           8.00   data required time
+         -11.21   data arrival time
+---------------------------------------------------------
+          -3.21   slack (VIOLATED)
+
+

@@ -1,0 +1,43 @@
+
+26. Printing statistics.
+
+=== clb_tile ===
+
+   Number of wires:               3984
+   Number of wire bits:           4574
+   Number of public wires:         304
+   Number of public wire bits:     894
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               4085
+     sky130_fd_sc_hd__a211o_4      165
+     sky130_fd_sc_hd__a21boi_4       1
+     sky130_fd_sc_hd__a21o_4       268
+     sky130_fd_sc_hd__a21oi_4       19
+     sky130_fd_sc_hd__a32o_4        24
+     sky130_fd_sc_hd__a32oi_4      173
+     sky130_fd_sc_hd__and2_4       176
+     sky130_fd_sc_hd__and3_4        24
+     sky130_fd_sc_hd__and4_4       206
+     sky130_fd_sc_hd__buf_1        786
+     sky130_fd_sc_hd__buf_2         29
+     sky130_fd_sc_hd__conb_1        60
+     sky130_fd_sc_hd__dfxtp_4      256
+     sky130_fd_sc_hd__inv_8        384
+     sky130_fd_sc_hd__nand2_4       31
+     sky130_fd_sc_hd__nor2_4       627
+     sky130_fd_sc_hd__nor3_4         3
+     sky130_fd_sc_hd__nor4_4       143
+     sky130_fd_sc_hd__o21a_4        39
+     sky130_fd_sc_hd__o21ai_4       59
+     sky130_fd_sc_hd__o22a_4        31
+     sky130_fd_sc_hd__o32a_4        32
+     sky130_fd_sc_hd__or2_4        336
+     sky130_fd_sc_hd__or3_4        102
+     sky130_fd_sc_hd__or4_4        111
+
+   Area for cell type \sky130_fd_sc_hd__buf_2 is unknown!
+
+   Chip area for module '\clb_tile': 48881.881600
+

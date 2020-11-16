@@ -1,0 +1,68 @@
+===========================================================================
+   Open Source Mixed-Height Standard Cell Detail Placer < OpenDP_v1.0 >    
+   Developers : SangGi Do, Mingyu Woo                                      
+===========================================================================
+Parsed 10000 number of lines!!
+Parsed 20000 number of lines!!
+Parsed 30000 number of lines!!
+Parsed 40000 number of lines!!
+Parsed 50000 number of lines!!
+Parsed 60000 number of lines!!
+Reading /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/merged.lef is Done
+
+-------------------- INPUT FILES ----------------------------------
+ benchmark name    : placement
+ directory         : /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp
+ lef               : /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/merged.lef
+ def               : /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/placement/openphysyn.def
+-------------------------------------------------------------------
+Parsed 10000 number of lines!!
+CoreArea: 
+5520.000000 : 10880.000000 - 429180.000000 : 432480.000000
+DieArea: 
+0.000000 : 0.000000 - 423660.000000 : 421600.000000
+Reading /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/placement/openphysyn.def is Done
+-------------------- DESIGN ANALYSIS ------------------------------
+  total cells              : 6860
+  multi cells              : 0
+  fixed cells              : 2663
+  total nets               : 4686
+  design area              : 1.78615e+11
+  total f_area             : 4.10769e+09
+  total m_area             : 9.15365e+10
+  design util              : 52.4543
+  num rows                 : 155
+  row height               : 2720
+-------------------------------------------------------------------
+ non_group_cell_region_assign done ..
+ - - - - - - - - - - - - - - - - - - - - - - - - 
+ non_group_cell_placement done .. 
+ - - - - - - - - - - - - - - - - - - - - - - - - 
+Reading /openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/placement/openphysyn.def is Done
+ DEF file write success !! 
+ location : /openLANE_flow/designs/clb_tile/runs/16-11_06-11/results/placement/clb_tile.placement.def
+-------------------------------------------------------------------
+ tasks                          Wtime      Ctime
+ Parser                         0.207      0.200
+ resgin assign                  0.207      0.200
+ pre-placement                  0.207      0.200
+ non Group cell placement       0.216      0.210
+ All                            0.217      0.210
+ - - - - - EVALUATION - - - - - 
+ AVG_displacement : 2554.12
+ SUM_displacement : 1.75213e+07
+ MAX_displacement : 50115
+ - - - - - - - - - - - - - - - - 
+ GP HPWL          : 217737
+ HPWL             : 232891
+ avg_Disp_site    : 5.55244
+ avg_Disp_row     : 0.939016
+ delta_HPWL       : 6.95997
+ ==== CHECK LEGALITY ==== 
+ row_check ==>> PASS 
+ site_check ==>> PASS 
+ power_check ==>> PASS 
+ edge_check ==>> PASS 
+ placed_check ==>> PASS 
+ overlap_check ==>> PASS 
+ - - - - - < Program END > - - - - - 

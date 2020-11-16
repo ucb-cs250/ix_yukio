@@ -1,0 +1,10 @@
+lef:/openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/merged_unpadded.lef
+def:/openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/routing/addspacers.def
+guide:/openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/routing/fastroute.guide
+output:/openLANE_flow/designs/clb_tile/runs/16-11_06-11/results/routing/clb_tile.def
+outputTA:/openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/routing/tritonRoute_TA.def
+outputguide:/openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/routing/tritonRoute.guide
+outputDRC:/openLANE_flow/designs/clb_tile/runs/16-11_06-11/reports/routing/tritonRoute.drc
+outputMaze:/openLANE_flow/designs/clb_tile/runs/16-11_06-11/tmp/routing/tritonRoute_maze.log
+threads:4
+verbose:1

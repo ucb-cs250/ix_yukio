@@ -1,0 +1,23 @@
+
+18. Printing statistics.
+
+=== clb_tile ===
+
+   Number of wires:               3127
+   Number of wire bits:           3970
+   Number of public wires:         111
+   Number of public wire bits:     954
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3332
+     $_ANDNOT_                     804
+     $_AND_                          1
+     $_MUX_                       1240
+     $_NAND_                        84
+     $_NOR_                         24
+     $_NOT_                         60
+     $_ORNOT_                      206
+     $_OR_                         657
+     sky130_fd_sc_hd__dfxtp_4      256
+
