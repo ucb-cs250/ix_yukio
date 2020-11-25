@@ -2,13 +2,13 @@ module data_connection_block
   #(
     // The number of fabric wires connecting to the MAC inputs.
     // The number of fabric wires connecting to the MAC outputs.
-    parameter W = 16, // W must be multiple of WW
+    parameter W = 192, // W must be multiple of WW
     // WW = WORD_WIDTH.
     parameter WW = 8,
     // 8: Four pairs of WW-bits coming in.
     parameter DATAIN = 8,
     // 4: Four big chungus (4*WW) outputs.
-    parameter DATAOUT = 16,
+    parameter DATAOUT = 8,
     parameter CONF_WIDTH = W*(DATAIN+DATAOUT)
     ) 
    (
@@ -36,7 +36,8 @@ module data_connection_block
    
    generate
       for(i = 0; i < W; i = i + 1) begin : wires
-	 tran(north[i], south[i]);
+	 assign north[i] = south[i];
+	 //tran(north[i], south[i]);
       end
       
       for(i = 0; i < DATAIN; i = i + 1) begin : inputs

@@ -1,3 +1,3 @@
 module transmission_gate(inout a, inout b, input c);
-   tranif1(a, b, c);
+  transmission_gate_cell impl(.A(a), .B(b), .C(c), .Cnot(~c));
 endmodule
