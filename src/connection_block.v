@@ -45,10 +45,10 @@ module connection_block
    
    generate
       for(i = 0; i < WS; i = i + 1) begin : single_wires
-	 tran(single0[i], single1[i]);
+	      assign single0[i] = single1[i];
       end
       for(i = 0; i < WD; i = i + 1) begin : double_wires
-	 tran(double0[i], double1[i]);
+	      assign double0[i] = double1[i];
       end
    endgenerate
    
