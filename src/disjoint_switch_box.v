@@ -1,7 +1,7 @@
 module disjoint_switch_box 
   #(
     // The number of fabric wires out each side.
-    parameter W = 8,
+    parameter W = 194,
     // There are 6 switches in each of the switch_box_element_ones.
     parameter CONF_WIDTH = 6*W
     ) 

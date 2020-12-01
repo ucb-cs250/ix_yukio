@@ -38,10 +38,10 @@ module clb_switch_box
    genvar 		    i;
    generate
       for(i = 0; i < WD / 2; i = i + 1) begin : double_direct_connection
-        // tran(north_double[i+WD/2], south_double[i]);
-        // tran(east_double[i], west_double[i+WD/2]);
-        assign north_double[i+WD/2] = south_double[i];
-        assign east_double[i] = west_double[i+WD/2];
+         // tran(north_double[i+WD/2], south_double[i]);
+         // tran(east_double[i], west_double[i+WD/2]);
+         assign north_double[i+WD/2] = south_double[i];
+         assign east_double[i] = west_double[i+WD/2];
       end
    endgenerate
    
