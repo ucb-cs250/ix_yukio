@@ -1,6 +1,8 @@
 # ix_yukio
 Yukio's interconnect
 
+**I'm a resident of the looking-glass world!!** (Every figure in this page is mirrored by y-axis)
+
 The modules are in src directory. There is a testbench for each module in testbench directory.
 
 The unidirectional version is in unidir_src directory. Its README is also in that directory.
