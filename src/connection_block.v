@@ -43,14 +43,14 @@ module connection_block
    
    genvar 		       i, j;
    
-   generate
-      for(i = 0; i < WS; i = i + 1) begin : single_wires
-	      assign single0[i] = single1[i];
-      end
-      for(i = 0; i < WD; i = i + 1) begin : double_wires
-	      assign double0[i] = double1[i];
-      end
-   endgenerate
+//   generate
+//      for(i = 0; i < WS; i = i + 1) begin : single_wires
+//	      assign single0[i] = single1[i];
+//      end
+//      for(i = 0; i < WD; i = i + 1) begin : double_wires
+//	      assign double0[i] = double1[i];
+//      end
+//   endgenerate
    
    generate
       for(i = 0; i < CLBIN0; i = i + 1) begin : clb0_inputs
