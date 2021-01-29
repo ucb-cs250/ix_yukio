@@ -14,9 +14,9 @@ module connection_block #(
   parameter CLBOD = 2,
   parameter CLBOD_BIAS = 0, // incremented every two blocks
   parameter CLBX = 1, // toggle using direct connections between CLBs or not
-  parameter SEL_PER_IN0 = $clog2((WS + WD) * 2 + WG + CLBX * CLBOUT1),
-  parameter SEL_PER_IN1 = $clog2((WS + WD) * 2 + WG + CLBX * CLBOUT0),
-  parameter SEL_PER_OUT = $clog2(CLBOUT0+CLBOUT1+1),
+  parameter SEL_PER_IN0 = $clog2((WS + WD) * 2 + WG + CLBX * CLBOUT1 + 1),
+  parameter SEL_PER_IN1 = $clog2((WS + WD) * 2 + WG + CLBX * CLBOUT0 + 1),
+  parameter SEL_PER_OUT = $clog2(CLBOUT0+CLBOUT1+1 + 1),
   parameter CONF_WIDTH = SEL_PER_OUT*2*(CLBOS+CLBOD)+SEL_PER_IN0*CLBIN0+SEL_PER_IN1*CLBIN1
 ) (
 
@@ -47,15 +47,15 @@ module connection_block #(
   if(CLBX && CLBOUT1 != 0) begin
     for(i = 0; i < CLBIN0; i = i + 1) begin : clb0_inputs
       if (WG != 0)
-        muxn #(.N((WS+WD)*2+WG+CLBOUT1)) m (
+        muxn #(.N((WS+WD)*2+WG+CLBOUT1+1)) m (
           .out(clb0_input[i]),
-          .in({clb1_output[CLBOUT1-1:0], global, double1_in, double0_in, single1_in, single0_in}),
+          .in({clb1_output[CLBOUT1-1:0], global, double1_in, double0_in, single1_in, single0_in, 1'bz}),
           .sel(c[SEL_PER_IN0*(i+1)-1:SEL_PER_IN0*i])
         );
       else
-        muxn #(.N((WS+WD)*2+WG+CLBOUT1)) m (
+        muxn #(.N((WS+WD)*2+WG+CLBOUT1+1)) m (
           .out(clb0_input[i]),
-          .in({clb1_output[CLBOUT1-1:0], double1_in, double0_in, single1_in, single0_in}),
+          .in({clb1_output[CLBOUT1-1:0], double1_in, double0_in, single1_in, single0_in, 1'bz}),
           .sel(c[SEL_PER_IN0*(i+1)-1:SEL_PER_IN0*i])
         );
     end
@@ -63,15 +63,15 @@ module connection_block #(
   else begin
     for(i = 0; i < CLBIN0; i = i + 1) begin : clb0_inputs
       if (WG != 0)
-        muxn #(.N((WS+WD)*2+WG)) m (
+        muxn #(.N((WS+WD)*2+WG+1)) m (
           .out(clb0_input[i]),
-          .in({global, double1_in, double0_in, single1_in, single0_in}),
+          .in({global, double1_in, double0_in, single1_in, single0_in, 1'bz}),
           .sel(c[SEL_PER_IN0*(i+1)-1:SEL_PER_IN0*i])
         );
       else
-        muxn #(.N((WS+WD)*2+WG)) m (
+        muxn #(.N((WS+WD)*2+WG+1)) m (
           .out(clb0_input[i]),
-          .in({double1_in, double0_in, single1_in, single0_in}),
+          .in({double1_in, double0_in, single1_in, single0_in, 1'bz}),
           .sel(c[SEL_PER_IN0*(i+1)-1:SEL_PER_IN0*i])
         );
     end
@@ -83,15 +83,15 @@ module connection_block #(
   if(CLBX && CLBOUT0 != 0) begin
     for(i = 0; i < CLBIN1; i = i + 1) begin : clb1_inputs
       if (WG != 0)
-        muxn #(.N((WS+WD)*2+WG+CLBOUT0)) m (
+        muxn #(.N((WS+WD)*2+WG+CLBOUT0+1)) m (
           .out(clb1_input[i]),
-          .in({clb0_output[CLBOUT0-1:0], global, double1_in, double0_in, single1_in, single0_in}),
+          .in({clb0_output[CLBOUT0-1:0], global, double1_in, double0_in, single1_in, single0_in, 1'bz}),
           .sel(c[BASE1+SEL_PER_IN1*(i+1)-1:BASE1+SEL_PER_IN1*i])
         );
       else
-        muxn #(.N((WS+WD)*2+WG+CLBOUT0)) m (
+        muxn #(.N((WS+WD)*2+WG+CLBOUT0+1)) m (
           .out(clb1_input[i]),
-          .in({clb0_output[CLBOUT0-1:0], double1_in, double0_in, single1_in, single0_in}),
+          .in({clb0_output[CLBOUT0-1:0], double1_in, double0_in, single1_in, single0_in, 1'bz}),
           .sel(c[BASE1+SEL_PER_IN1*(i+1)-1:BASE1+SEL_PER_IN1*i])
         );
     end
@@ -99,15 +99,15 @@ module connection_block #(
   else begin
     for(i = 0; i < CLBIN1; i = i + 1) begin : clb1_inputs
       if (WG != 0)
-        muxn #(.N((WS+WD)*2+WG)) m (
+        muxn #(.N((WS+WD)*2+WG+1)) m (
           .out(clb1_input[i]),
-          .in({global, double1_in, double0_in, single1_in, single0_in}),
+          .in({global, double1_in, double0_in, single1_in, single0_in, 1'bz}),
           .sel(c[BASE1+SEL_PER_IN1*(i+1)-1:BASE1+SEL_PER_IN1*i])
         );
       else
-        muxn #(.N((WS+WD)*2+WG)) m (
+        muxn #(.N((WS+WD)*2+WG+1)) m (
           .out(clb1_input[i]),
-          .in({double1_in, double0_in, single1_in, single0_in}),
+          .in({double1_in, double0_in, single1_in, single0_in, 1'bz}),
           .sel(c[BASE1+SEL_PER_IN1*(i+1)-1:BASE1+SEL_PER_IN1*i])
         );
     end
@@ -139,16 +139,16 @@ module connection_block #(
     if(CLBOUT1 != 0) assign clb_output[CLBOUT0+CLBOUT1-1:CLBOUT0] = clb1_output[CLBOUT1-1:0];
 
     for(i = 0; i < CLBOS; i = i + 1) begin : clb_output_single0
-      muxn #(.N(CLBOUT0+CLBOUT1+1)) m0 (
+      muxn #(.N(CLBOUT0+CLBOUT1+1+1)) m0 (
         .out(single1_out[(i+CLBOS_BIAS_WIDTH)%WS]),
-        .in({clb_output, single0_in[(i+CLBOS_BIAS_WIDTH)%WS]}),
+        .in({clb_output, single0_in[(i+CLBOS_BIAS_WIDTH)%WS], 1'bz}),
         .sel(c[BASE2+SEL_PER_OUT*(i+1)-1:BASE2+SEL_PER_OUT*i])
       );
     end
     for(i = 0; i < CLBOS; i = i + 1) begin : clb_output_single1
-      muxn #(.N(CLBOUT0+CLBOUT1+1)) m1 (
+      muxn #(.N(CLBOUT0+CLBOUT1+1+1)) m1 (
         .out(single0_out[(i+CLBOS_BIAS_WIDTH)%WS]),
-        .in({clb_output, single1_in[(i+CLBOS_BIAS_WIDTH)%WS]}),
+        .in({clb_output, single1_in[(i+CLBOS_BIAS_WIDTH)%WS], 1'bz}),
         .sel(c[BASE2+SEL_PER_OUT*CLBOS+SEL_PER_OUT*(i+1)-1:BASE2+SEL_PER_OUT*CLBOS+SEL_PER_OUT*i])
       );
     end
@@ -159,17 +159,17 @@ module connection_block #(
     end
 
     for(i = 0; i < CLBOD; i = i + 1) begin : clb_output_double0
-      muxn #(.N(CLBOUT0+CLBOUT1+1)) m0 (
+      muxn #(.N(CLBOUT0+CLBOUT1+1+1)) m0 (
         .out(double1_out[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
-        .in({clb_output, double0_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)]}),
+        .in({clb_output, double0_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)], 1'bz}),
         .sel(c[BASE3+SEL_PER_OUT*(i+1)-1:BASE3+SEL_PER_OUT*i])
       );
     end
 
     for(i = 0; i < CLBOD; i = i + 1) begin : clb_output_double1
-      muxn #(.N(CLBOUT0+CLBOUT1+1)) m1 (
+      muxn #(.N(CLBOUT0+CLBOUT1+1+1)) m1 (
         .out(double0_out[(i+CLBOD_BIAS_WIDTH)%(WD/2)]),
-        .in({clb_output, double1_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)]}),
+        .in({clb_output, double1_in[(i+CLBOD_BIAS_WIDTH)%(WD/2)], 1'bz}),
         .sel(c[BASE3+SEL_PER_OUT*CLBOD+SEL_PER_OUT*(i+1)-1:BASE3+SEL_PER_OUT*CLBOD+SEL_PER_OUT*i])
       );
     end
